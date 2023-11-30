@@ -25,3 +25,111 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+@keyframes blink {
+  50% {
+    background-color: transparent;
+  }
+}
+
+.cursor {
+  display: inline-block;
+  width: 1ch;
+  height: 1em;
+  background-color: currentColor;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes dropBounceLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  70% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.dropBounceLeftAnimation {
+  animation: dropBounceLeft 0.5s ease-out forwards;
+}
+
+@keyframes dropBounceRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  70% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.dropBounceRightAnimation {
+  animation: dropBounceRight 0.5s ease-out forwards;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.appearAnimation {
+  animation: appear 0.7s ease-in forwards;
+}
+
+.crawl-container {
+  bottom: 0;
+  width: 100%;
+  transform-origin: 50% 100%;
+}
+
+@keyframes crawl {
+  0% {
+    transform: translateY(10vh) scaleY(1.5) scaleX(1.5) rotateX(-40deg);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-90vh) scaleY(0) scaleX(0.1) rotateX(-20deg);
+    opacity: 0;
+  }
+}
+.crawl-line {
+  position: absolute;
+  width: 100%;
+  top: 330px;
+  animation: crawl 50s linear infinite;
+}
+
+.my-swiper-container {
+  height: 70vh;
+}
+.my-swiper-container .swiper-pagination-bullet {
+  background: rgb(85, 85, 85); /* Change the bullet's background color */
+  opacity: 0.7; /* Make non-active bullets fully opaque */
+  width: 10px; /* Change the bullet's width */
+  height: 10px; /* Change the bullet's height */
+  border: 2px solid cyan; /* Add a border to the bullet */
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5); /* Add a shadow for depth */
+  transition: transform 0.3s; /* Smoothly grow the bullet when active */
+  border-radius: 50%; /* Circular bullets */
+}
+.my-swiper-container .swiper-pagination-bullet-active {
+  background: rgb(44, 44, 44); /* Change the active bullet's background color */
+  transform: scale(1.5); /* Make the active bullet larger */
+  opacity: 1;
+}
