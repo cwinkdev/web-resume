@@ -60,9 +60,9 @@ const About = () => {
           ))}
         </div>
       ) : (
-        <div className="mt-4 h-[450px] flex flex-col font-light relative overflow-y-auto shadow-black bg-neutral-900 shadow-inner border-y border-emerald-400 rounded-lg">
+        <div className="mt-4 h-[450px] flex flex-col font-light relative overflow-y-auto shadow-black bg-neutral-900 shadow-lg border-y border-emerald-400 rounded-lg">
           <div className="bg-neutral-950 text-left mt-4 py-2 shadow-black shadow-sm">
-            <h2 className="pl-12 text-2xl font-semibold text-emerald-500">
+            <h2 className="pl-4 text-2xl font-semibold text-emerald-500">
               CHRISTIAN WINKLER
             </h2>
           </div>
