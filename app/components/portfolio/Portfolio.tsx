@@ -4,15 +4,19 @@ import { Pagination } from 'swiper/modules';
 import PortfolioStackSlide from './PortfolioStackSlide';
 import { portfolioSlides as slides } from '@/app/data/portfolioSlides';
 import { useState } from 'react';
+import { GiDigHole } from 'react-icons/gi';
 
 const Portfolio = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   return (
     <section
       id="portfolio"
-      className="p-8 pt-20 h-screen bg-neutral-950 w-full text-center relative"
+      className="p-8 pt-20 h-screen bg-gradient-to-b from-neutral-950 via-zinc-900 to-neutral-950 w-full text-center relative"
     >
-      <h2 className="text-2xl font-bold text-cyan-400 mb-4">DIG</h2>
+      <h2 className="text-2xl font-bold flex text-cyan-400 mb-4 items-center justify-center">
+        <GiDigHole />
+        DIG
+      </h2>
       <Swiper
         spaceBetween={0}
         modules={[Pagination]}

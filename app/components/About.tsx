@@ -8,13 +8,13 @@ const About = () => {
   return (
     <section
       id="about"
-      className="pt-20 h-screen w-full text-center bg-neutral-950"
+      className="pt-20 h-screen w-full text-center bg-gradient-to-b from-neutral-950 via-neutral-900 to-neutral-950"
     >
-      <div className="border-2 rounded-full h-40 bg-neutral-700 w-40 mx-auto my-4"></div>
+      <div className="border-2 rounded-full shadow-lg shadow-black h-40 bg-neutral-700 w-40 mx-auto my-4"></div>
 
       <div className="flex w-56 justify-center mx-auto text-center text-sm my-4">
         <p className="my-auto text-emerald-200">Version:</p>
-        <div className="w-40 h-6 mx-auto rounded-full flex relative font-light box-border border border-neutral-500">
+        <div className="w-40 h-6 mx-auto rounded-full flex shadow-sm shadow-black relative font-light box-border border border-neutral-500">
           <div
             onClick={() => setIsLongVersion(false)}
             className="w-1/2 flex h-full rounded-l-full bg-neutral-900"

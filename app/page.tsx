@@ -47,7 +47,7 @@ export default function Home() {
 
       <section
         id="main"
-        className="flex min-h-screen items-center flex-col bg-gradient-to-b font-extralight from-stone-950 to-stone-900 px-8 overflow-x-hidden"
+        className="flex min-h-screen items-center flex-col bg-gradient-to-b from-neutral-950 via-neutral-900 to-neutral-950 font-extralight  px-8 overflow-x-hidden"
       >
         <MainNavMenu />
       </section>
