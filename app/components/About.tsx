@@ -46,7 +46,7 @@ const About = () => {
           {aboutMeLines.map((line, index) => (
             <div
               key={line}
-              className="crawl-line text-xl font-bold text-yellow-300"
+              className="crawl-line text-xl font-bold text-yellow-400"
               style={{
                 opacity: 1 - index * 0.1, // Decrease opacity for each subsequent line
                 transform: `translateY(${index * 10}vh) scale(${
