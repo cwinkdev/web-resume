@@ -16,14 +16,25 @@ export default function Home() {
 
   return (
     <div id="top" className="relative ">
-      <div className="fixed top-0 w-full z-30 bg-black h-28 shadow-sm shadow-neutral-950 border-b border-neutral-700">
+      <div
+        className={`fixed top-0 w-full z-30 bg-black ${
+          state.showQuickNav ? 'h-16' : 'h-24'
+        } shadow-sm shadow-neutral-950 border-b duration-300 border-neutral-700`}
+      >
         <Link
           href={`#top`}
           onClick={(e) => handleClick(e, 'top')}
           className=" text-center font-mono h-14 flex"
         >
-          <p className="text-2xl m-auto text-emerald-500">Christian Winkler</p>
+          <p
+            className="text-2xl m-auto text-emerald-500"
+            style={{ transform: `translateX(${state.offset}px)` }}
+          >
+            Christian Winkler
+          </p>
         </Link>
+        <QuickNavMenu />
+
         <div className="h-14 w-full justify-center flex relative">
           <p
             className={`text-center absolute top-0 h-full text-emerald-100 font-mono`}
@@ -33,9 +44,9 @@ export default function Home() {
             {typedText}
             <span className="cursor"></span>
           </p>
-          <QuickNavMenu />
         </div>
       </div>
+
       <section
         id="main"
         className="flex min-h-screen items-center flex-col bg-gradient-to-b font-extralight from-stone-950 to-stone-900 px-8 overflow-x-hidden"

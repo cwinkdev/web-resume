@@ -47,6 +47,15 @@ export function useApp() {
   useEffect(() => {
     if (state.offset > 250) {
       setTypedText('');
+      setState((prevState) => ({
+        ...prevState,
+        showQuickNav: true,
+      }));
+    } else if (state.offset <= 250) {
+      setState((prevState) => ({
+        ...prevState,
+        showQuickNav: false,
+      }));
     }
   }, [state.offset]);
 

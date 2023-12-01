@@ -12,7 +12,7 @@ const QuickNavMenu = () => {
     const scrollYPosition = Math.max(state.offset - startingPoint, 0);
 
     // The initial negative offset so that buttons start off-screen
-    const initialXOffset = -350 * (buttonIndex + 1);
+    const initialXOffset = -400 * (buttonIndex + 1);
 
     // Calculate the translation needed based on scroll position
     let translateX = initialXOffset + scrollYPosition;
@@ -24,7 +24,7 @@ const QuickNavMenu = () => {
   };
 
   return (
-    <div className={`flex justify-evenly w-2/3 mx-auto absolute`}>
+    <div className={`flex justify-evenly w-full mx-auto absolute top-0 p-3`}>
       <QuickNavButton
         icon={<GiPerson />}
         sectionId={'about'}
