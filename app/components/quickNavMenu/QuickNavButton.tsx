@@ -1,7 +1,6 @@
 'use client';
 
 import { useApp } from '@/app/hooks/useApp';
-import { stat } from 'fs';
 import Link from 'next/link';
 import { ReactNode } from 'react';
 

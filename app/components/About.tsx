@@ -66,9 +66,9 @@ const About = () => {
               CHRISTIAN WINKLER
             </h2>
           </div>
-          <div className="flex px-4 mt-4">
+          <div className="flex px-4 mt-6">
             <div className="border-r border-emerald-600"></div>
-            <p className={`pl-4 text-left font-light duration-300`}>
+            <p className={`pl-4 text-left text-sm font-light duration-300`}>
               {aboutMeText}
             </p>
           </div>
