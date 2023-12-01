@@ -60,11 +60,11 @@ const About = () => {
           ))}
         </div>
       ) : (
-        <p
-          className={`mt-4 h-[50vh] font-light p-8 duration-300 border-y bg-neutral-900 shadow-inner shadow-black border-emerald-400 rounded-lg`}
-        >
-          {aboutMeText}
-        </p>
+        <div className="mt-4 h-[470px] font-light relative overflow-y-auto shadow-black bg-neutral-900 shadow-inner border-y border-emerald-400 rounded-lg">
+          <p className={`my-auto font-light text-lg p-8 duration-300`}>
+            {aboutMeText}
+          </p>
+        </div>
       )}
     </section>
   );

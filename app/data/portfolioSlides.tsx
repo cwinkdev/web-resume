@@ -8,7 +8,7 @@ export const portfolioSlides = [
     text: 'Various homing filters.',
   },
   {
-    href: 'url(./digResults.png)',
+    href: 'url(./digAlbumResults.png)',
     text: 'Truly randomized results ensures fresh albums each dig.',
   },
   { href: 'url(./trackList.png)', text: 'Useful stats for tracks and albums.' },
