@@ -97,7 +97,7 @@ body {
 
 @keyframes crawl {
   0% {
-    transform: translateY(10vh) scaleY(1.5) scaleX(1.5) rotateX(-40deg);
+    transform: translateY(0vh) scaleY(1.5) scaleX(1.5) rotateX(-50deg);
     opacity: 1;
   }
   50% {
@@ -111,12 +111,13 @@ body {
 .crawl-line {
   position: absolute;
   width: 100%;
-  top: 330px;
+  top: 455px;
   animation: crawl 50s linear infinite;
 }
 
 .my-swiper-container {
-  height: 70vh;
+  height: 600px;
+  width: 320px;
 }
 .my-swiper-container .swiper-pagination-bullet {
   background: rgb(85, 85, 85); /* Change the bullet's background color */

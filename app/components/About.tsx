@@ -10,7 +10,7 @@ const About = () => {
       id="about"
       className="pt-32 h-screen w-full text-center bg-neutral-950"
     >
-      <div className="border rounded-full h-40 bg-neutral-700 w-40 mx-auto my-4"></div>
+      <div className="border-2 rounded-full h-40 bg-neutral-700 w-40 mx-auto my-4"></div>
 
       <div className="flex w-56 justify-center mx-auto text-center text-sm my-4">
         <p className="my-auto text-emerald-200">Version:</p>
@@ -46,7 +46,7 @@ const About = () => {
           {aboutMeLines.map((line, index) => (
             <div
               key={line}
-              className="crawl-line font-semibold text-yellow-300"
+              className="crawl-line text-xl font-bold text-yellow-300"
               style={{
                 opacity: 1 - index * 0.1, // Decrease opacity for each subsequent line
                 transform: `translateY(${index * 10}vh) scale(${

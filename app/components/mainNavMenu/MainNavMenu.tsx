@@ -5,7 +5,7 @@ interface MainNavMenuProps {}
 
 const MainNavMenu = ({}: MainNavMenuProps) => {
   return (
-    <>
+    <div className="w-full grid grid-rows-2 grid-cols-1 text-center h-[500px] my-auto">
       <div className="flex justify-evenly">
         <MainNavButton
           label={'ABOUT'}
@@ -34,7 +34,7 @@ const MainNavMenu = ({}: MainNavMenuProps) => {
           sectionId={'contact'}
         />
       </div>
-    </>
+    </div>
   );
 };
 

@@ -1,4 +1,4 @@
-import { skillsList } from '../skills/skillsList';
+import { skillsList } from '../../data/skillsList';
 interface SkillSectionProps {
   label: string;
   type: string;

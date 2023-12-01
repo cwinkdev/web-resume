@@ -12,7 +12,7 @@ const QuickNavMenu = () => {
     const scrollYPosition = Math.max(state.offset - startingPoint, 0);
 
     // The initial negative offset so that buttons start off-screen
-    const initialXOffset = -320 * (buttonIndex + 1);
+    const initialXOffset = -350 * (buttonIndex + 1);
 
     // Calculate the translation needed based on scroll position
     let translateX = initialXOffset + scrollYPosition;

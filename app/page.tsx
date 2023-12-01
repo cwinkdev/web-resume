@@ -3,8 +3,8 @@
 import { GiPerson } from 'react-icons/gi';
 import MainNavButton from './components/mainNavMenu/MainNavButton';
 import About from './components/About';
-import Skills from './components/Skills';
-import Portfolio from './components/Portfolio';
+import Skills from './components/skills/Skills';
+import Portfolio from './components/portfolio/Portfolio';
 import Contact from './components/Contact';
 import QuickNavMenu from './components/quickNavMenu/QuickNavMenu';
 import { useApp } from './hooks/useApp';
@@ -40,9 +40,7 @@ export default function Home() {
         id="main"
         className="flex min-h-screen items-center flex-col bg-gradient-to-b font-extralight from-stone-950 to-stone-900 px-8 overflow-x-hidden"
       >
-        <div className="w-full grid grid-rows-2 grid-cols-1 text-center mt-32">
-          <MainNavMenu />
-        </div>
+        <MainNavMenu />
       </section>
       <About />
       <Skills />
