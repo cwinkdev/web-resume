@@ -8,7 +8,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="pt-20 h-screen w-full text-center bg-gradient-to-b from-neutral-950 via-neutral-900 to-neutral-950"
+      className="pt-20 p-8 h-screen w-full text-center bg-gradient-to-b from-neutral-950 via-neutral-900 to-neutral-950"
     >
       <div className="border-2 rounded-full shadow-lg shadow-black h-40 bg-neutral-700 w-40 mx-auto my-4"></div>
 
@@ -66,7 +66,7 @@ const About = () => {
               CHRISTIAN WINKLER
             </h2>
           </div>
-          <div className="flex px-12 mt-4">
+          <div className="flex px-4 mt-4">
             <div className="border-r border-emerald-600"></div>
             <p className={`pl-4 text-left font-light duration-300`}>
               {aboutMeText}
