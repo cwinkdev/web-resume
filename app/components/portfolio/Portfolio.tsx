@@ -11,7 +11,7 @@ const Portfolio = () => {
   return (
     <section
       id="portfolio"
-      className="p-8 pt-20 h-screen bg-gradient-to-b from-neutral-950 via-zinc-900 to-neutral-950 w-full text-center relative"
+      className="p-8 pt-20 h-screen bg-gradient-to-b from-neutral-950 via-cyan-950 to-neutral-950 w-full text-center relative"
     >
       <h2 className="text-2xl font-bold flex text-cyan-400 mb-4 items-center justify-center">
         <GiDigHole />
