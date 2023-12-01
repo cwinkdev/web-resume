@@ -1,7 +1,5 @@
 'use client';
 
-import { GiPerson } from 'react-icons/gi';
-import MainNavButton from './components/mainNavMenu/MainNavButton';
 import About from './components/About';
 import Skills from './components/skills/Skills';
 import Portfolio from './components/portfolio/Portfolio';

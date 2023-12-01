@@ -10,7 +10,7 @@ const Portfolio = () => {
   return (
     <section
       id="portfolio"
-      className="p-8 pt-32 h-screen bg-neutral-950 w-full text-center relative"
+      className="p-8 pt-20 h-screen bg-neutral-950 w-full text-center relative"
     >
       <h2 className="text-2xl font-bold text-cyan-400 mb-4">DIG</h2>
       <Swiper
