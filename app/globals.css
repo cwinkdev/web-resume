@@ -2,28 +2,55 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer base {
+  html {
+    --color-base: #111111;
+    --color-base1: rgb(27, 27, 27);
+    --color-base2: rgb(48, 48, 48);
+    --color-base3: #505050;
+    --color-baseText: #ffffff;
+    --color-primary: rgb(85, 207, 158);
+    --color-secondary: rgb(50, 168, 121);
+    --color-accent: rgb(175, 243, 216);
   }
+  @import '../styles/themes/theme1.css';
+  @import '../styles/themes/theme2.css';
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.nav-button {
+  background-color: #292929;
+  box-shadow: 0 0 8px rgb(0, 0, 0); /* Add a shadow for depth */
+}
+.lightMode .nav-button {
+  background-color: #ffffff;
+  box-shadow: 0 5px 6px rgba(0, 0, 0, 0.5); /* Add a shadow for depth */
+}
+
+.main-section {
+  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+  --tw-gradient-from: #171717 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(23 23 23 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: #0a0a0a var(--tw-gradient-to-position);
+  box-shadow: 0 0 8px rgb(0, 0, 0); /* Add a shadow for depth */
+}
+.lightMode .main-section {
+  background-color: #ffffff;
+  border-color: #0a0a0a;
+  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+  --tw-gradient-from: #ffffff var(--tw-gradient-from-position);
+  --tw-gradient-to: rgba(119, 119, 119, 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: #ffffff var(--tw-gradient-to-position);
+  box-shadow: 0 5px 6px rgba(0, 0, 0, 0.5); /* Add a shadow for depth */
+}
+
+.skill-section {
+  background-color: rgb(23, 23, 23);
+}
+.lightMode .skill-section {
+  background-color: #ffffff;
+  color: #0a0a0a;
 }
 
 @keyframes blink {

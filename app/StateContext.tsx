@@ -4,6 +4,7 @@ import { AppState } from '../types';
 import React, { createContext, useState, ReactNode } from 'react';
 
 const initialState: AppState = {
+  theme: '',
   offset: 0,
   showQuickNav: false,
   currentSection: 'top',

@@ -3,6 +3,7 @@
 import { useApp } from '@/app/hooks/useApp';
 import QuickNavButton from './QuickNavButton';
 import { GiEnvelope, GiPerson, GiSkills, GiWoodFrame } from 'react-icons/gi';
+import ThemeSwitcher from '../ThemeSwitcher';
 
 const QuickNavMenu = () => {
   const { state } = useApp();
@@ -25,29 +26,34 @@ const QuickNavMenu = () => {
 
   return (
     <div className={`flex justify-evenly w-full mx-auto absolute top-0 p-3`}>
+      <ThemeSwitcher translateX={calculateTranslateX(0)} />
       <QuickNavButton
         icon={<GiPerson />}
         sectionId={'about'}
         translateX={calculateTranslateX(0)}
-        additionalCSS={'text-cyan-200'}
+        additionalCSS={state.theme === '' ? 'text-cyan-200' : 'text-cyan-500'}
       />
       <QuickNavButton
         icon={<GiSkills />}
         sectionId={'skills'}
         translateX={calculateTranslateX(0)}
-        additionalCSS={'text-amber-200'}
+        additionalCSS={state.theme === '' ? 'text-amber-200' : 'text-amber-500'}
       />
       <QuickNavButton
         icon={<GiWoodFrame />}
         sectionId={'portfolio'}
         translateX={calculateTranslateX(0)}
-        additionalCSS={'text-violet-200'}
+        additionalCSS={
+          state.theme === '' ? 'text-violet-200' : 'text-violet-500'
+        }
       />
       <QuickNavButton
         icon={<GiEnvelope />}
         sectionId={'contact'}
         translateX={calculateTranslateX(0)}
-        additionalCSS={'text-emerald-200'}
+        additionalCSS={
+          state.theme === '' ? 'text-emerald-200' : 'text-emerald-500'
+        }
       />
     </div>
   );

@@ -13,19 +13,19 @@ export default function Home() {
   const { state, handleClick, typedText } = useApp();
 
   return (
-    <div id="top" className="relative ">
+    <div id="top" className={`relative duration-500 bg-base1 text-baseText`}>
       <div
-        className={`fixed top-0 w-full z-30 bg-black ${
+        className={`fixed top-0 w-full z-30 bg-base ${
           state.showQuickNav ? 'h-16' : 'h-24'
-        } shadow-sm shadow-neutral-950 border-b duration-300 border-neutral-700`}
+        } shadow-md shadow-neutral-00 border-b duration-300 border-neutral-700`}
       >
         <Link
           href={`#top`}
           onClick={(e) => handleClick(e, 'top')}
-          className=" text-center font-mono h-14 flex"
+          className=" text-center text-primary font-mono h-14 flex"
         >
           <p
-            className="text-2xl m-auto text-emerald-500"
+            className="text-2xl m-auto"
             style={{ transform: `translateX(${state.offset}px)` }}
           >
             Christian Winkler
@@ -35,7 +35,7 @@ export default function Home() {
 
         <div className="h-14 w-full justify-center flex relative">
           <p
-            className={`text-center absolute top-0 h-full text-emerald-100 font-mono`}
+            className={`text-center absolute top-0 h-full text-accent font-mono`}
             style={{ transform: `translateX(${state.offset}px)` }}
           >
             {'> '}
@@ -47,7 +47,7 @@ export default function Home() {
 
       <section
         id="main"
-        className="flex min-h-screen items-center flex-col bg-gradient-to-b from-neutral-950 via-neutral-900 to-neutral-950 font-extralight  px-8 overflow-x-hidden"
+        className="flex min-h-screen items-center flex-col font-extralight  px-8 overflow-x-hidden"
       >
         <MainNavMenu />
       </section>

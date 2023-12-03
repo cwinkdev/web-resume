@@ -6,6 +6,10 @@ import { AppStateContext } from '../StateContext';
 export function useApp() {
   const { state, setState } = useContext(AppStateContext);
 
+  const changeTheme = (theme: string) => {
+    document.querySelector('html')?.setAttribute('data-theme', theme);
+  };
+
   const handleClick = (
     e: React.MouseEvent<HTMLAnchorElement>,
     sectionId: string,
@@ -99,5 +103,6 @@ export function useApp() {
     setState,
     handleClick,
     typedText,
+    changeTheme,
   };
 }

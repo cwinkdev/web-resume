@@ -1,0 +1,10 @@
+html[data-theme='theme2'] {
+  --color-base: rgb(235, 209, 95);
+  --color-base1: rgb(212, 189, 84);
+  --color-base2: rgb(192, 167, 54);
+  --color-base3: rgb(105, 89, 19);
+  --color-baseText: #2b2b2b;
+  --color-primary: rgb(68, 17, 68);
+  --color-secondary: rgb(87, 192, 66);
+  --color-accent: rgb(255, 255, 255);
+}

@@ -1,22 +1,29 @@
+import { useApp } from '@/app/hooks/useApp';
 import MainNavButton from './MainNavButton';
 import { GiEnvelope, GiPerson, GiSkills, GiWoodFrame } from 'react-icons/gi';
 
 interface MainNavMenuProps {}
 
 const MainNavMenu = ({}: MainNavMenuProps) => {
+  const { state } = useApp();
+
   return (
     <div className="w-full grid grid-rows-2 grid-cols-1 text-center h-[500px] my-auto">
       <div className="flex justify-evenly">
         <MainNavButton
           label={'ABOUT'}
           icon={<GiPerson />}
-          additionalCSS={'dropBounceLeftAnimation text-cyan-200'}
+          additionalCSS={`dropBounceLeftAnimation ${
+            state.theme === '' ? 'text-cyan-200' : 'text-cyan-500'
+          }`}
           sectionId={'about'}
         />
         <MainNavButton
           label={'SKILLS'}
           icon={<GiSkills />}
-          additionalCSS={'dropBounceRightAnimation text-amber-200'}
+          additionalCSS={`dropBounceLeftAnimation ${
+            state.theme === '' ? 'text-amber-200' : 'text-amber-500'
+          }`}
           sectionId={'skills'}
         />
       </div>
@@ -24,13 +31,17 @@ const MainNavMenu = ({}: MainNavMenuProps) => {
         <MainNavButton
           label={'PORTFOLIO'}
           icon={<GiWoodFrame />}
-          additionalCSS={'dropBounceLeftAnimation text-violet-200'}
+          additionalCSS={`dropBounceLeftAnimation ${
+            state.theme === '' ? 'text-violet-200' : 'text-violet-500'
+          }`}
           sectionId={'portfolio'}
         />
         <MainNavButton
           label={'CONTACT'}
           icon={<GiEnvelope />}
-          additionalCSS={'dropBounceRightAnimation text-emerald-200'}
+          additionalCSS={`dropBounceLeftAnimation ${
+            state.theme === '' ? 'text-emerald-200' : 'text-emerald-500'
+          }`}
           sectionId={'contact'}
         />
       </div>

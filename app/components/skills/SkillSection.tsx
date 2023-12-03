@@ -5,8 +5,8 @@ interface SkillSectionProps {
 }
 const SkillSection = ({ label, type }: SkillSectionProps) => {
   return (
-    <div className="my-2 border-2 pb-2 border-neutral-600 rounded-lg bg-neutral-900 shadow-md shadow-black">
-      <p className="text-emerald-300 border-b border-neutral-800 text-left font-semibold py-2 px-4 rounded-t-lg bg-gradient-to-r from-black to-transparent">
+    <div className="my-2 border-2 pb-2 border-base3 bg-base1 rounded-lg skill-section-custom shadow-md shadow-black">
+      <p className="text-primary border-b border-base2 text-left font-semibold py-2 px-4 rounded-t-lg bg-base">
         {label}
       </p>
       <ul className="">
@@ -14,10 +14,10 @@ const SkillSection = ({ label, type }: SkillSectionProps) => {
           skill.type === type ? (
             <li
               key={skill.key}
-              className={`${skill.additionalCSS} my-1.5 flex px-6`}
+              className={`${skill.additionalCSS} my-1.5 flex px-6 bg-base1`}
             >
-              <div className="mr-4 w-1 h-1 my-auto bg-emerald-300"></div>
-              <p>{skill.key}</p>
+              <div className="mr-4 w-1 h-1 my-auto bg-secondary"></div>
+              <p className="text-baseText">{skill.key}</p>
             </li>
           ) : null,
         )}
