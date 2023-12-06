@@ -29,7 +29,7 @@ const ThemeSwitcher = ({
   additionalCSS,
   showName,
 }: ThemeSwitcherProps) => {
-  const { state, setState, changeTheme } = useApp();
+  const { setState, changeTheme } = useApp();
   const [themeIndex, setThemeIndex] = useState(0); // Current theme index
 
   const cycleTheme = () => {
@@ -47,12 +47,14 @@ const ThemeSwitcher = ({
       {showName ? <h2 className="font-semibold mb-2">View mode:</h2> : null}
       <button
         onClick={cycleTheme}
-        className={`${additionalCSS} ${state.theme.colors} shadow-md shadow-baseShadow justify-between mx-auto flex p-1.5 border-2 border-base3`}
+        className={`${additionalCSS} ${themes[themeIndex].colors} shadow-md shadow-baseShadow justify-between mx-auto flex p-1.5 border-2 border-base3`}
       >
-        <div className={`${state.theme.colors}`}>{state.theme.icon}</div>
+        <div className={`${themes[themeIndex].colors}`}>
+          {themes[themeIndex].icon}
+        </div>
         {showName ? (
           <p className={`text-baseText text-lg font-normal m-auto px-3`}>
-            {state.theme.name}
+            {themes[themeIndex].name}
           </p>
         ) : null}
       </button>
