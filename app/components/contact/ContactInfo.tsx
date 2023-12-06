@@ -5,15 +5,11 @@ import { GiCloudDownload } from 'react-icons/gi';
 import { useInView } from 'react-intersection-observer';
 
 const ContactInfo = () => {
-  const options = { threshold: 0.2 };
-  const { ref, inView } = useInView(options);
   return (
     <div
       className={`min-h-[700px] h-fit justify-evenly flex flex-col py-4 px-6 w-full`}
     >
-      <h2 ref={ref} className="text-3xl font-semibold text-primary">
-        Contact Info
-      </h2>
+      <h2 className="text-3xl font-semibold text-primary">Contact Info</h2>
       <div className="border-b border-accent mx-auto w-1/2"></div>
       <div className="">
         <p className="text-xl font-semibold ">Christian Winkler</p>
