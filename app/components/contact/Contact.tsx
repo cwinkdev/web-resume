@@ -13,7 +13,7 @@ const Contact = () => {
       } p-8 pt-20 h-screen w-full text-center text-baseText`}
     >
       <div
-        className={`border-secondary bg-base rounded-lg border-y shadow-md shadow-black`}
+        className={`border-secondary bg-base rounded-lg border-y shadow-md shadow-baseShadow`}
       >
         <ContactInfo />
       </div>

@@ -22,6 +22,7 @@ const config: Config = {
         primary: 'var(--color-primary)',
         secondary: 'var(--color-secondary)',
         accent: 'var(--color-accent)',
+        baseShadow: 'var(--color-baseShadow)',
       },
     },
   },

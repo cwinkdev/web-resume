@@ -13,7 +13,7 @@ const About = () => {
         ref={ref}
         className={`${
           inView ? 'slide-in-right' : 'slide-off-left'
-        } border-2 rounded-full shadow-md shadow-black h-40 bg-base2 w-40 mx-auto my-4`}
+        } border-2 rounded-full shadow-md shadow-baseShadow h-40 bg-base2 w-40 mx-auto my-4`}
       ></div>
 
       <AboutModeToggle

@@ -7,4 +7,5 @@ html[data-theme='theme1'] {
   --color-primary: rgb(0, 0, 0);
   --color-secondary: rgb(65, 65, 65);
   --color-accent: rgb(117, 117, 117);
+  --color-baseShadow: rgb(163, 163, 163);
 }

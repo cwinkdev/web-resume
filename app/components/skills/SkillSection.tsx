@@ -12,7 +12,7 @@ const SkillSection = ({ label, type }: SkillSectionProps) => {
       ref={ref}
       className={`${
         inView ? 'slide-in-right' : 'slide-off-left'
-      } my-2 border-2 pb-2 border-base3 bg-base1 rounded-lg skill-section-custom shadow-md shadow-black`}
+      } my-2 border-2 pb-2 border-base3 bg-base1 rounded-lg skill-section-custom shadow-md shadow-baseShadow`}
     >
       <p className="text-primary border-b border-base2 text-left font-semibold py-2 px-4 rounded-t-lg bg-base">
         {label}

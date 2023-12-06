@@ -17,7 +17,7 @@ const AboutCard = ({ isLongVersion }: AboutCardProps) => {
           ref={ref}
           className={`${
             inView ? 'slide-in-right' : 'slide-off-left'
-          } mt-4 h-[450px] font-light relative overflow-hidden crawl-container shadow-black shadow-inner border-y border-emerald-400 rounded-lg`}
+          } mt-4 h-[450px] font-light relative overflow-hidden crawl-container shadow-baseShadow shadow-inner border-y border-emerald-400 rounded-lg`}
           style={{
             backgroundImage: 'url(./space.jpg)', // Adjust the path as needed
             backgroundSize: 'cover', // Cover the entire area
@@ -45,9 +45,9 @@ const AboutCard = ({ isLongVersion }: AboutCardProps) => {
           ref={ref}
           className={`${
             inView ? 'slide-in-right' : 'slide-off-left'
-          } mt-4 h-[450px] flex flex-col font-light relative overflow-y-auto shadow-black bg-base shadow-md border-y border-secondary rounded-lg`}
+          } mt-4 h-[450px] flex flex-col font-light relative overflow-y-auto shadow-baseShadow bg-base shadow-md border-y border-secondary rounded-lg`}
         >
-          <div className="bg-base2 text-left mt-4 py-2 shadow-black shadow-sm">
+          <div className="bg-base2 text-left mt-4 py-2 shadow-baseShadow shadow-md">
             <h2 className="pl-4 text-2xl font-semibold text-primary">
               CHRISTIAN WINKLER
             </h2>

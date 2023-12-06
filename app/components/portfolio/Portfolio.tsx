@@ -18,7 +18,7 @@ const Portfolio = () => {
     <section
       id="portfolio"
       className={`p-8 pt-20 h-screen ${
-        state.theme === '' ? 'bg-gradient-to-b' : ''
+        state.theme.id === '' ? 'bg-gradient-to-b' : ''
       } from-transparent via-cyan-950 to-transparent w-full text-center relative`}
     >
       <PortfolioHeader />
@@ -37,7 +37,7 @@ const Portfolio = () => {
             bulletClass: 'swiper-pagination-bullet',
             bulletActiveClass: 'swiper-pagination-bullet-active',
           }}
-          className="border-2 border-neutral-500 rounded-3xl text-white w-11/12 bg-zinc-900 shadow-lg shadow-black my-swiper-container"
+          className="border-2 border-neutral-500 rounded-3xl text-white w-11/12 bg-zinc-900 shadow-md shadow-baseShadow my-swiper-container"
         >
           {slides.map((slide, index) => (
             <SwiperSlide key={index} className="relative flex flex-col">

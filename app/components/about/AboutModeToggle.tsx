@@ -22,7 +22,7 @@ const AboutModeToggle = ({
       } flex w-56 justify-center mx-auto text-center text-sm my-4`}
     >
       <p className="my-auto text-primary">Version:</p>
-      <div className="w-40 h-6 mx-auto rounded-full flex shadow-sm shadow-black bg-base1 text-baseText relative font-light box-border border border-base3">
+      <div className="w-40 h-6 mx-auto rounded-full flex shadow-md shadow-baseShadow bg-base1 text-baseText relative font-light box-border border border-base3">
         <div
           onClick={() => setIsLongVersion(false)}
           className={`${
@@ -42,7 +42,7 @@ const AboutModeToggle = ({
         <div
           className={`${
             isLongVersion ? 'right-0' : 'right-20'
-          } absolute duration-500 shadow-md shadow-black h-full w-1/2 border border-secondary bg-white bg-opacity-10 rounded-full`}
+          } absolute duration-500 shadow-md shadow-baseShadow h-full w-1/2 border border-secondary bg-white bg-opacity-10 rounded-full`}
         ></div>
       </div>
     </div>

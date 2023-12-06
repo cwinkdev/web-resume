@@ -12,6 +12,7 @@
     --color-primary: rgb(85, 207, 158);
     --color-secondary: rgb(50, 168, 121);
     --color-accent: rgb(175, 243, 216);
+    --color-baseShadow: rgb(0, 0, 0);
   }
   @import '../styles/themes/theme1.css';
   @import '../styles/themes/theme2.css';
