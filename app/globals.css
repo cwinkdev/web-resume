@@ -106,6 +106,7 @@
 /* OBSERVER ANIMATIONS ################################################## 
 
 */
+
 @keyframes slideInLeft {
   from {
     transform: translateX(-80%);
@@ -115,9 +116,6 @@
     transform: translateX(0);
     opacity: 1;
   }
-}
-.slide-in-left {
-  animation: slideInLeft 1s ease-in-out;
 }
 
 @keyframes slideOffLeft {
@@ -130,9 +128,6 @@
     opacity: 0;
   }
 }
-.slide-off-left {
-  animation: slideOffLeft 1s ease-in-out;
-}
 
 @keyframes slideInRight {
   from {
@@ -143,9 +138,6 @@
     transform: translateX(0);
     opacity: 1;
   }
-}
-.slide-in-right {
-  animation: slideInRight 1s ease-in-out;
 }
 
 @keyframes slideOffRight {
@@ -158,6 +150,19 @@
     opacity: 0;
   }
 }
+
+.slide-in-left {
+  animation: slideInLeft 0.8s ease-in-out;
+}
+
+.slide-off-left {
+  animation: slideOffLeft 0.8s ease-in-out;
+}
+
+.slide-in-right {
+  animation: slideInRight 0.8s ease-in-out;
+}
+
 .slide-off-right {
-  animation: slideOffRight 1s ease-in-out;
+  animation: slideOffRight 0.8s ease-in-out;
 }

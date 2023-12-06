@@ -3,7 +3,7 @@
 import About from './components/about/About';
 import Skills from './components/skills/Skills';
 import Portfolio from './components/portfolio/Portfolio';
-import Contact from './components/Contact';
+import Contact from './components/contact/Contact';
 import QuickNavMenu from './components/quickNavMenu/QuickNavMenu';
 import { useApp } from './hooks/useApp';
 import Link from 'next/link';
@@ -13,7 +13,10 @@ export default function Home() {
   const { state, handleClick, typedText } = useApp();
 
   return (
-    <div id="top" className={`relative duration-500 bg-base1 text-baseText`}>
+    <div
+      id="top"
+      className={`relative duration-500 bg-base1 text-baseText overflow-x-hidden`}
+    >
       <div
         className={`fixed top-0 w-full z-30 bg-base ${
           state.showQuickNav ? 'h-16' : 'h-24'
