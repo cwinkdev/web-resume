@@ -63,41 +63,6 @@ export function useApp() {
     }
   }, [state.offset]);
 
-  useEffect(() => {
-    const callback = (entries: any, observer: any) => {
-      entries.forEach((entry: any) => {
-        if (entry.isIntersecting) {
-          console.log(entry.target.id + ' is in view!');
-          setState((prevState) => ({
-            ...prevState,
-            currentSection: entry.target.id,
-          }));
-        }
-      });
-    };
-
-    const options = {
-      root: null,
-      rootMargin: '0px',
-      threshold: 0.5, // Adjust this value based on when you want to switch 'active' sections
-    };
-
-    const observer = new IntersectionObserver(callback, options);
-
-    // Select all sections to be observed
-    const sections = document.querySelectorAll('section'); // Assuming all your sections are <section> elements
-    sections.forEach((section) => {
-      observer.observe(section);
-    });
-
-    // Cleanup
-    return () => {
-      sections.forEach((section) => {
-        observer.unobserve(section);
-      });
-    };
-  }, [setState]);
-
   return {
     state,
     setState,

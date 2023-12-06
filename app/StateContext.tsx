@@ -1,10 +1,12 @@
 'use client';
 
+import { GiMoon } from 'react-icons/gi';
 import { AppState } from '../types';
 import React, { createContext, useState, ReactNode } from 'react';
 
 const initialState: AppState = {
   theme: '',
+  themeIcon: <GiMoon />,
   offset: 0,
   showQuickNav: false,
   currentSection: 'top',

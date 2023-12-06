@@ -1,11 +1,19 @@
+import { useInView } from 'react-intersection-observer';
 import { skillsList } from '../../data/skillsList';
 interface SkillSectionProps {
   label: string;
   type: string;
 }
 const SkillSection = ({ label, type }: SkillSectionProps) => {
+  const options = { threshold: 0 };
+  const { ref, inView } = useInView(options);
   return (
-    <div className="my-2 border-2 pb-2 border-base3 bg-base1 rounded-lg skill-section-custom shadow-md shadow-black">
+    <div
+      ref={ref}
+      className={`${
+        inView ? 'slide-in-right' : 'slide-off-left'
+      } my-2 border-2 pb-2 border-base3 bg-base1 rounded-lg skill-section-custom shadow-md shadow-black`}
+    >
       <p className="text-primary border-b border-base2 text-left font-semibold py-2 px-4 rounded-t-lg bg-base">
         {label}
       </p>

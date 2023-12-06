@@ -1,6 +1,6 @@
 'use client';
 
-import About from './components/About';
+import About from './components/about/About';
 import Skills from './components/skills/Skills';
 import Portfolio from './components/portfolio/Portfolio';
 import Contact from './components/Contact';

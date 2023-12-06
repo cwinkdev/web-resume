@@ -17,6 +17,7 @@ const MainNavMenu = ({}: MainNavMenuProps) => {
             state.theme === '' ? 'text-cyan-200' : 'text-cyan-500'
           }`}
           sectionId={'about'}
+          componentID={'navButtonAbout'}
         />
         <MainNavButton
           label={'SKILLS'}
@@ -25,6 +26,7 @@ const MainNavMenu = ({}: MainNavMenuProps) => {
             state.theme === '' ? 'text-amber-200' : 'text-amber-500'
           }`}
           sectionId={'skills'}
+          componentID={'navButtonSkills'}
         />
       </div>
       <div className="flex justify-evenly">
@@ -35,6 +37,7 @@ const MainNavMenu = ({}: MainNavMenuProps) => {
             state.theme === '' ? 'text-violet-200' : 'text-violet-500'
           }`}
           sectionId={'portfolio'}
+          componentID={'navButtonPortfolio'}
         />
         <MainNavButton
           label={'CONTACT'}
@@ -43,6 +46,7 @@ const MainNavMenu = ({}: MainNavMenuProps) => {
             state.theme === '' ? 'text-emerald-200' : 'text-emerald-500'
           }`}
           sectionId={'contact'}
+          componentID={'navButtonContact'}
         />
       </div>
     </div>

@@ -1,8 +1,18 @@
+import { useInView } from 'react-intersection-observer';
 import SkillSection from './SkillSection';
 
 const Skills = () => {
+  const options = { threshold: 0 };
+  const { ref, inView } = useInView(options);
+
   return (
-    <section id="skills" className="p-8 pt-20 h-screen w-full text-center">
+    <section
+      ref={ref}
+      id="skills"
+      className={`${
+        inView ? 'slide-in-left' : 'slide-off-right'
+      } p-8 pt-20 h-screen w-full text-center`}
+    >
       <div
         className={`border-secondary min-h-[700px] h-fit bg-base text-baseText justify-evenly flex flex-col rounded-lg border-y py-4 px-6 w-full relative shadow-lg shadow-black`}
       >

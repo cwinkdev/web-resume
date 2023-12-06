@@ -3,7 +3,7 @@
 import { useApp } from '@/app/hooks/useApp';
 import QuickNavButton from './QuickNavButton';
 import { GiEnvelope, GiPerson, GiSkills, GiWoodFrame } from 'react-icons/gi';
-import ThemeSwitcher from '../ThemeSwitcher';
+import ThemeSwitcher from './ThemeSwitcher';
 
 const QuickNavMenu = () => {
   const { state } = useApp();

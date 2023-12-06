@@ -17,15 +17,6 @@
   @import '../styles/themes/theme2.css';
 }
 
-.nav-button {
-  background-color: #292929;
-  box-shadow: 0 0 8px rgb(0, 0, 0); /* Add a shadow for depth */
-}
-.lightMode .nav-button {
-  background-color: #ffffff;
-  box-shadow: 0 5px 6px rgba(0, 0, 0, 0.5); /* Add a shadow for depth */
-}
-
 .main-section {
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
   --tw-gradient-from: #171717 var(--tw-gradient-from-position);
@@ -67,61 +58,11 @@
   animation: blink 1s step-end infinite;
 }
 
-@keyframes dropBounceLeft {
-  0% {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  20% {
-    opacity: 0;
-  }
-  70% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-.dropBounceLeftAnimation {
-  animation: dropBounceLeft 0.5s ease-out forwards;
-}
-
-@keyframes dropBounceRight {
-  0% {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  20% {
-    opacity: 0;
-  }
-  70% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-.dropBounceRightAnimation {
-  animation: dropBounceRight 0.5s ease-out forwards;
-}
-
-@keyframes appear {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-.appearAnimation {
-  animation: appear 0.7s ease-in forwards;
-}
-
 .crawl-container {
   bottom: 0;
   width: 100%;
   transform-origin: 50% 100%;
 }
-
 @keyframes crawl {
   0% {
     transform: translateY(0vh) scaleY(1.5) scaleX(1.5) rotateX(-50deg);
@@ -160,4 +101,63 @@
   background: rgb(44, 44, 44); /* Change the active bullet's background color */
   transform: scale(1.5); /* Make the active bullet larger */
   opacity: 1;
+}
+
+/* OBSERVER ANIMATIONS ################################################## 
+
+*/
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-80%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.slide-in-left {
+  animation: slideInLeft 1s ease-in-out;
+}
+
+@keyframes slideOffLeft {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-80%);
+    opacity: 0;
+  }
+}
+.slide-off-left {
+  animation: slideOffLeft 1s ease-in-out;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(80%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.slide-in-right {
+  animation: slideInRight 1s ease-in-out;
+}
+
+@keyframes slideOffRight {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(80%);
+    opacity: 0;
+  }
+}
+.slide-off-right {
+  animation: slideOffRight 1s ease-in-out;
 }

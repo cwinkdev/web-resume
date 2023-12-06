@@ -1,7 +1,12 @@
 import { useState } from 'react';
-import { useApp } from '../hooks/useApp';
+import { useApp } from '../../hooks/useApp';
+import { GiMoon, GiPartyPopper, GiSun } from 'react-icons/gi';
 
-const themes = ['', 'theme1', 'theme2']; // Array of theme classes
+const themes = [
+  { id: '', icon: <GiMoon />, colors: 'bg-white' },
+  { id: 'theme1', icon: <GiSun />, colors: 'bg-black' },
+  { id: 'theme2', icon: <GiPartyPopper />, colors: 'bg-purple-400' },
+];
 
 interface ThemeSwitcherProps {
   translateX: number;
@@ -16,9 +21,10 @@ const ThemeSwitcher = ({ translateX }: ThemeSwitcherProps) => {
     setThemeIndex(nextThemeIndex);
     setState((prevState) => ({
       ...prevState,
-      theme: themes[themeIndex],
+      theme: themes[nextThemeIndex].id,
+      themeIcon: themes[nextThemeIndex].icon,
     }));
-    changeTheme(themes[themeIndex]);
+    changeTheme(themes[nextThemeIndex].id);
   };
 
   return (
@@ -28,9 +34,9 @@ const ThemeSwitcher = ({ translateX }: ThemeSwitcherProps) => {
     >
       <button
         onClick={cycleTheme}
-        className="rounded-full p-2 border-2 border-gray-300" // Add more styling as needed
+        className="rounded-full p-1 border-2 border-base3" // Add more styling as needed
       >
-        {state.theme}
+        <div className="text-2xl text-primary">{state.themeIcon}</div>
       </button>
     </div>
   );
