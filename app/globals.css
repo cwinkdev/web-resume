@@ -104,7 +104,6 @@
 }
 
 /* OBSERVER ANIMATIONS ################################################## 
-
 */
 
 @keyframes slideInLeft {
@@ -117,6 +116,11 @@
     opacity: 1;
   }
 }
+.slide-in-left {
+  animation: slideInLeft 0.8s ease-in-out;
+}
+
+/* ------------------------------------------------ */
 
 @keyframes slideOffLeft {
   from {
@@ -128,6 +132,11 @@
     opacity: 0;
   }
 }
+.slide-off-left {
+  animation: slideOffLeft 0.8s ease-in-out;
+}
+
+/* ------------------------------------------------ */
 
 @keyframes slideInRight {
   from {
@@ -139,6 +148,11 @@
     opacity: 1;
   }
 }
+.slide-in-right {
+  animation: slideInRight 0.8s ease-in-out;
+}
+
+/* ------------------------------------------------ */
 
 @keyframes slideOffRight {
   from {
@@ -150,19 +164,6 @@
     opacity: 0;
   }
 }
-
-.slide-in-left {
-  animation: slideInLeft 0.8s ease-in-out;
-}
-
-.slide-off-left {
-  animation: slideOffLeft 0.8s ease-in-out;
-}
-
-.slide-in-right {
-  animation: slideInRight 0.8s ease-in-out;
-}
-
 .slide-off-right {
   animation: slideOffRight 0.8s ease-in-out;
 }
