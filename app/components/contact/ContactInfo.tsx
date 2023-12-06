@@ -2,7 +2,6 @@
 
 import { SiGithub } from 'react-icons/si';
 import { GiCloudDownload } from 'react-icons/gi';
-import { useInView } from 'react-intersection-observer';
 
 const ContactInfo = () => {
   return (

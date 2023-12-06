@@ -34,7 +34,7 @@ const ThemeSwitcher = ({ translateX }: ThemeSwitcherProps) => {
     >
       <button
         onClick={cycleTheme}
-        className="rounded-full p-1 border-2 border-base3" // Add more styling as needed
+        className="rounded-full p-1.5 border-2 border-base3" // Add more styling as needed
       >
         <div className="text-2xl text-primary">{state.themeIcon}</div>
       </button>
