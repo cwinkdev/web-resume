@@ -1,11 +1,20 @@
 import { useInView } from 'react-intersection-observer';
 import ContactInfo from './ContactInfo';
 import { useApp } from '@/app/hooks/useApp';
+import { useEffect } from 'react';
 
 const Contact = () => {
   const options = { threshold: 0 };
   const { ref, inView } = useInView(options);
-  const { state } = useApp();
+  const { state, setState } = useApp();
+  useEffect(() => {
+    if (inView) {
+      setState((prevState) => ({
+        ...prevState,
+        currentSection: 'contact',
+      }));
+    }
+  }, [inView, state.currentSection]);
 
   return (
     <section

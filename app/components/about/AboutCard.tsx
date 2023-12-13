@@ -8,7 +8,7 @@ interface AboutCardProps {
 }
 
 const AboutCard = ({ isLongVersion }: AboutCardProps) => {
-  const aboutMeLines = splitIntoLines(aboutMeText, 32);
+  const aboutMeLines = splitIntoLines(aboutMeText, 29);
   const options = { threshold: 0 };
   const { ref, inView } = useInView(options);
   const { state } = useApp();
@@ -74,9 +74,7 @@ const AboutCard = ({ isLongVersion }: AboutCardProps) => {
           </div>
           <div className="flex px-4 mt-6">
             <div className="border-r border-secondary"></div>
-            <p
-              className={`pl-4 text-left text-sm text-baseText font-light duration-300`}
-            >
+            <p className={`pl-4 text-left text-sm text-baseText duration-300`}>
               {aboutMeText}
             </p>
           </div>

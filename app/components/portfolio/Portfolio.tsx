@@ -3,18 +3,26 @@ import 'swiper/swiper-bundle.css';
 import { Pagination } from 'swiper/modules';
 import PortfolioStackSlide from './PortfolioStackSlide';
 import { portfolioSlides as slides } from '@/app/data/portfolioSlides';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useApp } from '@/app/hooks/useApp';
 import { useInView } from 'react-intersection-observer';
 import PortfolioHeader from './PortfolioHeader';
 import PortfolioBlurbs from './PortfolioBlurbs';
 
 const Portfolio = () => {
-  const { state } = useApp();
+  const { state, setState } = useApp();
   const [activeIndex, setActiveIndex] = useState(0);
   const options = { threshold: 0 };
   const { ref, inView } = useInView(options);
 
+  useEffect(() => {
+    if (inView) {
+      setState((prevState) => ({
+        ...prevState,
+        currentSection: 'portfolio',
+      }));
+    }
+  }, [inView, state.currentSection]);
   return (
     <section
       id="portfolio"

@@ -53,7 +53,7 @@ const AboutModeToggle = ({
         <div
           className={`${isLongVersion ? 'right-0' : 'right-20'} ${
             state.theme.id === 'theme1'
-              ? 'bg-cyan-400 bg-opacity-20 border-secondary'
+              ? 'bg-cyan-400 bg-opacity-20 border-base3'
               : state.theme.id === 'theme2'
               ? 'bg-white bg-opacity-10 border-2 border-accent'
               : 'bg-white bg-opacity-10 border-secondary'
