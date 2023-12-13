@@ -62,7 +62,7 @@ export default function Home() {
 
       <section
         id="main"
-        className="flex min-h-screen items-center flex-col font-extralight  px-8 overflow-x-hidden"
+        className="flex min-h-screen items-center flex-col font-extralight px-8 overflow-x-hidden"
       >
         <MainNavMenu />
       </section>

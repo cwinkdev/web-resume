@@ -30,7 +30,7 @@ const ContactInfo = () => {
         <a
           href="/path-to-resume.pdf"
           download
-          className="flex justify-center items-center text-xl"
+          className="flex justify-center items-center text-xl bg-base2 w-fit p-2 px-4 mx-auto rounded-lg border border-base3"
         >
           <GiCloudDownload />
           <p className="ml-2">Download resume</p>
