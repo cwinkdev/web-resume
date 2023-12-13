@@ -45,7 +45,11 @@ export default function Home() {
         <div className="h-14 w-full justify-center flex relative">
           <p
             className={`text-center absolute top-0 h-full text-accent font-mono ${
-              state.theme.id === 'theme1' ? 'text-baseText' : 'text-accent'
+              state.theme.id === 'theme1'
+                ? 'text-baseText'
+                : state.theme.id === ''
+                ? 'text-accent'
+                : 'text-baseText'
             }`}
             style={{ transform: `translateX(${state.offset}px)` }}
           >

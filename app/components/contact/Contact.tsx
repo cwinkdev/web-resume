@@ -24,8 +24,10 @@ const Contact = () => {
         }}
         className={`${
           state.theme.id === 'theme1'
-            ? 'border border-base3'
-            : 'border-y border-secondary'
+            ? 'border border-base3 rounded-sm'
+            : state.theme.id === ''
+            ? 'border-y border-secondary rounded-xl'
+            : 'border-y border-secondary rounded-2xl'
         }  bg-base rounded-lg shadow-md shadow-baseShadow`}
       >
         <ContactInfo />

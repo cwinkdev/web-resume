@@ -21,12 +21,20 @@ const SkillSection = ({ label, type }: SkillSectionProps) => {
       }}
       className={`${inView ? 'slide-in-right' : 'slide-off-left'} ${
         state.theme.id === 'theme1'
-          ? 'border border-base3'
-          : ' border-y border-secondary'
-      } my-2 pb-2 bg-base1 rounded-lg skill-section-custom shadow-md shadow-baseShadow`}
+          ? 'border border-base3 rounded-sm'
+          : state.theme.id === ''
+          ? 'rounded-xl border-y border-secondary'
+          : 'border-y border-secondary rounded-2xl'
+      } my-2 pb-2 bg-base1 skill-section-custom shadow-md shadow-baseShadow`}
     >
       <p
-        className={`bg-base2 text-primary border-b border-base2 text-left font-semibold py-2 px-4 rounded-t-lg`}
+        className={`text-primary border-b border-base2 text-left font-semibold py-2 px-4 ${
+          state.theme.id === 'theme1'
+            ? 'rounded-t-sm bg-base2'
+            : state.theme.id === ''
+            ? 'rounded-t-xl bg-base2'
+            : 'rounded-t-2xl bg-base2'
+        }`}
       >
         {label}
       </p>

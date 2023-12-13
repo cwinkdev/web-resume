@@ -32,7 +32,7 @@ const AboutModeToggle = ({
       <p className="my-auto text-primary">Version:</p>
       <div
         {...handlers}
-        className="w-40 h-6 mx-auto rounded-full flex shadow-md shadow-baseShadow bg-base2text-baseText relative font-light box-border border border-base3"
+        className="w-40 h-6 mx-auto rounded-full flex shadow-md shadow-baseShadow bg-base2 text-baseText relative font-light box-border border border-base3"
       >
         <div
           onClick={() => setIsLongVersion(false)}
@@ -53,9 +53,11 @@ const AboutModeToggle = ({
         <div
           className={`${isLongVersion ? 'right-0' : 'right-20'} ${
             state.theme.id === 'theme1'
-              ? 'bg-cyan-400 bg-opacity-20'
-              : 'bg-white bg-opacity-10'
-          } absolute duration-500 shadow-md shadow-baseShadow h-full w-1/2 border border-secondary rounded-full`}
+              ? 'bg-cyan-400 bg-opacity-20 border-secondary'
+              : state.theme.id === 'theme2'
+              ? 'bg-white bg-opacity-10 border-2 border-accent'
+              : 'bg-white bg-opacity-10 border-secondary'
+          } absolute duration-500 shadow-md shadow-baseShadow h-full w-1/2 border rounded-full`}
         ></div>
       </div>
     </div>

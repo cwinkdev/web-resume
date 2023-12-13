@@ -42,7 +42,13 @@ const MainNavButton = ({
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
-        className={`h-3/4 w-3/4 flex bg-base shadow-md shadow-baseShadow mx-auto border-2 border-base3 p-1.5 rounded-full ${additionalCSS}`}
+        className={`${
+          state.theme.id === 'theme1'
+            ? 'rounded-sm'
+            : state.theme.id === ''
+            ? 'rounded-xl'
+            : 'rounded-full'
+        } h-3/4 w-3/4 flex bg-base shadow-md shadow-baseShadow mx-auto border-2 border-base3 p-1.5 ${additionalCSS}`}
       >
         <div className="m-auto text-7xl">{icon}</div>
       </div>

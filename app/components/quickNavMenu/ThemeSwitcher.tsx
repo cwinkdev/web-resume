@@ -44,10 +44,20 @@ const ThemeSwitcher = ({
 
   return (
     <div style={{ transform: `translateX(${translateX}px)` }}>
-      {showName ? <h2 className="font-semibold mb-2">View mode:</h2> : null}
+      {showName ? (
+        <h2 className="font-semibold mt-6 mb-2">View mode:</h2>
+      ) : null}
       <button
         onClick={cycleTheme}
-        className={`${additionalCSS} ${themes[themeIndex].colors} shadow-md shadow-baseShadow justify-between mx-auto flex p-1.5 border-2 border-base3`}
+        className={`${
+          state.theme.id === 'theme1'
+            ? 'rounded-sm'
+            : state.theme.id === ''
+            ? 'rounded-xl'
+            : 'rounded-full'
+        } ${
+          themes[themeIndex].colors
+        } ${additionalCSS} bg-base shadow-sm shadow-baseShadow justify-between mx-auto flex p-1.5 border-2 border-base3`}
       >
         <div className={`${themes[themeIndex].colors}`}>
           {themes[themeIndex].icon}

@@ -20,7 +20,13 @@ const AboutCard = ({ isLongVersion }: AboutCardProps) => {
           ref={ref}
           className={`${
             inView ? 'slide-in-right' : 'slide-off-left'
-          } mt-4 h-[450px] font-light relative overflow-hidden crawl-container shadow-baseShadow shadow-inner border-y border-secondary rounded-lg`}
+          } mt-4 h-[450px] font-light relative overflow-hidden crawl-container shadow-baseShadow shadow-inner border-y border-secondary ${
+            state.theme.id === 'theme1'
+              ? 'rounded-sm'
+              : state.theme.id === ''
+              ? 'rounded-xl'
+              : 'rounded-lg'
+          }`}
           style={{
             backgroundImage: 'url(./space.jpg)',
             backgroundSize: 'cover',
@@ -53,8 +59,10 @@ const AboutCard = ({ isLongVersion }: AboutCardProps) => {
           }}
           className={`${inView ? 'slide-in-right' : 'slide-off-left'}  ${
             state.theme.id === 'theme1'
-              ? 'border border-base3'
-              : ' border-y border-secondary'
+              ? 'border border-base3 rounded-sm'
+              : state.theme.id === ''
+              ? 'border-y border-secondary rounded-xl'
+              : 'border-y border-secondary rounded-lg'
           } mt-4 h-[450px] flex flex-col font-light relative overflow-y-auto shadow-baseShadow bg-base shadow-md rounded-lg`}
         >
           <div
