@@ -1,7 +1,6 @@
-import { useState } from 'react';
-import { aboutMeText } from '../../data/aboutMe';
-import { splitIntoLines } from '../../utils/splitParagraph';
+import { useSwipeable } from 'react-swipeable';
 import { useInView } from 'react-intersection-observer';
+import { useApp } from '@/app/hooks/useApp';
 
 interface AboutModeToggleProps {
   isLongVersion: boolean;
@@ -14,6 +13,15 @@ const AboutModeToggle = ({
 }: AboutModeToggleProps) => {
   const options = { threshold: 0 };
   const { ref, inView } = useInView(options);
+  const { state } = useApp();
+
+  // Handlers for swipe actions
+  const handlers = useSwipeable({
+    onSwipedLeft: () => setIsLongVersion(false),
+    onSwipedRight: () => setIsLongVersion(true),
+    trackMouse: true,
+  });
+
   return (
     <div
       ref={ref}
@@ -22,7 +30,10 @@ const AboutModeToggle = ({
       } flex w-56 justify-center mx-auto text-center text-sm my-4`}
     >
       <p className="my-auto text-primary">Version:</p>
-      <div className="w-40 h-6 mx-auto rounded-full flex shadow-md shadow-baseShadow bg-base1 text-baseText relative font-light box-border border border-base3">
+      <div
+        {...handlers}
+        className="w-40 h-6 mx-auto rounded-full flex shadow-md shadow-baseShadow bg-base2text-baseText relative font-light box-border border border-base3"
+      >
         <div
           onClick={() => setIsLongVersion(false)}
           className={`${
@@ -40,9 +51,11 @@ const AboutModeToggle = ({
           <p className="m-auto">Long</p>
         </div>
         <div
-          className={`${
-            isLongVersion ? 'right-0' : 'right-20'
-          } absolute duration-500 shadow-md shadow-baseShadow h-full w-1/2 border border-secondary bg-white bg-opacity-10 rounded-full`}
+          className={`${isLongVersion ? 'right-0' : 'right-20'} ${
+            state.theme.id === 'theme1'
+              ? 'bg-cyan-400 bg-opacity-20'
+              : 'bg-white bg-opacity-10'
+          } absolute duration-500 shadow-md shadow-baseShadow h-full w-1/2 border border-secondary rounded-full`}
         ></div>
       </div>
     </div>

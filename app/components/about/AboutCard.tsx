@@ -1,3 +1,4 @@
+import { useApp } from '@/app/hooks/useApp';
 import { aboutMeText } from '../../data/aboutMe';
 import { splitIntoLines } from '../../utils/splitParagraph';
 import { useInView } from 'react-intersection-observer';
@@ -10,6 +11,8 @@ const AboutCard = ({ isLongVersion }: AboutCardProps) => {
   const aboutMeLines = splitIntoLines(aboutMeText, 32);
   const options = { threshold: 0 };
   const { ref, inView } = useInView(options);
+  const { state } = useApp();
+
   return (
     <>
       {isLongVersion ? (
@@ -43,11 +46,17 @@ const AboutCard = ({ isLongVersion }: AboutCardProps) => {
       ) : (
         <div
           ref={ref}
-          className={`${
-            inView ? 'slide-in-right' : 'slide-off-left'
-          } mt-4 h-[450px] flex flex-col font-light relative overflow-y-auto shadow-baseShadow bg-base shadow-md border-y border-secondary rounded-lg`}
+          className={`${inView ? 'slide-in-right' : 'slide-off-left'}  ${
+            state.theme.id === 'theme1'
+              ? 'border border-base3'
+              : ' border-y border-secondary'
+          } mt-4 h-[450px] flex flex-col font-light relative overflow-y-auto shadow-baseShadow bg-base shadow-md rounded-lg`}
         >
-          <div className="bg-base2 text-left mt-4 py-2 shadow-baseShadow shadow-md">
+          <div
+            className={`${
+              state.theme.id === 'theme1' ? 'bg-accent' : 'bg-base2'
+            } text-left mt-4 py-2 border-y border-accent shadow-baseShadow shadow-md`}
+          >
             <h2 className="pl-4 text-2xl font-semibold text-primary">
               CHRISTIAN WINKLER
             </h2>

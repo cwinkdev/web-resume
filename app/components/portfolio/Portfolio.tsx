@@ -14,10 +14,11 @@ const Portfolio = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const options = { threshold: 0 };
   const { ref, inView } = useInView(options);
+
   return (
     <section
       id="portfolio"
-      className={`p-8 pt-20 h-screen ${
+      className={`p-8 pt-20 min-h-fit h-screen ${
         state.theme.id === '' ? 'bg-gradient-to-b' : ''
       } from-transparent via-cyan-950 to-transparent w-full text-center relative`}
     >

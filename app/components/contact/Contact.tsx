@@ -1,19 +1,26 @@
 import { useInView } from 'react-intersection-observer';
 import ContactInfo from './ContactInfo';
+import { useApp } from '@/app/hooks/useApp';
 
 const Contact = () => {
   const options = { threshold: 0 };
   const { ref, inView } = useInView(options);
+  const { state } = useApp();
+
   return (
     <section
       ref={ref}
       id="contact"
       className={`${
         inView ? 'slide-in-right' : 'slide-off-left'
-      } p-8 pt-20 h-screen w-full text-center text-baseText`}
+      } p-8 pt-20 min-h-fit h-screen w-full text-center text-baseText`}
     >
       <div
-        className={`border-secondary bg-base rounded-lg border-y shadow-md shadow-baseShadow`}
+        className={`${
+          state.theme.id === 'theme1'
+            ? 'border border-base2'
+            : 'border-y border-secondary'
+        } bg-base rounded-lg shadow-md shadow-baseShadow`}
       >
         <ContactInfo />
       </div>
