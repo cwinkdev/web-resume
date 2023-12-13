@@ -26,11 +26,11 @@ const QuickNavButton = ({
       style={{ transform: `translateX(${translateX}px)` }}
     >
       <div
-        className={`flex rounded-full h-10 py-1 text-center bg-base2 ${
+        className={`flex rounded-full h-10 py-1 text-center bg-base ${
           state.currentSection === sectionId
-            ? ` opacity-100 scale-110 border-primary`
-            : ' opacity-70 border-base3'
-        } duration-300 text-2xl border-2 p-2 m-auto ${additionalCSS}`}
+            ? ` opacity-70`
+            : ' opacity-100 scale-110 shadow-md shadow-baseShadow'
+        } duration-300 text-2xl border-base3 border p-2 m-auto ${additionalCSS}`}
       >
         <div className="m-auto">{icon}</div>
       </div>

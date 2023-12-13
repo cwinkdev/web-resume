@@ -20,11 +20,11 @@ const AboutCard = ({ isLongVersion }: AboutCardProps) => {
           ref={ref}
           className={`${
             inView ? 'slide-in-right' : 'slide-off-left'
-          } mt-4 h-[450px] font-light relative overflow-hidden crawl-container shadow-baseShadow shadow-inner border-y border-emerald-400 rounded-lg`}
+          } mt-4 h-[450px] font-light relative overflow-hidden crawl-container shadow-baseShadow shadow-inner border-y border-secondary rounded-lg`}
           style={{
-            backgroundImage: 'url(./space.jpg)', // Adjust the path as needed
-            backgroundSize: 'cover', // Cover the entire area
-            backgroundPosition: 'center', // Center the background image
+            backgroundImage: 'url(./space.jpg)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
           }}
         >
           {aboutMeLines.map((line, index) => (
@@ -32,11 +32,11 @@ const AboutCard = ({ isLongVersion }: AboutCardProps) => {
               key={line}
               className="crawl-line text-xl font-bold text-yellow-400"
               style={{
-                opacity: 1 - index * 0.1, // Decrease opacity for each subsequent line
+                opacity: 1 - index * 0.1,
                 transform: `translateY(${index * 10}vh) scale(${
                   1 - index * 0.05
-                })`, // Move up and scale down each line
-                animationDelay: `${index * 2}s`, // Delay each line's animation
+                })`,
+                animationDelay: `${index * 2}s`,
               }}
             >
               {line}
@@ -46,6 +46,11 @@ const AboutCard = ({ isLongVersion }: AboutCardProps) => {
       ) : (
         <div
           ref={ref}
+          style={{
+            backgroundImage:
+              state.theme.id === 'theme1' ? 'url(./abstractCardBG.png)' : '',
+            backgroundPosition: 'center',
+          }}
           className={`${inView ? 'slide-in-right' : 'slide-off-left'}  ${
             state.theme.id === 'theme1'
               ? 'border border-base3'
@@ -53,9 +58,7 @@ const AboutCard = ({ isLongVersion }: AboutCardProps) => {
           } mt-4 h-[450px] flex flex-col font-light relative overflow-y-auto shadow-baseShadow bg-base shadow-md rounded-lg`}
         >
           <div
-            className={`${
-              state.theme.id === 'theme1' ? 'bg-accent' : 'bg-base2'
-            } text-left mt-4 py-2 border-y border-accent shadow-baseShadow shadow-md`}
+            className={`bg-base2 text-left mt-4 py-2 border-y border-accent shadow-baseShadow shadow-md`}
           >
             <h2 className="pl-4 text-2xl font-semibold text-primary">
               CHRISTIAN WINKLER

@@ -17,6 +17,10 @@ export function useApp() {
     e.preventDefault();
     const element = document.getElementById(sectionId);
     if (element) {
+      setState((prevState) => ({
+        ...prevState,
+        currentSection: sectionId,
+      }));
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };

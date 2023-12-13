@@ -18,6 +18,12 @@ export default function Home() {
       className={`relative duration-500 bg-base1 text-baseText overflow-x-hidden`}
     >
       <div
+        style={{
+          backgroundImage:
+            state.theme.id === 'theme1' ? 'url(./abstractCardBG.png)' : '',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
         className={`fixed top-0 w-full z-30 bg-base ${
           state.showQuickNav ? 'h-16' : 'h-24'
         } shadow-md shadow-neutral-00 border-b duration-300 border-neutral-700`}
@@ -38,7 +44,9 @@ export default function Home() {
 
         <div className="h-14 w-full justify-center flex relative">
           <p
-            className={`text-center absolute top-0 h-full text-accent font-mono`}
+            className={`text-center absolute top-0 h-full text-accent font-mono ${
+              state.theme.id === 'theme1' ? 'text-baseText' : 'text-accent'
+            }`}
             style={{ transform: `translateX(${state.offset}px)` }}
           >
             {'> '}

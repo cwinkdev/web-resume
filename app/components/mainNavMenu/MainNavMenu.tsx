@@ -22,7 +22,7 @@ const MainNavMenu = ({}: MainNavMenuProps) => {
         />
       </div>
       <div className="h-[500px] grid grid-rows-2 grid-cols-1">
-        <div className="flex justify-evenly h-1/2">
+        <div className="flex justify-center h-1/2">
           <MainNavButton
             label={'ABOUT'}
             icon={<GiPerson />}
@@ -42,7 +42,7 @@ const MainNavMenu = ({}: MainNavMenuProps) => {
             componentID={'navButtonSkills'}
           />
         </div>
-        <div className="flex justify-evenly h-1/2">
+        <div className="flex justify-center h-1/2">
           <MainNavButton
             label={'PORTFOLIO'}
             icon={<GiWoodFrame />}

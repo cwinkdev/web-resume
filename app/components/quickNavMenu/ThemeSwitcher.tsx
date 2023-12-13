@@ -29,7 +29,7 @@ const ThemeSwitcher = ({
   additionalCSS,
   showName,
 }: ThemeSwitcherProps) => {
-  const { setState, changeTheme } = useApp();
+  const { state, setState, changeTheme } = useApp();
   const [themeIndex, setThemeIndex] = useState(0); // Current theme index
 
   const cycleTheme = () => {
