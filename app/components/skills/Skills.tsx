@@ -20,19 +20,19 @@ const Skills = () => {
       id="skills"
       className={`${
         inView ? 'slide-in-left' : 'slide-off-right'
-      } p-8 pt-20 min-h-fit h-screen w-full text-center`}
+      } p-8 pt-20 h-fit min-h-screen w-full text-center lg:w-1/2 lg:m-auto`}
     >
       <div
         ref={ref}
         className={`${
-          state.theme.id === 'theme1'
-            ? 'border-y border-base3'
-            : 'shadow-md shadow-baseShadow'
-        } min-h-[700px] h-fit bg-base text-baseText justify-evenly flex flex-col rounded-lg py-4 px-6 w-full relative `}
+          state.theme.id === 'theme1' ? '' : ''
+        } min-h-[700px] lg:min-h-fit h-fit text-baseText text-lg justify-evenly rounded-lg py-4 w-full relative `}
       >
-        <SkillSection label={'Core Skills'} type={'core'} />
-        <SkillSection label={'Broad Skills'} type={'broad'} />
-        <SkillSection label={'Intangibles'} type={'intangible'} />
+        <div className="flex flex-col lg:flex-row ">
+          <SkillSection label={'Core Skills'} type={'core'} />
+          <SkillSection label={'Broad Proficiencies'} type={'broad'} />
+          <SkillSection label={'Intangibles'} type={'intangible'} />
+        </div>
       </div>
     </section>
   );

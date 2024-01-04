@@ -23,7 +23,7 @@ const About = () => {
     <section
       id="about"
       ref={ref}
-      className="pt-20 p-8 min-h-fit h-screen w-full text-center"
+      className="pt-20 p-8 min-h-fit h-screen w-full text-center lg:w-1/2 lg:mx-auto"
     >
       <div
         className={`${

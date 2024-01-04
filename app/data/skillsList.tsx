@@ -1,78 +1,111 @@
+import {
+  SiTypescript,
+  SiNextdotjs,
+  SiReact,
+  SiFirebase,
+  SiCss3,
+  SiTailwindcss,
+  SiGithub,
+} from 'react-icons/si';
+import {
+  FaDesktop,
+  FaLightbulb,
+  FaHeart,
+  FaPuzzlePiece,
+  FaHandshake,
+} from 'react-icons/fa';
+import { MdDevices } from 'react-icons/md';
+import { GiMeshNetwork, GiVanDammeSplit } from 'react-icons/gi';
+
 export const skillsList = [
   {
     key: 'React',
-    additionalCSS: ' text-gray-100',
+    icon: <SiReact />,
+    additionalCSS: 'w-32 text-cyan-400',
     type: 'core',
   },
   {
     key: 'Next.js',
-    additionalCSS: ' text-gray-100',
+    icon: <SiNextdotjs />,
+    additionalCSS: 'w-32 text-baseText',
     type: 'core',
   },
   {
     key: 'Typescript',
-    additionalCSS: ' text-gray-100',
+    icon: <SiTypescript />,
+    additionalCSS: 'w-32 text-blue-500',
     type: 'core',
   },
   {
-    key: 'NoSQL',
-    additionalCSS: ' text-gray-100',
+    key: 'Tailwind',
+    icon: <SiTailwindcss />,
+    additionalCSS: 'w-32 text-cyan-500',
     type: 'core',
   },
   {
     key: 'API Integration',
-    additionalCSS: ' text-gray-100',
+    icon: <GiMeshNetwork />,
+    additionalCSS: 'w-fit px-4 text-amber-400',
     type: 'core',
   },
   {
     key: 'Front End',
-    additionalCSS: 'font-light text-gray-200',
+    icon: <FaDesktop />,
+    additionalCSS: 'w-32 text-green-300',
     type: 'broad',
   },
   {
     key: 'CSS',
-    additionalCSS: 'font-light text-gray-200',
+    icon: <SiCss3 />,
+    additionalCSS: 'w-32 text-blue-500',
     type: 'broad',
   },
   {
-    key: 'Tailwind',
-    additionalCSS: 'font-light text-gray-200',
-    type: 'broad',
-  },
-  {
-    key: 'Responsive UI/UX',
-    additionalCSS: 'font-light text-gray-200',
+    key: 'NoSQL',
+    icon: <SiFirebase />,
+    additionalCSS: 'w-32 text-yellow-200',
     type: 'broad',
   },
   {
     key: 'GitHub',
-    additionalCSS: 'font-light text-gray-200',
+    icon: <SiGithub />,
+    additionalCSS: 'w-32 text-purple-600',
     type: 'broad',
   },
-
+  {
+    key: 'Responsive UI/UX',
+    icon: <MdDevices />,
+    additionalCSS: 'w-fit px-4 text-baseText',
+    type: 'broad',
+  },
   {
     key: 'Creative',
-    additionalCSS: 'text-sm font-light text-gray-300',
+    icon: <FaLightbulb />,
+    additionalCSS: 'w-32 text-yellow-300',
     type: 'intangible',
   },
   {
     key: 'Passionate',
-    additionalCSS: 'text-sm font-light text-gray-300',
-    type: 'intangible',
-  },
-  {
-    key: 'Problem Solving',
-    additionalCSS: 'text-sm font-light text-gray-300',
+    icon: <FaHeart />,
+    additionalCSS: 'w-32 text-red-300',
     type: 'intangible',
   },
   {
     key: 'Agreeable',
-    additionalCSS: 'text-sm font-light text-gray-300',
+    icon: <FaHandshake />,
+    additionalCSS: 'w-32 text-lime-300',
     type: 'intangible',
   },
   {
     key: 'Flexible',
-    additionalCSS: 'text-sm font-light text-gray-300',
+    icon: <GiVanDammeSplit />,
+    additionalCSS: 'w-32 text-violet-300',
+    type: 'intangible',
+  },
+  {
+    key: 'Problem Solving',
+    icon: <FaPuzzlePiece />,
+    additionalCSS: 'w-fit px-4 text-blue-300',
     type: 'intangible',
   },
 ];

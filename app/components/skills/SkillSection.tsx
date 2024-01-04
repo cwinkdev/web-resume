@@ -23,30 +23,30 @@ const SkillSection = ({ label, type }: SkillSectionProps) => {
         state.theme.id === 'theme1'
           ? 'border border-base3 rounded-sm'
           : state.theme.id === ''
-          ? 'rounded-xl border-y border-secondary'
-          : 'border-y border-secondary rounded-2xl'
-      } my-2 pb-2 bg-base1 skill-section-custom shadow-md shadow-baseShadow`}
+          ? 'rounded-xl border-t border-secondary'
+          : 'border-t border-secondary rounded-2xl'
+      } my-2 pb-2 bg-base bg-gradient-radial from-base1 to-base skill-section-custom shadow-md shadow-baseShadow lg:w-1/3 lg:m-2`}
     >
       <p
-        className={`text-primary border-b border-base2 text-left font-semibold py-2 px-4 ${
+        className={`text-baseText border-b border-base2 bg-base text-center font-semibold py-4 ${
           state.theme.id === 'theme1'
-            ? 'rounded-t-sm bg-base2'
+            ? 'rounded-t-sm'
             : state.theme.id === ''
-            ? 'rounded-t-xl bg-base2'
-            : 'rounded-t-2xl bg-base2'
+            ? 'rounded-t-xl'
+            : 'rounded-t-2xl'
         }`}
       >
         {label}
       </p>
-      <ul className="">
+      <ul className="w-full mx-auto flex flex-wrap items-center justify-evenly pb-2 pt-4">
         {skillsList.map((skill) =>
           skill.type === type ? (
             <li
               key={skill.key}
-              className={`${skill.additionalCSS} my-1.5 flex px-6`}
+              className={`${skill.additionalCSS} flex flex-col bg-base border border-white border-opacity-10 rounded-lg px-4 items-center justify-center m-1 py-4`}
             >
-              <div className="mr-4 w-1 h-1 my-auto bg-secondary"></div>
-              <p className="text-baseText">{skill.key}</p>
+              <div className="text-5xl">{skill.icon}</div>
+              <p className="text-baseText font-bold mt-2">{skill.key}</p>
             </li>
           ) : null,
         )}

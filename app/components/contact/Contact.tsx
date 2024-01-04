@@ -22,7 +22,7 @@ const Contact = () => {
       id="contact"
       className={`${
         inView ? 'slide-in-right' : 'slide-off-left'
-      }  p-8 pt-20 min-h-fit h-screen w-full text-center text-baseText`}
+      }  p-8 pt-20 min-h-fit h-screen w-full text-center text-baseText lg:w-1/2 lg:mx-auto`}
     >
       <div
         style={{
