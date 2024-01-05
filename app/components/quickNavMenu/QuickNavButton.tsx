@@ -26,7 +26,7 @@ const QuickNavButton = ({
       style={{ transform: `translateX(${translateX}px)` }}
     >
       <div
-        className={`flex h-10 py-1 text-center bg-base ${
+        className={`flex h-10 lg:h-16 lg:w-16 py-1 text-center bg-base ${
           state.currentSection === sectionId
             ? ` opacity-70`
             : ' opacity-100 scale-110 shadow-md shadow-baseShadow'

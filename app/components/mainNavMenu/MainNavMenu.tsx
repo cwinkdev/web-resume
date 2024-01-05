@@ -18,7 +18,7 @@ const MainNavMenu = ({}: MainNavMenuProps) => {
       >
         <ThemeSwitcher additionalCSS="text-4xl w-64 px-3" showName={true} />
       </div>
-      <div className="h-[400px] grid grid-rows-2 grid-cols-1">
+      <div className="h-[400px] grid grid-rows-2 grid-cols-1 lg:flex lg:mx-auto">
         <div className="flex justify-center h-1/2">
           <MainNavButton
             label={'ABOUT'}

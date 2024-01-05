@@ -3,37 +3,28 @@ import 'swiper/swiper-bundle.css';
 import { Pagination } from 'swiper/modules';
 import PortfolioStackSlide from './PortfolioStackSlide';
 import { portfolioSlides as slides } from '@/app/data/portfolioSlides';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useApp } from '@/app/hooks/useApp';
-import { useInView } from 'react-intersection-observer';
 import PortfolioHeader from './PortfolioHeader';
 import PortfolioBlurbs from './PortfolioBlurbs';
 
 const Portfolio = () => {
-  const { state, setState } = useApp();
+  const { state } = useApp();
   const [activeIndex, setActiveIndex] = useState(0);
-  const options = { threshold: 0 };
-  const { ref, inView } = useInView(options);
 
-  useEffect(() => {
-    if (inView) {
-      setState((prevState) => ({
-        ...prevState,
-        currentSection: 'portfolio',
-      }));
-    }
-  }, [inView, state.currentSection]);
   return (
     <section
-      id="portfolio"
-      className={`p-8 pt-20 min-h-fit h-screen ${
+      className={`p-8 pt-20 min-h-screen h-screen ${
         state.theme.id === '' ? 'bg-gradient-to-b' : ''
       } from-transparent via-cyan-950 to-transparent w-full text-center relative lg:w-1/2 lg:mx-auto`}
     >
       <PortfolioHeader />
       <div
-        ref={ref}
-        className={`${inView ? 'slide-in-right' : 'slide-off-left'} `}
+        className={`${
+          state.currentSection === 'portfolio'
+            ? 'slide-in-right'
+            : 'slide-off-left'
+        } `}
       >
         <Swiper
           spaceBetween={0}

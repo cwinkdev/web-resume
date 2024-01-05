@@ -9,11 +9,14 @@ const QuickNavMenu = () => {
   const { state } = useApp();
 
   const calculateTranslateX = (buttonIndex: number) => {
-    const startingPoint = 250;
+    const startingPoint = 100;
     const scrollYPosition = Math.max(state.offset - startingPoint, 0);
 
     // The initial negative offset so that buttons start off-screen
-    const initialXOffset = -500 * (buttonIndex + 1);
+    const initialXOffset =
+      window.innerWidth > 640
+        ? -700 * (buttonIndex + 1)
+        : -700 * (buttonIndex + 1);
 
     // Calculate the translation needed based on scroll position
     let translateX = initialXOffset + scrollYPosition;
@@ -25,7 +28,9 @@ const QuickNavMenu = () => {
   };
 
   return (
-    <div className={`flex justify-evenly w-full mx-auto absolute top-0 p-3`}>
+    <div
+      className={`flex lg:flex-col lg:h-screen justify-evenly w-full lg:w-28 mx-auto absolute top-0 p-3`}
+    >
       <ThemeSwitcher
         translateX={calculateTranslateX(0)}
         additionalCSS="text-2xl rounded-full"

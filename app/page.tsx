@@ -8,10 +8,65 @@ import QuickNavMenu from './components/quickNavMenu/QuickNavMenu';
 import { useApp } from './hooks/useApp';
 import Link from 'next/link';
 import MainNavMenu from './components/mainNavMenu/MainNavMenu';
+import { useEffect, useRef } from 'react';
 
 export default function Home() {
-  const { state, handleClick, typedText } = useApp();
+  const { state, setState, handleClick, typedText } = useApp();
+  const aboutRef = useRef(null);
+  const skillsRef = useRef(null);
+  const portfolioRef = useRef(null);
+  const contactRef = useRef(null);
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            switch (entry.target.id) {
+              case 'about':
+                console.log('a');
+                setState((prevState) => ({
+                  ...prevState,
+                  currentSection: 'about',
+                }));
+                break;
+              case 'skills':
+                console.log('s');
+                setState((prevState) => ({
+                  ...prevState,
+                  currentSection: 'skills',
+                }));
+                break;
+              case 'portfolio':
+                console.log('p');
+                setState((prevState) => ({
+                  ...prevState,
+                  currentSection: 'portfolio',
+                }));
+                break;
+              case 'contact':
+                console.log('c');
+                setState((prevState) => ({
+                  ...prevState,
+                  currentSection: 'contact',
+                }));
+                break;
+              default:
+                break;
+            }
+          }
+        });
+      },
+      { threshold: 0.2 },
+    );
+
+    if (aboutRef.current) observer.observe(aboutRef.current);
+    if (skillsRef.current) observer.observe(skillsRef.current);
+    if (portfolioRef.current) observer.observe(portfolioRef.current);
+    if (contactRef.current) observer.observe(contactRef.current);
+
+    return () => observer.disconnect();
+  }, []);
   return (
     <div
       id="top"
@@ -25,13 +80,13 @@ export default function Home() {
           backgroundPosition: 'center',
         }}
         className={`fixed top-0 w-full z-30 bg-base ${
-          state.showQuickNav ? 'h-16' : 'h-24'
+          state.showQuickNav ? 'lg:h-0 h-16' : 'h-24'
         } shadow-md shadow-neutral-00 border-b duration-300 border-neutral-700`}
       >
         <Link
           href={`#top`}
           onClick={(e) => handleClick(e, 'top')}
-          className=" text-center text-primary font-mono h-14 flex"
+          className="text-center text-primary font-mono h-14 flex"
         >
           <p
             className="text-2xl m-auto"
@@ -62,14 +117,22 @@ export default function Home() {
 
       <section
         id="main"
-        className="flex min-h-screen items-center flex-col font-extralight px-8 overflow-x-hidden lg:w-1/2 lg:mx-auto"
+        className="flex min-h-screen items-center flex-col font-extralight px-8 overflow-x-hidden lg:w-3/4 lg:mx-auto"
       >
         <MainNavMenu />
       </section>
-      <About />
-      <Skills />
-      <Portfolio />
-      <Contact />
+      <div id="about" ref={aboutRef}>
+        <About />
+      </div>
+      <div id="skills" ref={skillsRef}>
+        <Skills />
+      </div>
+      <div id="portfolio" ref={portfolioRef}>
+        <Portfolio />
+      </div>
+      <div id="contact" ref={contactRef}>
+        <Contact />
+      </div>
     </div>
   );
 }

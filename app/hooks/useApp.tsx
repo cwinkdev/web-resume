@@ -27,8 +27,11 @@ export function useApp() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const maxScroll = 1000; // Maximum scroll value where the text is fully off-screen
-      const newPos = Math.min(window.scrollY, maxScroll);
+      const maxScroll = window.innerWidth > 640 ? 1700 : 1000;
+      const newPos = Math.min(
+        window.innerWidth > 640 ? window.scrollY * 1.5 : window.scrollY,
+        maxScroll,
+      );
       setState((prevState) => ({
         ...prevState,
         offset: newPos,
@@ -53,13 +56,24 @@ export function useApp() {
   }, [typedText, fullText]);
 
   useEffect(() => {
-    if (state.offset > 250) {
+    if (state.offset > 1100 && window.innerWidth > 640) {
       setTypedText('');
       setState((prevState) => ({
         ...prevState,
         showQuickNav: true,
       }));
-    } else if (state.offset <= 250) {
+    } else if (state.offset > 100 && window.innerWidth <= 640) {
+      setTypedText('');
+      setState((prevState) => ({
+        ...prevState,
+        showQuickNav: true,
+      }));
+    } else if (state.offset <= 1100 && window.innerWidth > 640) {
+      setState((prevState) => ({
+        ...prevState,
+        showQuickNav: false,
+      }));
+    } else if (state.offset <= 100 && window.innerWidth <= 640) {
       setState((prevState) => ({
         ...prevState,
         showQuickNav: false,
