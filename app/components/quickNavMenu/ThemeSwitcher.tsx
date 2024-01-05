@@ -14,7 +14,7 @@ const themes = [
     id: 'theme2',
     name: 'Vibrant Fun',
     icon: <GiPartyPopper />,
-    colors: 'text-purple-700',
+    colors: 'text-yellow-200',
   },
 ];
 
@@ -55,11 +55,11 @@ const ThemeSwitcher = ({
             : 'rounded-full'
         } ${
           themes[themeIndex].colors
-        } ${additionalCSS} bg-base shadow-sm shadow-baseShadow justify-between mx-auto flex p-1.5 border-2 border-base3`}
+        } ${additionalCSS} bg-base2 shadow-sm shadow-baseShadow justify-between mx-auto flex p-1.5 border-2 border-base3`}
       >
         <div className={`${themes[themeIndex].colors}`}>{state.theme.icon}</div>
         {showName ? (
-          <p className={`text-baseText text-lg font-normal m-auto px-3`}>
+          <p className={`text-baseText text-lg font-semibold m-auto px-3`}>
             {themes[themeIndex].name}
           </p>
         ) : null}

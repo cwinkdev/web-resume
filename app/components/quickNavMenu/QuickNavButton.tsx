@@ -28,11 +28,11 @@ const QuickNavButton = ({
       <div
         className={`flex h-10 lg:h-16 lg:w-16 py-1 text-center bg-base ${
           state.currentSection === sectionId
-            ? ` opacity-70`
+            ? ` opacity-80`
             : ' opacity-100 scale-110 shadow-md shadow-baseShadow'
         } ${
           state.theme.id === 'theme1' ? 'rounded-sm' : 'rounded-full'
-        } duration-300 text-2xl border-base3 border p-2 m-auto ${additionalCSS}`}
+        } duration-300 text-2xl border-base3 border-2 p-2 m-auto ${additionalCSS}`}
       >
         <div className="m-auto">{icon}</div>
       </div>
