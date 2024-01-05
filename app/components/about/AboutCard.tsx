@@ -19,7 +19,7 @@ const AboutCard = ({ isLongVersion }: AboutCardProps) => {
         <div
           ref={ref}
           className={`${
-            inView ? 'slide-in-right' : 'slide-off-left'
+            inView ? 'slide-in-right' : 'disappear'
           } mt-4 h-[450px] font-light relative overflow-hidden crawl-container shadow-baseShadow shadow-inner border-y border-secondary ${
             state.theme.id === 'theme1'
               ? 'rounded-sm'
@@ -58,7 +58,7 @@ const AboutCard = ({ isLongVersion }: AboutCardProps) => {
             backgroundPosition: 'center',
             backgroundSize: 'cover',
           }}
-          className={`${inView ? 'slide-in-right' : 'slide-off-left'}  ${
+          className={`${inView ? 'slide-in-right' : 'disappear'}  ${
             state.theme.id === 'theme1'
               ? 'border border-base3 rounded-sm'
               : state.theme.id === ''

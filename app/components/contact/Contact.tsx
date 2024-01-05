@@ -7,7 +7,7 @@ const Contact = () => {
   return (
     <section
       className={`${
-        state.currentSection === 'contact' ? 'slide-in-right' : 'slide-off-left'
+        state.currentSection === 'contact' ? 'slide-in-right' : 'disappear'
       }  p-8 pt-20 min-h-screen h-screen w-full text-center text-baseText lg:w-1/2 lg:mx-auto my-24`}
     >
       <div

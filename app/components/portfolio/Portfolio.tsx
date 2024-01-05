@@ -21,9 +21,7 @@ const Portfolio = () => {
       <PortfolioHeader />
       <div
         className={`${
-          state.currentSection === 'portfolio'
-            ? 'slide-in-right'
-            : 'slide-off-left'
+          state.currentSection === 'portfolio' ? 'slide-in-right' : 'disappear'
         } `}
       >
         <Swiper

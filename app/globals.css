@@ -123,22 +123,6 @@
 
 /* ------------------------------------------------ */
 
-@keyframes slideOffLeft {
-  from {
-    transform: translateX(0);
-    opacity: 1;
-  }
-  to {
-    transform: translateX(-80%);
-    opacity: 0;
-  }
-}
-.slide-off-left {
-  animation: slideOffLeft 0.8s ease-in-out;
-}
-
-/* ------------------------------------------------ */
-
 @keyframes slideInRight {
   from {
     transform: translateX(80%);
@@ -155,16 +139,14 @@
 
 /* ------------------------------------------------ */
 
-@keyframes slideOffRight {
+@keyframes disappear {
   from {
-    transform: translateX(0);
     opacity: 1;
   }
   to {
-    transform: translateX(80%);
     opacity: 0;
   }
 }
-.slide-off-right {
-  animation: slideOffRight 0.8s ease-in-out;
+.disappear {
+  animation: disappear 0.8s ease-in-out;
 }

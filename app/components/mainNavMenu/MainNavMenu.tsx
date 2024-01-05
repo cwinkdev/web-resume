@@ -14,7 +14,7 @@ const MainNavMenu = ({}: MainNavMenuProps) => {
     <div className="w-full flex flex-col text-center h-full my-auto">
       <div
         ref={ref}
-        className={`w-full ${inView ? 'slide-in-left' : 'slide-off-right'} `}
+        className={`w-full ${inView ? 'slide-in-left' : 'disappear'} `}
       >
         <ThemeSwitcher additionalCSS="text-4xl w-64 px-3" showName={true} />
       </div>

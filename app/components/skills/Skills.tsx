@@ -7,7 +7,7 @@ const Skills = () => {
   return (
     <section
       className={`${
-        state.currentSection === 'skills' ? 'slide-in-left' : 'slide-off-right'
+        state.currentSection === 'skills' ? 'slide-in-left' : 'disappear'
       } p-8 pt-20 lg:pt-0 h-fit min-h-screen w-full text-center flex items-center lg:w-3/4 lg:m-auto`}
     >
       <div

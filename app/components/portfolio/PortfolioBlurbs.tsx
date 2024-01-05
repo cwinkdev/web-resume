@@ -12,10 +12,7 @@ const PortfolioBlurbs = ({ activeIndex, slides }: PortfolioBlurbsProps) => {
   const options = { threshold: 0 };
   const { ref, inView } = useInView(options);
   return (
-    <div
-      ref={ref}
-      className={`${inView ? 'slide-in-left' : 'slide-off-right'} mt-4`}
-    >
+    <div ref={ref} className={`${inView ? 'slide-in-left' : 'disappear'} mt-4`}>
       <p
         className={`${
           state.theme.id === 'theme1'

@@ -19,7 +19,7 @@ const SkillSection = ({ label, type }: SkillSectionProps) => {
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
-      className={`${inView ? 'slide-in-right' : 'slide-off-left'} ${
+      className={`${inView ? 'slide-in-right' : 'disappear'} ${
         state.theme.id === 'theme1'
           ? 'border border-base3 rounded-sm bg-gradient-radial from-base2 to-base1'
           : state.theme.id === ''

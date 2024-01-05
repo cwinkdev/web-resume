@@ -9,10 +9,7 @@ const PortfolioHeader = () => {
   const options = { threshold: 0 };
   const { ref, inView } = useInView(options);
   return (
-    <div
-      ref={ref}
-      className={`${inView ? 'slide-in-left' : 'slide-off-right'} `}
-    >
+    <div ref={ref} className={`${inView ? 'slide-in-left' : 'disappear'} `}>
       <h2
         className={`${
           state.theme.id === 'theme1'

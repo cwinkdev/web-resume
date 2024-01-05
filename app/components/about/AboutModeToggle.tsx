@@ -26,7 +26,7 @@ const AboutModeToggle = ({
     <div
       ref={ref}
       className={`${
-        inView ? 'slide-in-left' : 'slide-off-right'
+        inView ? 'slide-in-left' : 'disappear'
       } flex w-56 justify-center mx-auto text-center text-sm my-4`}
     >
       <p className="my-auto text-primary">Version:</p>

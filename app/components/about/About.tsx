@@ -11,7 +11,7 @@ const About = () => {
     <section className="pt-32 p-8 min-h-fit h-screen w-full text-center lg:w-1/2 lg:mx-auto">
       <div
         className={`${
-          state.currentSection === 'about' ? 'slide-in-right' : 'slide-off-left'
+          state.currentSection === 'about' ? 'slide-in-right' : 'disappear'
         } border-2 border-base3 rounded-full shadow-md shadow-baseShadow h-40 bg-base2 w-40 mx-auto my-4`}
       ></div>
       <AboutModeToggle
