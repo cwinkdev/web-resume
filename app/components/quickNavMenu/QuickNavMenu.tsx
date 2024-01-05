@@ -4,24 +4,24 @@ import { useApp } from '@/app/hooks/useApp';
 import QuickNavButton from './QuickNavButton';
 import { GiEnvelope, GiPerson, GiSkills, GiWoodFrame } from 'react-icons/gi';
 import ThemeSwitcher from './ThemeSwitcher';
+import { useEffect, useState } from 'react';
 
 const QuickNavMenu = () => {
   const { state } = useApp();
+  const [initialXOffset, setInitialXOffset] = useState<number>(0);
+
+  useEffect(() => {
+    // Calculate initialXOffset when component mounts
+    const xOffset = window.innerWidth > 640 ? -700 : -700; // Adjust your logic as needed
+    setInitialXOffset(xOffset);
+  }, []);
 
   const calculateTranslateX = (buttonIndex: number) => {
     const startingPoint = 100;
     const scrollYPosition = Math.max(state.offset - startingPoint, 0);
 
-    // The initial negative offset so that buttons start off-screen
-    const initialXOffset =
-      window.innerWidth > 640
-        ? -700 * (buttonIndex + 1)
-        : -700 * (buttonIndex + 1);
-
-    // Calculate the translation needed based on scroll position
-    let translateX = initialXOffset + scrollYPosition;
-
-    // Ensure that the translateX doesn't go beyond the initial position
+    // Use initialXOffset from state
+    let translateX = initialXOffset * (buttonIndex + 1) + scrollYPosition;
     translateX = Math.min(translateX, 0);
 
     return translateX;
