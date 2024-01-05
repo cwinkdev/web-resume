@@ -9,10 +9,13 @@ interface PortfolioBlurbsProps {
 }
 const PortfolioBlurbs = ({ activeIndex, slides }: PortfolioBlurbsProps) => {
   const { state } = useApp();
-  const options = { threshold: 0 };
-  const { ref, inView } = useInView(options);
+
   return (
-    <div ref={ref} className={`${inView ? 'slide-in-left' : 'disappear'} mt-4`}>
+    <div
+      className={`${
+        state.currentSection === 'portfolio' ? 'slide-in-left' : 'disappear'
+      } mt-4`}
+    >
       <p
         className={`${
           state.theme.id === 'theme1'
