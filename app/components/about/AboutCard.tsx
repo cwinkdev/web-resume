@@ -56,6 +56,7 @@ const AboutCard = ({ isLongVersion }: AboutCardProps) => {
             backgroundImage:
               state.theme.id === 'theme1' ? 'url(./abstractCardBG.png)' : '',
             backgroundPosition: 'center',
+            backgroundSize: 'cover',
           }}
           className={`${inView ? 'slide-in-right' : 'slide-off-left'}  ${
             state.theme.id === 'theme1'
@@ -63,7 +64,7 @@ const AboutCard = ({ isLongVersion }: AboutCardProps) => {
               : state.theme.id === ''
               ? 'border-y border-secondary rounded-xl'
               : 'border-y border-secondary rounded-lg'
-          } mt-4 h-[450px] flex flex-col font-light relative overflow-y-auto shadow-baseShadow bg-base shadow-md rounded-lg`}
+          } mt-4 h-[450px] lg:h-fit flex flex-col font-light relative overflow-y-auto shadow-baseShadow bg-base shadow-md rounded-lg`}
         >
           <div
             className={`bg-base2 text-left mt-4 py-2 border-y border-accent shadow-baseShadow shadow-md`}
@@ -72,9 +73,11 @@ const AboutCard = ({ isLongVersion }: AboutCardProps) => {
               CHRISTIAN WINKLER
             </h2>
           </div>
-          <div className="flex px-4 mt-6">
+          <div className="flex px-4 mt-6 lg:mt-0 lg:p-8">
             <div className="border-r border-secondary"></div>
-            <p className={`pl-4 text-left text-sm text-baseText duration-300`}>
+            <p
+              className={`pl-4 text-left lg:text-lg text-sm text-baseText duration-300`}
+            >
               {aboutMeText}
             </p>
           </div>

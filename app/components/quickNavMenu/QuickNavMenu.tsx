@@ -29,7 +29,8 @@ const QuickNavMenu = () => {
 
   return (
     <div
-      className={`flex lg:flex-col lg:h-screen justify-evenly w-full lg:w-28 mx-auto absolute top-0 p-3`}
+      style={{ transform: `translateX(${calculateTranslateX(0)}px)` }}
+      className={`flex lg:flex-col lg:h-screen justify-evenly w-full lg:w-28 mx-auto lg:bg-base lg:bg-opacity-10 absolute top-0 p-3`}
     >
       <ThemeSwitcher
         translateX={calculateTranslateX(0)}

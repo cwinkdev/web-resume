@@ -27,7 +27,7 @@ export function useApp() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const maxScroll = window.innerWidth > 640 ? 1700 : 1000;
+      const maxScroll = window.innerWidth > 640 ? 800 : 1000;
       const newPos = Math.min(
         window.innerWidth > 640 ? window.scrollY * 1.5 : window.scrollY,
         maxScroll,
@@ -56,7 +56,7 @@ export function useApp() {
   }, [typedText, fullText]);
 
   useEffect(() => {
-    if (state.offset > 1100 && window.innerWidth > 640) {
+    if (state.offset > 700 && window.innerWidth > 640) {
       setTypedText('');
       setState((prevState) => ({
         ...prevState,
@@ -68,7 +68,7 @@ export function useApp() {
         ...prevState,
         showQuickNav: true,
       }));
-    } else if (state.offset <= 1100 && window.innerWidth > 640) {
+    } else if (state.offset <= 700 && window.innerWidth > 640) {
       setState((prevState) => ({
         ...prevState,
         showQuickNav: false,
