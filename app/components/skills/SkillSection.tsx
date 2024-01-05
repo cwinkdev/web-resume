@@ -21,11 +21,11 @@ const SkillSection = ({ label, type }: SkillSectionProps) => {
       }}
       className={`${inView ? 'slide-in-right' : 'slide-off-left'} ${
         state.theme.id === 'theme1'
-          ? 'border border-base3 rounded-sm'
+          ? 'border border-base3 rounded-sm bg-gradient-radial from-base2 to-base1'
           : state.theme.id === ''
-          ? 'rounded-xl border-t border-secondary'
-          : 'border-t border-secondary rounded-2xl'
-      } my-2 pb-2 bg-gradient-radial from-base2 to-base1 skill-section-custom shadow-md shadow-baseShadow lg:w-1/3 lg:m-2`}
+          ? 'rounded-xl border-t border-secondary bg-gradient-radial from-base2 to-base1'
+          : 'border-t border-secondary rounded-2xl bg-base2'
+      } my-2 pb-2  skill-section-custom shadow-md shadow-baseShadow lg:w-1/3 lg:m-2`}
     >
       <p
         className={`text-primary text-xl border-b border-base2 bg-base shadow-baseShadow shadow-sm text-center font-semibold py-4 ${
@@ -43,7 +43,7 @@ const SkillSection = ({ label, type }: SkillSectionProps) => {
           skill.type === type ? (
             <li
               key={skill.key}
-              className={`${skill.additionalCSS} flex flex-col bg-base border border-base2 shadow-baseShadow0 shadow-sm rounded-lg px-4 items-center justify-center m-1 py-4`}
+              className={`${skill.additionalCSS} flex flex-col bg-base1 border border-base2 shadow-baseShadow0 shadow-sm rounded-lg px-4 items-center justify-center m-1 py-4`}
             >
               <div className="text-5xl">{skill.icon}</div>
               <p className="text-baseText font-bold mt-2">{skill.key}</p>
