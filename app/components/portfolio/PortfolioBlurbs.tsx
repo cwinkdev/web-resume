@@ -11,11 +11,7 @@ const PortfolioBlurbs = ({ activeIndex, slides }: PortfolioBlurbsProps) => {
   const { state } = useApp();
 
   return (
-    <div
-      className={`${
-        state.currentSection === 'portfolio' ? 'slide-in-left' : 'disappear'
-      } mt-4`}
-    >
+    <div className={`mt-4`}>
       <p
         className={`${
           state.theme.id === 'theme1'

@@ -7,11 +7,7 @@ const PortfolioHeader = () => {
   const { state } = useApp();
 
   return (
-    <div
-      className={`${
-        state.currentSection === 'portfolio' ? 'slide-in-left' : 'disappear'
-      } `}
-    >
+    <div>
       <h2
         className={`${
           state.theme.id === 'theme1'
