@@ -20,7 +20,7 @@ const Portfolio = () => {
     >
       <div
         className={`${
-          state.currentSection === 'portfolio' ? 'slide-in-right' : 'disappear'
+          state.currentSection === 'portfolio' ? 'slide-in-right' : ''
         } `}
       >
         <PortfolioHeader />

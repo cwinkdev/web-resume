@@ -30,7 +30,7 @@ const MainNavButton = ({
       href={`#${sectionId}`}
       onClick={(e) => handleClick(e, sectionId)}
       className={`${
-        inView ? 'slide-in-left' : 'disappear'
+        inView ? 'slide-in-left' : ''
       } w-40 h-40 text-center my-20 duration-300 `}
       id={componentID}
       ref={ref}

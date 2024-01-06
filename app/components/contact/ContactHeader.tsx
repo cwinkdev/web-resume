@@ -9,7 +9,7 @@ const ContactHeader = () => {
     <div
       ref={ref}
       className={`${
-        inView ? 'slide-in-left' : 'disappear'
+        inView ? 'slide-in-left' : ''
       } text-3xl font-semibold text-primary`}
     ></div>
   );
