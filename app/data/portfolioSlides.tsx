@@ -21,3 +21,30 @@ export const portfolioSlides = [
     text: 'Log in to collect finds in custom user crates and export albums to Spotify.',
   },
 ];
+
+export const portfolioSlidesWide = [
+  {
+    href: 'url(./digHomeW.png)',
+    text: 'Unique, full-stack app with multiple features.',
+  },
+  {
+    href: 'url(./digW.png)',
+    text: 'Dig up gems just like at the record store.',
+  },
+  {
+    href: 'url(./filtersW.png)',
+    text: 'Various homing filters.',
+  },
+  {
+    href: 'url(./resultsW.png)',
+    text: 'Truly randomized results ensures fresh albums each dig.',
+  },
+  {
+    href: 'url(./albumModalW.png)',
+    text: 'Useful stats for tracks and albums.',
+  },
+  {
+    href: 'url(./cratesW.png)',
+    text: 'Log in to collect finds in custom user crates and export albums to Spotify.',
+  },
+];
