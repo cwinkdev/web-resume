@@ -30,7 +30,7 @@ const QuickNavMenu = () => {
   return (
     <div
       style={{ transform: `translateX(${calculateTranslateX(0)}px)` }}
-      className={`flex lg:flex-col lg:h-screen justify-evenly w-full lg:w-28 mx-auto lg:bg-black lg:bg-opacity-20  absolute top-0 p-3`}
+      className={`flex xl:flex-col xl:h-screen justify-evenly w-full xl:w-28 mx-auto duration-300 xl:bg-black xl:bg-opacity-40 absolute top-0 p-3`}
     >
       <ThemeSwitcher
         translateX={calculateTranslateX(0)}
@@ -38,6 +38,7 @@ const QuickNavMenu = () => {
         showName={false}
       />
       <QuickNavButton
+        label={'ABOUT'}
         icon={<GiPerson />}
         sectionId={'about'}
         translateX={calculateTranslateX(0)}
@@ -46,6 +47,7 @@ const QuickNavMenu = () => {
         }
       />
       <QuickNavButton
+        label={'SKILLS'}
         icon={<GiSkills />}
         sectionId={'skills'}
         translateX={calculateTranslateX(0)}
@@ -54,6 +56,7 @@ const QuickNavMenu = () => {
         }
       />
       <QuickNavButton
+        label={'PORTFOLIO'}
         icon={<GiWoodFrame />}
         sectionId={'portfolio'}
         translateX={calculateTranslateX(0)}
@@ -62,6 +65,7 @@ const QuickNavMenu = () => {
         }
       />
       <QuickNavButton
+        label={'CONTACT'}
         icon={<GiEnvelope />}
         sectionId={'contact'}
         translateX={calculateTranslateX(0)}

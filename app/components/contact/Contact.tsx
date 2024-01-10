@@ -7,8 +7,8 @@ const Contact = () => {
   return (
     <section
       className={`${
-        state.currentSection === 'contact' ? 'slide-in-right' : ''
-      }  p-8 pt-20 min-h-screen h-screen w-full text-center text-baseText lg:w-1/2 lg:mx-auto my-24`}
+        state.currentSection === 'contact' ? 'slide-in-left' : ''
+      }  p-8 pt-20 min-h-screen h-screen w-full text-center text-baseText xl:w-1/2 xl:mx-auto my-24`}
     >
       <div
         style={{

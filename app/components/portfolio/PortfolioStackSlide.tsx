@@ -1,13 +1,13 @@
 const PortfolioStackSlide = () => {
   return (
-    <div className="rounded-3xl h-[500px] lg:pt-24 flex flex-col justify-evenly lg:text-xl">
+    <div className="rounded-3xl h-[500px] xl:pt-24 flex flex-col justify-evenly xl:text-xl">
       <div>
         <div className="flex justify-center">
           <div className="w-1/12 border-b border-cyan-200 my-auto opacity-60"></div>
           <p className="mx-1 my-auto text-cyan-400 font-bold">CORE TECH</p>
           <div className="w-1/12 border-b border-cyan-200 my-auto opacity-60"></div>
         </div>
-        <div className="text-sm lg:text-lg font-light">
+        <div className="text-sm xl:text-lg font-light">
           <p>React 18.2.0</p>
           <p>Next.js 14.0.3</p>
           <p>TypeScript 5.1.3</p>
@@ -18,23 +18,23 @@ const PortfolioStackSlide = () => {
         </div>
       </div>
       <div>
-        <div className="flex justify-center mt-2 lg:mt-8">
+        <div className="flex justify-center mt-2 xl:mt-8">
           <div className="w-1/12 border-b border-cyan-200 my-auto opacity-60"></div>
           <p className="mx-1 my-auto text-cyan-400 font-bold">Deployment</p>
           <div className="w-1/12 border-b border-cyan-200 my-auto opacity-60"></div>
         </div>
-        <div className="text-sm lg:text-lg font-light">
+        <div className="text-sm xl:text-lg font-light">
           <p>Vercel</p>
           <p>GitHub</p>
         </div>
       </div>
       <div>
-        <div className="flex justify-center mt-2 lg:mt-8">
+        <div className="flex justify-center mt-2 xl:mt-8">
           <div className="w-1/12 border-b border-cyan-200 my-auto opacity-60"></div>
           <p className="mx-1 my-auto text-cyan-400 font-bold">UX Packages</p>
           <div className="w-1/12 border-b border-cyan-200 my-auto opacity-60"></div>
         </div>
-        <div className="text-sm lg:text-lg font-light">
+        <div className="text-sm xl:text-lg font-light">
           <p>react-icons</p>
           <p>react-select</p>
           <p>react-toastify </p>

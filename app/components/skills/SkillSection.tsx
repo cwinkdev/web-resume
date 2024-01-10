@@ -1,4 +1,3 @@
-import { useInView } from 'react-intersection-observer';
 import { skillsList } from '../../data/skillsList';
 import { useApp } from '@/app/hooks/useApp';
 interface SkillSectionProps {
@@ -6,26 +5,23 @@ interface SkillSectionProps {
   type: string;
 }
 const SkillSection = ({ label, type }: SkillSectionProps) => {
-  const options = { threshold: 0 };
-  const { ref, inView } = useInView(options);
   const { state } = useApp();
 
   return (
     <div
-      ref={ref}
       style={{
         backgroundImage:
           state.theme.id === 'theme1' ? 'url(./abstractCardBG.png)' : '',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
-      className={`${inView ? 'slide-in-right' : ''} ${
+      className={`${
         state.theme.id === 'theme1'
           ? 'border border-base3 rounded-sm bg-gradient-radial from-base2 to-base1'
           : state.theme.id === ''
           ? 'rounded-xl border-t border-secondary bg-gradient-radial from-base2 to-base1'
           : 'border-t border-secondary rounded-2xl bg-base2'
-      } my-2 pb-2  skill-section-custom shadow-md shadow-baseShadow lg:w-1/3 lg:m-2`}
+      } my-2 pb-2 shadow-md shadow-baseShadow xl:w-1/3 xl:m-2`}
     >
       <p
         className={`text-primary text-xl border-b border-base2 bg-base shadow-baseShadow shadow-sm text-center font-semibold py-4 ${

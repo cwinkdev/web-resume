@@ -57,7 +57,7 @@ export default function Home() {
           }
         });
       },
-      { threshold: 0 },
+      { threshold: 0.2 },
     );
 
     if (aboutRef.current) observer.observe(aboutRef.current);
@@ -80,7 +80,7 @@ export default function Home() {
           backgroundPosition: 'center',
         }}
         className={`fixed top-0 w-full z-30 bg-base ${
-          state.showQuickNav ? 'lg:h-0 h-16' : 'h-24'
+          state.showQuickNav ? 'xl:h-0 h-16' : 'h-24'
         } shadow-md shadow-neutral-00 border-b duration-300 border-neutral-700`}
       >
         <Link
@@ -117,7 +117,7 @@ export default function Home() {
 
       <section
         id="main"
-        className="flex min-h-screen items-center flex-col font-extralight px-8 overflow-x-hidden lg:w-3/4 lg:mx-auto"
+        className="flex min-h-screen items-center flex-col font-extralight px-8 overflow-x-hidden xl:w-3/4 xl:mx-auto"
       >
         <MainNavMenu />
       </section>

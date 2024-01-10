@@ -15,7 +15,7 @@ const MainNavMenu = ({}: MainNavMenuProps) => {
       <div ref={ref} className={`w-full ${inView ? 'slide-in-left' : ''} `}>
         <ThemeSwitcher additionalCSS="text-4xl w-64 px-3" showName={true} />
       </div>
-      <div className="h-[400px] grid grid-rows-2 grid-cols-1 lg:flex lg:mx-auto">
+      <div className="h-[400px] grid grid-rows-2 grid-cols-1 xl:flex xl:mx-auto">
         <div className="flex justify-center h-1/2">
           <MainNavButton
             label={'ABOUT'}
