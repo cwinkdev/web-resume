@@ -20,10 +20,10 @@ const ContactInfo = () => {
       </div>
       <a
         href="https://github.com/cwinkdev"
-        className="flex justify-center items-center text-2xl bg-base2 w-fit p-2 px-4 mx-auto rounded-lg border border-base3"
+        className="flex justify-center items-center text-2xl bg-base w-fit p-2 px-4 mx-auto rounded-lg border border-base3"
       >
         <SiGithub />
-        <p className="ml-2">cwinkdev</p>
+        <p className="ml-2 my-auto ">cwinkdev</p>
       </a>
       <div className="border-b border-secondary mx-auto w-1/2 my-4"></div>
       <div className="flex flex-col items-center">
@@ -37,7 +37,7 @@ const ContactInfo = () => {
         </a>
       </div>
       <div className="border-b border-secondary mx-auto w-1/2 my-4"></div>
-      <p className="text-primary">Thanks for checking out my resume!</p>
+      <p className="text-primary">Thanks for taking a look!</p>
     </div>
   );
 };
