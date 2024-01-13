@@ -9,7 +9,7 @@ const PortfolioHeader = () => {
   return (
     <div>
       <a
-        href="https://https://dig-in-the-crate.vercel.app/"
+        href="https://dig-in-the-crate.vercel.app/"
         className={`${
           state.theme.id === 'theme1'
             ? 'text-cyan-600'
