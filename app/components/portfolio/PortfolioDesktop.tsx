@@ -1,6 +1,6 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
-import { Pagination } from 'swiper/modules';
+import { Pagination, Navigation } from 'swiper/modules';
 import PortfolioStackSlide from './PortfolioStackSlide';
 import { portfolioSlidesWide as slides } from '@/app/data/portfolioSlides';
 
@@ -13,7 +13,7 @@ const PortfolioDesktop = ({ setActiveIndex }: PortfolioDesktopProps) => {
     <div className="hidden xl:block">
       <Swiper
         spaceBetween={0}
-        modules={[Pagination]}
+        modules={[Navigation, Pagination]}
         slidesPerView={1}
         loop={false}
         onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
@@ -22,6 +22,7 @@ const PortfolioDesktop = ({ setActiveIndex }: PortfolioDesktopProps) => {
           bulletClass: 'swiper-pagination-bullet',
           bulletActiveClass: 'swiper-pagination-bullet-active',
         }}
+        navigation
         className="border-2 hidden border-neutral-500 rounded-3xl text-white w-11/12 bg-base shadow-md shadow-baseShadow my-swiper-container-wide"
       >
         {slides.map((slide, index) => (
