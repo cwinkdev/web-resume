@@ -8,7 +8,8 @@ const PortfolioHeader = () => {
 
   return (
     <div>
-      <h2
+      <a
+        href="https://https://dig-in-the-crate.vercel.app/"
         className={`${
           state.theme.id === 'theme1'
             ? 'text-cyan-600'
@@ -19,7 +20,7 @@ const PortfolioHeader = () => {
       >
         <GiDigHole />
         DIG
-      </h2>
+      </a>
     </div>
   );
 };
