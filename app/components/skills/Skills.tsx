@@ -17,7 +17,7 @@ const Skills = () => {
       >
         <p
           className={`text-4xl text-accent mb-12 ${
-            state.currentSection === 'skills' ? 'slide-in-right' : ''
+            state.currentSection === 'skills' ? 'opacity-100' : 'opacity-0'
           }`}
         >
           What I can do for you...
