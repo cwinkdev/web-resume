@@ -93,41 +93,36 @@
   width: 1200px;
 }
 .my-swiper-container .swiper-pagination-bullet {
-  background: rgb(
-    95,
-    95,
-    95
-  ) !important; /* Change the bullet's background color */
-  opacity: 0.7; /* Make non-active bullets fully opaque */
-  width: 10px; /* Change the bullet's width */
-  height: 10px; /* Change the bullet's height */
-  border: 2px solid rgba(0, 255, 255, 0.61); /* Add a border to the bullet */
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5); /* Add a shadow for depth */
-  transition: transform 0.3s; /* Smoothly grow the bullet when active */
-  border-radius: 50%; /* Circular bullets */
+  background: rgb(95, 95, 95);
+  opacity: 0.7;
+  width: 10px;
+  height: 10px;
+  border: 2px solid rgba(0, 255, 255, 0.61);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s;
+  border-radius: 50%;
 }
 .my-swiper-container .swiper-pagination-bullet-active {
-  background: rgb(90, 90, 90); /* Change the active bullet's background color */
-  transform: scale(1.5); /* Make the active bullet larger */
+  background: rgb(90, 90, 90);
+  transform: scale(1.5);
   opacity: 1;
-  border: 2px solid rgb(0, 238, 255); /* Add a border to the bullet */
+  border: 2px solid rgb(0, 238, 255);
 }
 .my-swiper-container-wide .swiper-pagination-bullet {
-  background: rgb(34, 34, 34); /* Change the bullet's background color */
-  opacity: 0.7; /* Make non-active bullets fully opaque */
-  width: 10px; /* Change the bullet's width */
-  height: 10px; /* Change the bullet's height */
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5); /* Add a shadow for depth */
-  transition: transform 0.3s; /* Smoothly grow the bullet when active */
-  border-radius: 50%; /* Circular bullets */
+  background: rgb(34, 34, 34);
+  opacity: 0.7;
+  width: 10px;
+  height: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s;
+  border-radius: 50%;
 }
 .my-swiper-container-wide .swiper-pagination-bullet-active {
-  background: rgb(68, 68, 68); /* Change the active bullet's background color */
-  transform: scale(1.5); /* Make the active bullet larger */
+  background: rgb(68, 68, 68);
+  transform: scale(1.5);
   opacity: 1;
-  border: 2px solid rgb(0, 238, 255); /* Add a border to the bullet */
+  border: 2px solid rgb(0, 238, 255);
 }
-/* Custom CSS file or <style> tag */
 .my-swiper-container-wide .swiper-button-next,
 .my-swiper-container-wide .swiper-button-prev {
   color: rgb(0, 238, 255);

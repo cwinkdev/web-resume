@@ -3,6 +3,7 @@ import 'swiper/swiper-bundle.css';
 import { Pagination, Navigation } from 'swiper/modules';
 import PortfolioStackSlide from './PortfolioStackSlide';
 import { portfolioSlidesWide as slides } from '@/app/data/portfolioSlides';
+import { handleClientScriptLoad } from 'next/script';
 
 interface PortfolioDesktopProps {
   setActiveIndex: (index: number) => void;
@@ -23,7 +24,7 @@ const PortfolioDesktop = ({ setActiveIndex }: PortfolioDesktopProps) => {
           bulletActiveClass: 'swiper-pagination-bullet-active',
         }}
         navigation
-        className="border-2 hidden border-neutral-500 rounded-3xl text-white w-11/12 bg-base shadow-md shadow-baseShadow my-swiper-container-wide"
+        className="border hidden border-neutral-500 rounded-3xl text-white w-11/12 bg-base shadow-md shadow-baseShadow my-swiper-container-wide"
       >
         {slides.map((slide, index) => (
           <SwiperSlide key={index} className="relative flex flex-col">
@@ -34,11 +35,9 @@ const PortfolioDesktop = ({ setActiveIndex }: PortfolioDesktopProps) => {
                 backgroundPosition: 'top',
                 height: '600px',
               }}
-              className="rounded-3xl"
+              className="rounded-t-3xl"
             ></div>
-            <div className="flex flex-col absolute bottom- w-full bg-gradient-to-t from-black to-neutral-900 h-12 -bottom-1">
-              <div className="w-full rounded-b-2xl border-t border-neutral-600 "></div>
-            </div>
+            <div className="absolute w-full text-lg z-20 rounded-b-2xl border-t border-neutral-600 flex justify-between px-4 h-12"></div>
           </SwiperSlide>
         ))}
         <SwiperSlide key={5} className="relative">

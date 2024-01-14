@@ -1,6 +1,6 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
-import { Pagination } from 'swiper/modules';
+import { Navigation, Pagination } from 'swiper/modules';
 import PortfolioStackSlide from './PortfolioStackSlide';
 import { portfolioSlides as slides } from '@/app/data/portfolioSlides';
 
@@ -15,7 +15,7 @@ const PortfolioMobile = ({ setActiveIndex }: PortfolioMobileProps) => {
         spaceBetween={0}
         modules={[Pagination]}
         slidesPerView={1}
-        loop={true}
+        loop={false}
         onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
         pagination={{
           clickable: true,
