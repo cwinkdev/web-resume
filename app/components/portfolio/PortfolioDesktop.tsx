@@ -37,7 +37,7 @@ const PortfolioDesktop = ({ setActiveIndex }: PortfolioDesktopProps) => {
               }}
               className="rounded-t-3xl"
             ></div>
-            <div className="absolute w-full text-lg z-20 rounded-b-2xl border-t border-neutral-600 flex justify-between px-4 h-12"></div>
+            <div className="absolute w-full text-lg z-20 rounded-b-2xl bg-zinc-950 border-t border-neutral-600 flex justify-between px-4 h-12"></div>
           </SwiperSlide>
         ))}
         <SwiperSlide key={5} className="relative">

@@ -55,7 +55,7 @@ const ThemeSwitcher = ({
             : 'rounded-full'
         } ${
           themes[themeIndex].colors
-        } ${additionalCSS} bg-base2 shadow-sm shadow-baseShadow justify-between mx-auto flex p-1.5 border-2 border-base3`}
+        } ${additionalCSS} bg-base2 shadow-sm shadow-baseShadow justify-between mx-auto flex p-1.5 border-2 border-base3 hover:border-accent duration-300`}
       >
         <div className={`${themes[themeIndex].colors}`}>{state.theme.icon}</div>
         {showName ? (

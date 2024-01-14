@@ -31,7 +31,7 @@ const MainNavButton = ({
       onClick={(e) => handleClick(e, sectionId)}
       className={`${
         inView ? 'slide-in-left' : ''
-      } w-40 h-40 text-center my-20 duration-300 `}
+      } w-40 h-40 text-center relative my-20 duration-300 hover:scale-110 hover:text-accent`}
       id={componentID}
       ref={ref}
     >
@@ -48,7 +48,7 @@ const MainNavButton = ({
             : state.theme.id === ''
             ? 'rounded-xl'
             : 'rounded-full'
-        } h-3/4 w-3/4 flex bg-base shadow-md shadow-baseShadow mx-auto border-2 border-base3 p-1.5 ${additionalCSS}`}
+        } h-3/4 w-3/4 flex bg-base shadow-md shadow-baseShadow mx-auto duration-300 border-2 border-base3 hover:border-accent p-1.5 ${additionalCSS}`}
       >
         <div className="m-auto text-7xl">{icon}</div>
       </div>
