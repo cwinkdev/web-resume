@@ -6,7 +6,6 @@ import Portfolio from './components/portfolio/Portfolio';
 import Contact from './components/contact/Contact';
 import QuickNavMenu from './components/quickNavMenu/QuickNavMenu';
 import { useApp } from './hooks/useApp';
-import Link from 'next/link';
 import MainNavMenu from './components/mainNavMenu/MainNavMenu';
 import { useEffect, useRef } from 'react';
 

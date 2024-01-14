@@ -15,7 +15,7 @@ const MainNavMenu = ({}: MainNavMenuProps) => {
       <div className="h-[400px] grid grid-rows-2 grid-cols-1 xl:flex xl:mx-auto">
         <div className="flex justify-center h-1/2">
           <MainNavButton
-            label={'ABOUT'}
+            label={'ABOUT ME'}
             icon={<GiPerson />}
             additionalCSS={`dropBounceLeftAnimation ${
               state.theme.id === '' ? 'text-cyan-200' : 'text-cyan-500'

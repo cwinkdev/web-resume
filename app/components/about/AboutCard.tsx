@@ -20,7 +20,7 @@ const AboutCard = ({ isLongVersion }: AboutCardProps) => {
           ref={ref}
           className={`${
             inView ? 'slide-in-right' : ''
-          } mt-4 h-[450px] font-light relative overflow-hidden crawl-container shadow-baseShadow shadow-inner border-y border-secondary ${
+          } mt-4 h-[450px] font-light mx-auto relative overflow-hidden crawl-container shadow-baseShadow shadow-inner border-y border-secondary ${
             state.theme.id === 'theme1'
               ? 'rounded-sm'
               : state.theme.id === ''
@@ -36,7 +36,7 @@ const AboutCard = ({ isLongVersion }: AboutCardProps) => {
           {aboutMeLines.map((line, index) => (
             <div
               key={line}
-              className="crawl-line text-xl font-bold text-yellow-400"
+              className="crawl-line w-full xl:text-2xl text-xl font-bold"
               style={{
                 opacity: 1 - index * 0.1,
                 transform: `translateY(${index * 10}vh) scale(${
@@ -64,7 +64,7 @@ const AboutCard = ({ isLongVersion }: AboutCardProps) => {
               : state.theme.id === ''
               ? 'border-y border-secondary rounded-xl'
               : 'border-y border-secondary rounded-lg'
-          } mt-4 h-[450px] xl:h-fit flex flex-col font-light relative overflow-y-auto shadow-baseShadow bg-base shadow-md rounded-lg`}
+          } mt-4 h-[450px] w-[350px] xl:w-[750px] mx-auto xl:h-fit flex flex-col font-light relative overflow-y-auto shadow-baseShadow bg-base shadow-md rounded-lg`}
         >
           <div
             className={`bg-base2 text-left mt-4 py-2 border-y border-accent shadow-baseShadow shadow-md`}

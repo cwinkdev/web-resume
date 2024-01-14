@@ -12,15 +12,13 @@ const About = () => {
       <div
         className={`${
           state.currentSection === 'about' ? 'slide-in-right' : ''
-        } border-2 border-base3 rounded-full shadow-md shadow-baseShadow h-40 bg-base2 w-40 mx-auto my-4`}
+        } border-2 border-base3 rounded-full shadow-md shadow-baseShadow mx-auto h-40 bg-base2 w-40 mx-auto my-4`}
       ></div>
       <AboutModeToggle
         isLongVersion={isLongVersion}
         setIsLongVersion={setIsLongVersion}
       />
-      <div>
-        <AboutCard isLongVersion={isLongVersion} />
-      </div>
+      <AboutCard isLongVersion={isLongVersion} />
     </section>
   );
 };

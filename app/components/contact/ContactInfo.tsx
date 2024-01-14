@@ -17,7 +17,7 @@ const ContactInfo = () => {
         </a>
         <p className="text-secondary">North Augusta, SC - USA</p>
       </div>
-      <div className="border-b border-secondary mx-auto w-1/2 lg:w-1/3 opacity-50"></div>
+      <div className="border-b border-secondary mx-auto w-1/2 xl:w-1/3 opacity-50"></div>
       <p className="h-2 text-accent">Check out my Github profile!</p>
 
       <a
@@ -28,7 +28,7 @@ const ContactInfo = () => {
         <p className="ml-2 mb-1">cwinkdev</p>
       </a>
 
-      <div className="border-b border-secondary mx-auto w-1/2 lg:w-1/3 opacity-50"></div>
+      <div className="border-b border-secondary mx-auto w-1/2 xl:w-1/3 opacity-50"></div>
       <div className="flex flex-col items-center">
         <a
           href="/path-to-resume.pdf"

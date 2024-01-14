@@ -61,7 +61,7 @@
 
 .crawl-container {
   bottom: 0;
-  width: 100%;
+  width: 750px;
   transform-origin: 50% 100%;
 }
 @keyframes crawl {
@@ -78,10 +78,11 @@
   }
 }
 .crawl-line {
+  color: #feda4a;
   position: absolute;
-  width: 100%;
   top: 455px;
   animation: crawl 50s linear infinite;
+  font-family: 'Arial', 'Helvetica', sans-serif; /* or any similar web-safe font */
 }
 
 .my-swiper-container {
