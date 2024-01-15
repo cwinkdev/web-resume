@@ -57,7 +57,7 @@ const ThemeSwitcher = ({
             ? 'rounded-xl'
             : 'rounded-full'
         } ${themes[themeIndex].colors} ${additionalCSS} relative
-   group bg-base shadow-sm xl:mt-0 shadow-baseShadow justify-between mx-auto flex border border-base3 hover:border-accent duration-300`}
+   group bg-base shadow-sm xl:mt-0 shadow-baseShadow justify-between mx-auto flex border border-base3 xl:hover:border-accent duration-300`}
       >
         <div
           className={`${
@@ -66,7 +66,7 @@ const ThemeSwitcher = ({
               : state.theme.id === ''
               ? 'rounded-xl'
               : 'rounded-full'
-          } absolute w-[0%] group-hover:w-[100%] opacity-0 group-hover:opacity-100 h-full bg-base2 z-0 duration-500 left-0`}
+          } absolute w-[0%] xl:group-hover:w-[100%] opacity-0 xl:group-hover:opacity-100 h-full bg-base2 z-0 duration-500 left-0`}
         ></div>
         <div className={`${themes[themeIndex].colors} z-10 m-1.5 xl:text-3xl`}>
           {state.theme.icon}
