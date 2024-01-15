@@ -23,28 +23,24 @@ export default function Home() {
           if (entry.isIntersecting) {
             switch (entry.target.id) {
               case 'about':
-                console.log('a');
                 setState((prevState) => ({
                   ...prevState,
                   currentSection: 'about',
                 }));
                 break;
               case 'skills':
-                console.log('s');
                 setState((prevState) => ({
                   ...prevState,
                   currentSection: 'skills',
                 }));
                 break;
               case 'portfolio':
-                console.log('p');
                 setState((prevState) => ({
                   ...prevState,
                   currentSection: 'portfolio',
                 }));
                 break;
               case 'contact':
-                console.log('c');
                 setState((prevState) => ({
                   ...prevState,
                   currentSection: 'contact',
