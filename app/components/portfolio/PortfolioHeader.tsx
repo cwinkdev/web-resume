@@ -14,7 +14,7 @@ const PortfolioHeader = ({
   const { state } = useApp();
 
   return (
-    <div className="flex justify-evenly w-3/4 mx-auto">
+    <div className="flex justify-evenly w-56 mx-auto">
       <button
         onClick={() => setActiveProject(0)}
         className={`${

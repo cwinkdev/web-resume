@@ -16,7 +16,9 @@ const Portfolio = () => {
     <section
       className={`p-8 pt-20 min-h-screen h-screen ${
         state.theme.id === '' ? 'bg-gradient-to-b' : ''
-      } from-transparent via-cyan-950 to-transparent w-full text-center relative xl:w-full xl:mx-auto`}
+      } from-transparent ${
+        activeProject === 0 ? 'via-cyan-950' : 'via-violet-950'
+      }  to-transparent w-full text-center relative duration-1000 xl:w-full xl:mx-auto`}
     >
       <div
         className={`${
