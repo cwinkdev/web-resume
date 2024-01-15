@@ -109,8 +109,22 @@ export default function Home() {
 
       <section
         id="main"
-        className="flex min-h-screen items-center flex-col font-extralight px-8 overflow-x-hidden xl:w-3/4 xl:mx-auto"
+        className="relative flex min-h-screen z-0 items-center flex-col font-extralight px-8 overflow-x-hidden w-full xl:mx-auto"
       >
+        <div
+          style={{
+            backgroundImage: 'url(./bgTexture.png)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+          className={`${
+            state.theme.id === 'theme1'
+              ? 'opacity-20'
+              : state.theme.id === ''
+              ? 'opacity-100'
+              : 'opacity-20'
+          } absolute w-full h-full`}
+        ></div>
         <MainNavMenu />
       </section>
       <div id="about" ref={aboutRef}>
