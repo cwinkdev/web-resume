@@ -31,7 +31,7 @@ const MainNavButton = ({
       onClick={(e) => handleClick(e, sectionId)}
       className={`${
         inView ? 'slide-in-left' : ''
-      } w-40 h-40 text-center relative my-20 duration-300 hover:scale-110 hover:text-accent`}
+      } w-40 h-40 text-center relative duration-300 hover:scale-110 hover:text-accent`}
       id={componentID}
       ref={ref}
     >

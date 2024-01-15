@@ -9,6 +9,8 @@ interface AboutCardProps {
 
 const AboutCard = ({ isLongVersion }: AboutCardProps) => {
   const aboutMeLines = splitIntoLines(aboutMeText, 29);
+  const aboutMeLinesWide = splitIntoLines(aboutMeText, 48);
+
   const options = { threshold: 0 };
   const { ref, inView } = useInView(options);
   const { state } = useApp();
@@ -20,7 +22,7 @@ const AboutCard = ({ isLongVersion }: AboutCardProps) => {
           ref={ref}
           className={`${
             inView ? 'slide-in-right' : ''
-          } mt-4 h-[450px] font-light mx-auto relative overflow-hidden crawl-container shadow-baseShadow shadow-inner border-y border-secondary ${
+          } mt-4 h-[450px] w-[350px] xl:w-[750px] font-light mx-auto relative overflow-hidden crawl-container shadow-baseShadow shadow-inner border-y border-secondary ${
             state.theme.id === 'theme1'
               ? 'rounded-sm'
               : state.theme.id === ''
@@ -33,21 +35,40 @@ const AboutCard = ({ isLongVersion }: AboutCardProps) => {
             backgroundPosition: 'center',
           }}
         >
-          {aboutMeLines.map((line, index) => (
-            <div
-              key={line}
-              className="crawl-line w-full xl:text-2xl text-xl font-bold"
-              style={{
-                opacity: 1 - index * 0.1,
-                transform: `translateY(${index * 10}vh) scale(${
-                  1 - index * 0.05
-                })`,
-                animationDelay: `${index * 2}s`,
-              }}
-            >
-              {line}
-            </div>
-          ))}
+          <div className="xl:hidden">
+            {aboutMeLines.map((line, index) => (
+              <div
+                key={line}
+                className="crawl-line w-full xl:text-2xl text-xl font-bold"
+                style={{
+                  opacity: 1 - index * 0.1,
+                  transform: `translateY(${index * 10}vh) scale(${
+                    1 - index * 0.05
+                  })`,
+                  animationDelay: `${index * 2}s`,
+                }}
+              >
+                {line}
+              </div>
+            ))}
+          </div>
+          <div className="xl:block hidden">
+            {aboutMeLinesWide.map((line, index) => (
+              <div
+                key={line}
+                className="crawl-line w-full xl:text-2xl text-xl font-bold"
+                style={{
+                  opacity: 1 - index * 0.1,
+                  transform: `translateY(${index * 10}vh) scale(${
+                    1 - index * 0.05
+                  })`,
+                  animationDelay: `${index * 2}s`,
+                }}
+              >
+                {line}
+              </div>
+            ))}
+          </div>
         </div>
       ) : (
         <div
@@ -64,7 +85,7 @@ const AboutCard = ({ isLongVersion }: AboutCardProps) => {
               : state.theme.id === ''
               ? 'border-y border-secondary rounded-xl'
               : 'border-y border-secondary rounded-lg'
-          } mt-4 h-[450px] w-[350px] xl:w-[750px] mx-auto xl:h-fit flex flex-col font-light relative overflow-y-auto shadow-baseShadow bg-base shadow-md rounded-lg`}
+          } mt-4 h-[380px] w-[350px] xl:h-[340px] xl:w-[750px] mx-auto flex flex-col font-light relative overflow-y-auto shadow-baseShadow bg-base shadow-md rounded-lg`}
         >
           <div
             className={`bg-base2 text-left mt-4 py-2 border-y border-accent shadow-baseShadow shadow-md`}

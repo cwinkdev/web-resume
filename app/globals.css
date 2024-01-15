@@ -61,7 +61,6 @@
 
 .crawl-container {
   bottom: 0;
-  width: 750px;
   transform-origin: 50% 100%;
 }
 @keyframes crawl {

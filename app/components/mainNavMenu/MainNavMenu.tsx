@@ -12,7 +12,13 @@ const MainNavMenu = ({}: MainNavMenuProps) => {
   const { ref, inView } = useInView(options);
   return (
     <div className="w-full flex flex-col text-center h-full my-auto">
-      <div className="h-[400px] grid grid-rows-2 grid-cols-1 xl:flex xl:mx-auto">
+      <div ref={ref} className={`w-full ${inView ? 'slide-in-left' : ''} `}>
+        <ThemeSwitcher
+          additionalCSS="text-4xl mt-2 w-64 px-3"
+          showName={true}
+        />
+      </div>
+      <div className="h-[450px] grid grid-rows-2 mt-24 grid-cols-1 xl:justify-evenly justify-between xl:flex xl:mx-auto">
         <div className="flex justify-center h-1/2">
           <MainNavButton
             label={'ABOUT ME'}
@@ -53,9 +59,6 @@ const MainNavMenu = ({}: MainNavMenuProps) => {
             componentID={'navButtonContact'}
           />
         </div>
-      </div>
-      <div ref={ref} className={`w-full ${inView ? 'slide-in-left' : ''} `}>
-        <ThemeSwitcher additionalCSS="text-4xl w-64 px-3" showName={true} />
       </div>
     </div>
   );

@@ -43,8 +43,11 @@ const ThemeSwitcher = ({
   };
 
   return (
-    <div style={{ transform: `translateX(${translateX}px)` }}>
-      {showName ? <h2 className="font-semibold mb-2">View mode:</h2> : null}
+    <div
+      className="h-32 flex flex-col "
+      style={{ transform: `translateX(${translateX}px)` }}
+    >
+      {showName ? <h2 className="font-semibold">View mode:</h2> : null}
       <button
         onClick={cycleTheme}
         className={`${

@@ -27,12 +27,12 @@ const AboutModeToggle = ({
       ref={ref}
       className={`${
         inView ? 'slide-in-left' : ''
-      } flex w-56 justify-center mx-auto text-center text-sm my-4`}
+      } flex w-60 pl-3 pr-1 py-2 rounded-full border border-base2 shadow shadow-baseShadow justify-center mx-auto text-center bg-base text-sm my-4`}
     >
       <p className="my-auto text-primary">Version:</p>
       <div
         {...handlers}
-        className="w-40  cursor-pointer h-6 mx-auto rounded-full flex shadow-md shadow-baseShadow bg-base2 text-baseText relative font-light box-border border border-base3"
+        className="w-40 cursor-pointer h-6 mx-auto rounded-full flex shadow-md shadow-baseShadow bg-base2 text-baseText relative font-light box-border border border-base3"
       >
         <div
           onClick={() => setIsLongVersion(false)}
