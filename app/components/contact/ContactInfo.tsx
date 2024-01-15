@@ -22,10 +22,13 @@ const ContactInfo = () => {
 
       <a
         href="https://github.com/cwinkdev"
-        className="flex justify-center items-center text-xl bg-base w-fit p-2 px-4 mx-auto rounded-lg border border-base3"
+        className="relative flex justify-center items-center text-xl bg-base w-fit hover:border-accent p-2 px-4 mx-auto duration-700 rounded-lg border border-base3 group"
       >
-        <SiGithub />
-        <p className="ml-2 mb-1">cwinkdev</p>
+        <div className="absolute w-[0%] group-hover:w-[100%] h-full bg-base3 z-0 duration-500 rounded-lg left-0"></div>
+        <div className="z-10 flex items-center">
+          <SiGithub />
+          <p className="ml-2 mb-1">cwinkdev</p>
+        </div>
       </a>
 
       <div className="border-b border-secondary mx-auto w-1/2 xl:w-1/3 opacity-50"></div>
@@ -33,10 +36,13 @@ const ContactInfo = () => {
         <a
           href="/path-to-resume.pdf"
           download
-          className="flex justify-center items-center text-xl bg-base w-fit p-2 px-4 mx-auto rounded-lg border border-base3"
+          className="relative flex justify-center items-center text-xl bg-base w-fit hover:border-accent group p-2 px-4 mx-auto rounded-lg border border-base3"
         >
-          <GiCloudDownload />
-          <p className="ml-2 mb-1">Download resume</p>
+          <div className="absolute w-[0%] group-hover:w-[100%] h-full bg-base3 z-0 duration-500 rounded-lg left-0"></div>
+          <div className="z-10 flex items-center">
+            <GiCloudDownload />
+            <p className="ml-2 mb-1">Download resume</p>{' '}
+          </div>
         </a>
       </div>
       <p className="text-accent">Thanks for taking a look!</p>

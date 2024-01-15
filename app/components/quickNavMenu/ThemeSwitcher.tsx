@@ -58,11 +58,22 @@ const ThemeSwitcher = ({
             : 'rounded-full'
         } ${
           themes[themeIndex].colors
-        } ${additionalCSS} bg-base2 shadow-sm shadow-baseShadow justify-between mx-auto flex p-1.5 border-2 border-base3 hover:border-accent duration-300`}
+        } ${additionalCSS} relative group bg-base1 shadow-sm shadow-baseShadow justify-between mx-auto flex border border-base3 hover:border-accent duration-300`}
       >
-        <div className={`${themes[themeIndex].colors}`}>{state.theme.icon}</div>
+        <div
+          className={`${
+            state.theme.id === 'theme1'
+              ? 'rounded-sm'
+              : state.theme.id === ''
+              ? 'rounded-xl'
+              : 'rounded-full'
+          } absolute w-[0%] group-hover:w-[100%] h-full bg-base3 z-0 duration-500 left-0`}
+        ></div>
+        <div className={`${themes[themeIndex].colors} z-10 my-1`}>
+          {state.theme.icon}
+        </div>
         {showName ? (
-          <p className={`text-baseText text-lg font-semibold m-auto px-3`}>
+          <p className={`text-baseText text-lg font-semibold m-auto px-3 z-10`}>
             {themes[themeIndex].name}
           </p>
         ) : null}

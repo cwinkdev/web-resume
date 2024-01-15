@@ -48,7 +48,7 @@ const MainNavButton = ({
             : state.theme.id === ''
             ? 'rounded-xl'
             : 'rounded-full'
-        } relative h-3/4 w-3/4 flex bg-base shadow-md group-hover:scale-110 group-hover:border-accent shadow-baseShadow mx-auto duration-300 border-2 border-base3 ${additionalCSS}`}
+        } relative h-3/4 w-3/4 flex bg-base shadow-md group-hover:scale-110 group-hover:border-accent shadow-baseShadow mx-auto duration-500 border-2 border-base3 ${additionalCSS}`}
       >
         <div className="m-auto text-7xl z-10">{icon}</div>
         <div
@@ -58,7 +58,7 @@ const MainNavButton = ({
               : state.theme.id === ''
               ? 'rounded-xl'
               : 'rounded-full'
-          } absolute left-0 h-full bg-base2 transform w-[0%] group-hover:w-[100%] duration-300`}
+          } absolute left-0 h-full bg-base2 transform w-[0%] group-hover:w-[100%] duration-700`}
         ></div>
       </div>
       <p className="text-lg mt-4 h-1/4 font-light group-hover:text-accent">
