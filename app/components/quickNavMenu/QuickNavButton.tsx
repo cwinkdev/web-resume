@@ -31,15 +31,15 @@ const QuickNavButton = ({
       <div
         className={`flex h-10 xl:h-16 xl:w-16 text-center ${
           state.currentSection === sectionId
-            ? ` opacity-80 bg-base1 border-secondary`
-            : ' opacity-100 scale-110 shadow-md shadow-baseShadow bg-base border-base3'
+            ? ` opacity-80 bg-base1 border-secondary border-2`
+            : ' opacity-100 scale-110 border shadow-md shadow-baseShadow bg-base border-base3'
         } ${
           state.theme.id === 'theme1'
             ? 'rounded-sm'
             : state.theme.id === ''
             ? 'rounded-xl'
             : 'rounded-full'
-        } duration-300 text-2xl relative xl:group-hover:border-accent border-base3 border-2 px-1.5 m-auto ${additionalCSS}`}
+        } duration-300 text-2xl relative xl:group-hover:border-accent border-base3 px-1.5 m-auto ${additionalCSS}`}
       >
         <div
           className={`${

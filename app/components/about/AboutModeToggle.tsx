@@ -27,7 +27,7 @@ const AboutModeToggle = ({
       ref={ref}
       className={`${
         inView ? 'slide-in-left' : ''
-      } flex w-60 pl-3 pr-1 py-2 justify-center mx-auto text-center bg-base text-sm my-4`}
+      } flex w-60 pl-3 pr-1 py-2 justify-center mx-auto text-center text-sm my-4`}
     >
       <p className="my-auto text-primary">Version:</p>
       <div
