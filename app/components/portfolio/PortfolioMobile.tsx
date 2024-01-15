@@ -6,9 +6,13 @@ import { portfolioSlides as slides } from '@/app/data/portfolioSlides';
 
 interface PortfolioMobileProps {
   setActiveIndex: (index: number) => void;
+  activeProject: number;
 }
 
-const PortfolioMobile = ({ setActiveIndex }: PortfolioMobileProps) => {
+const PortfolioMobile = ({
+  setActiveIndex,
+  activeProject,
+}: PortfolioMobileProps) => {
   return (
     <div className="xl:hidden">
       <Swiper

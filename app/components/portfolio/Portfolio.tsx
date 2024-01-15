@@ -9,6 +9,7 @@ import PortfolioDesktop from './PortfolioDesktop';
 
 const Portfolio = () => {
   const { state } = useApp();
+  const [activeProject, setActiveProject] = useState(0);
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
@@ -22,10 +23,23 @@ const Portfolio = () => {
           state.currentSection === 'portfolio' ? 'slide-in-right' : ''
         } `}
       >
-        <PortfolioHeader />
-        <PortfolioMobile setActiveIndex={setActiveIndex} />
-        <PortfolioDesktop setActiveIndex={setActiveIndex} />
-        <PortfolioBlurbs activeIndex={activeIndex} slides={slides} />
+        <PortfolioHeader
+          activeProject={activeProject}
+          setActiveProject={setActiveProject}
+        />
+        <PortfolioMobile
+          setActiveIndex={setActiveIndex}
+          activeProject={activeProject}
+        />
+        <PortfolioDesktop
+          setActiveIndex={setActiveIndex}
+          activeProject={activeProject}
+        />
+        <PortfolioBlurbs
+          activeIndex={activeIndex}
+          activeProject={activeProject}
+          slides={slides}
+        />
       </div>
     </section>
   );

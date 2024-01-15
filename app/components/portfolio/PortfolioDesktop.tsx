@@ -6,10 +6,14 @@ import { portfolioSlidesWide as slides } from '@/app/data/portfolioSlides';
 import { handleClientScriptLoad } from 'next/script';
 
 interface PortfolioDesktopProps {
+  activeProject: number;
   setActiveIndex: (index: number) => void;
 }
 
-const PortfolioDesktop = ({ setActiveIndex }: PortfolioDesktopProps) => {
+const PortfolioDesktop = ({
+  setActiveIndex,
+  activeProject,
+}: PortfolioDesktopProps) => {
   return (
     <div className="hidden xl:block">
       <Swiper

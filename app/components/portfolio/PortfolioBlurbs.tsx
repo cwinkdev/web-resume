@@ -5,9 +5,14 @@ import { useInView } from 'react-intersection-observer';
 
 interface PortfolioBlurbsProps {
   activeIndex: number;
+  activeProject: number;
   slides: any;
 }
-const PortfolioBlurbs = ({ activeIndex, slides }: PortfolioBlurbsProps) => {
+const PortfolioBlurbs = ({
+  activeIndex,
+  activeProject,
+  slides,
+}: PortfolioBlurbsProps) => {
   const { state } = useApp();
 
   return (
