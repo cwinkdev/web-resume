@@ -24,7 +24,7 @@ const ContactInfo = () => {
         href="https://github.com/cwinkdev"
         className="relative flex justify-center items-center text-xl bg-base w-fit hover:border-accent p-2 px-4 mx-auto duration-700 rounded-lg border border-base3 group"
       >
-        <div className="absolute w-[0%] group-hover:w-[100%] h-full bg-base3 z-0 duration-500 rounded-lg left-0"></div>
+        <div className="absolute w-[0%] group-hover:w-[100%] opacity-0 group-hover:opacity-100 h-full bg-base2 z-0 duration-500 rounded-lg left-0"></div>
         <div className="z-10 flex items-center">
           <SiGithub />
           <p className="ml-2 mb-1">cwinkdev</p>
@@ -38,7 +38,7 @@ const ContactInfo = () => {
           download
           className="relative flex justify-center items-center text-xl bg-base w-fit hover:border-accent group p-2 px-4 mx-auto rounded-lg border border-base3"
         >
-          <div className="absolute w-[0%] group-hover:w-[100%] h-full bg-base3 z-0 duration-500 rounded-lg left-0"></div>
+          <div className="absolute w-[0%] group-hover:w-[100%] opacity-0 group-hover:opacity-100 h-full bg-base2 z-0 duration-500 rounded-lg left-0"></div>
           <div className="z-10 flex items-center">
             <GiCloudDownload />
             <p className="ml-2 mb-1">Download resume</p>{' '}

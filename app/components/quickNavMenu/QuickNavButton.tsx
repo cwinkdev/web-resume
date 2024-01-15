@@ -26,20 +26,34 @@ const QuickNavButton = ({
       href={`#${sectionId}`}
       onClick={(e) => handleClick(e, sectionId)}
       style={{ transform: `translateX(${translateX}px)` }}
+      className="group"
     >
       <div
-        className={`flex h-10 xl:h-16 xl:w-16 py-1 text-center ${
+        className={`flex h-10 xl:h-16 xl:w-16 text-center ${
           state.currentSection === sectionId
-            ? ` opacity-80 bg-base border-secondary`
-            : ' opacity-100 scale-110 shadow-md shadow-baseShadow bg-base2  border-base3'
+            ? ` opacity-80 bg-base1 border-secondary`
+            : ' opacity-100 scale-110 shadow-md shadow-baseShadow bg-base border-base3'
         } ${
-          state.theme.id === 'theme1' ? 'rounded-sm ' : 'rounded-full'
-        } duration-300 text-2xl border-base3 border-2 p-2 m-auto ${additionalCSS}`}
+          state.theme.id === 'theme1'
+            ? 'rounded-sm'
+            : state.theme.id === ''
+            ? 'rounded-xl'
+            : 'rounded-full'
+        } duration-300 text-2xl relative group-hover:border-accent border-base3 border-2 px-1.5 m-auto ${additionalCSS}`}
       >
-        <div className="m-auto">{icon}</div>
+        <div
+          className={`${
+            state.theme.id === 'theme1'
+              ? 'rounded-sm'
+              : state.theme.id === ''
+              ? 'rounded-xl'
+              : 'rounded-full'
+          } absolute left-0 h-full bg-base2 transform opacity-0 group-hover:opacity-100 w-[0%] group-hover:w-[100%] duration-700`}
+        ></div>
+        <div className="z-10 m-auto">{icon}</div>
       </div>
       <p
-        className={`text-center mt-2 duration-300 hidden xl:block ${
+        className={`text-center mt-2 duration-300 group-hover:text-accent hidden xl:block ${
           state.currentSection === sectionId ? ` opacity-100 ` : ' opacity-70 '
         }`}
       >

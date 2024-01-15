@@ -58,7 +58,7 @@ const MainNavButton = ({
               : state.theme.id === ''
               ? 'rounded-xl'
               : 'rounded-full'
-          } absolute left-0 h-full bg-base2 transform w-[0%] group-hover:w-[100%] duration-700`}
+          } absolute left-0 h-full bg-base2 transform opacity-0 group-hover:opacity-100 w-[0%] group-hover:w-[100%] duration-700`}
         ></div>
       </div>
       <p className="text-lg mt-4 h-1/4 font-light group-hover:text-accent">
