@@ -61,7 +61,7 @@ const MainNavButton = ({
           } absolute left-0 h-full bg-base2 transform opacity-0 xl:group-hover:opacity-100 w-[0%] xl:group-hover:w-[100%] duration-700`}
         ></div>
       </div>
-      <p className="text-lg mt-4 h-1/4 font-light xl:group-hover:text-accent">
+      <p className="text-lg mt-4 h-1/4 font-light xl:group-hover:text-accent xl:group-hover:font-normal xl:group-hover:text-xl">
         {label}
       </p>
     </Link>
