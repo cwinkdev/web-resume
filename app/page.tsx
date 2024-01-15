@@ -80,7 +80,7 @@ export default function Home() {
         }}
         className={`fixed top-0 w-full bg-base ${
           state.showQuickNav ? 'xl:h-0 h-16' : 'h-24'
-        } shadow-md shadow-neutral-00 border-b z-10 duration-300 border-neutral-700`}
+        } shadow-md shadow-neutral-00 border-b z-20 duration-300 border-neutral-700`}
       >
         <QuickNavMenu />
         <div

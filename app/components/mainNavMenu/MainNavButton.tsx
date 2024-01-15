@@ -31,7 +31,7 @@ const MainNavButton = ({
       onClick={(e) => handleClick(e, sectionId)}
       className={`${
         inView ? 'slide-in-left' : ''
-      } w-40 h-40 text-center relative duration-300 hover:scale-110 hover:text-accent`}
+      } w-40 h-40 text-center duration-300 group `}
       id={componentID}
       ref={ref}
     >
@@ -48,11 +48,22 @@ const MainNavButton = ({
             : state.theme.id === ''
             ? 'rounded-xl'
             : 'rounded-full'
-        } h-3/4 w-3/4 flex bg-base shadow-md shadow-baseShadow mx-auto duration-300 border-2 border-base3 hover:border-accent p-1.5 ${additionalCSS}`}
+        } relative h-3/4 w-3/4 flex bg-base shadow-md group-hover:scale-110 group-hover:border-accent shadow-baseShadow mx-auto duration-300 border-2 border-base3 ${additionalCSS}`}
       >
-        <div className="m-auto text-7xl">{icon}</div>
+        <div className="m-auto text-7xl z-10">{icon}</div>
+        <div
+          className={`${
+            state.theme.id === 'theme1'
+              ? 'rounded-sm'
+              : state.theme.id === ''
+              ? 'rounded-xl'
+              : 'rounded-full'
+          } absolute left-0 h-full bg-base2 transform w-[0%] group-hover:w-[100%] duration-300`}
+        ></div>
       </div>
-      <p className="text-lg mt-4 h-1/4 font-light">{label}</p>
+      <p className="text-lg mt-4 h-1/4 font-light group-hover:text-accent">
+        {label}
+      </p>
     </Link>
   );
 };
