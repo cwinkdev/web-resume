@@ -30,7 +30,7 @@ const QuickNavMenu = () => {
   return (
     <div
       style={{ transform: `translateX(${calculateTranslateX(0)}px)` }}
-      className={`flex xl:flex-col xl:h-screen justify-evenly w-full xl:w-32 mx-auto duration-300 xl:bg-black xl:bg-opacity-40 absolute top-0 p-3`}
+      className={`flex xl:flex-col xl:h-screen justify-evenly w-full xl:w-36 mx-auto duration-300 xl:bg-base xl:bg-opacity-40 absolute top-0 p-3`}
     >
       <ThemeSwitcher
         translateX={calculateTranslateX(0)}

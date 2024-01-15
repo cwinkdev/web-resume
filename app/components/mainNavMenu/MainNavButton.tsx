@@ -36,12 +36,6 @@ const MainNavButton = ({
       ref={ref}
     >
       <div
-        style={{
-          backgroundImage:
-            state.theme.id === 'theme1' ? 'url(./abstractCardBG.png)' : '',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
         className={`${
           state.theme.id === 'theme1'
             ? 'rounded-sm'
@@ -52,6 +46,12 @@ const MainNavButton = ({
       >
         <div className="m-auto text-7xl z-10">{icon}</div>
         <div
+          style={{
+            backgroundImage:
+              state.theme.id === 'theme1' ? 'url(./abstractCardBG.png)' : '',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
           className={`${
             state.theme.id === 'theme1'
               ? 'rounded-sm'
