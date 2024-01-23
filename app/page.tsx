@@ -108,6 +108,10 @@ export default function Home() {
         className="relative flex min-h-screen z-0 items-center flex-col font-extralight px-8 overflow-x-hidden w-full xl:mx-auto"
       >
         <div
+          style={{
+            backgroundImage: 'url(./abstractBG2.png)',
+            backgroundPosition: 'center',
+          }}
           className={`${
             state.theme.id === 'theme1'
               ? 'opacity-20'
