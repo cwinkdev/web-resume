@@ -2,8 +2,12 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
 import { Pagination, Navigation } from 'swiper/modules';
 import PortfolioStackSlide from './PortfolioStackSlide';
-import { portfolioSlidesWide as slides } from '@/app/data/portfolioSlides';
+import {
+  portfolioSlidesWide,
+  tldlSlidesWide,
+} from '@/app/data/portfolioSlides';
 import { handleClientScriptLoad } from 'next/script';
+import { act } from 'react-dom/test-utils';
 
 interface PortfolioDesktopProps {
   activeProject: number;
@@ -14,6 +18,8 @@ const PortfolioDesktop = ({
   setActiveIndex,
   activeProject,
 }: PortfolioDesktopProps) => {
+  let slides = activeProject === 0 ? portfolioSlidesWide : tldlSlidesWide;
+
   return (
     <div className="hidden xl:block">
       <Swiper
@@ -45,7 +51,7 @@ const PortfolioDesktop = ({
           </SwiperSlide>
         ))}
         <SwiperSlide key={5} className="relative">
-          <PortfolioStackSlide />
+          <PortfolioStackSlide activeProject={activeProject} />
         </SwiperSlide>
       </Swiper>
     </div>

@@ -1,5 +1,8 @@
 import 'swiper/swiper-bundle.css';
-import { portfolioSlides as slides } from '@/app/data/portfolioSlides';
+import {
+  portfolioSlides as slides,
+  tldlSlides,
+} from '@/app/data/portfolioSlides';
 import { useState } from 'react';
 import { useApp } from '@/app/hooks/useApp';
 import PortfolioHeader from './PortfolioHeader';
@@ -40,7 +43,7 @@ const Portfolio = () => {
         <PortfolioBlurbs
           activeIndex={activeIndex}
           activeProject={activeProject}
-          slides={slides}
+          slides={activeProject === 0 ? slides : tldlSlides}
         />
       </div>
     </section>

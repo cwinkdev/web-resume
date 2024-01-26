@@ -97,7 +97,7 @@
   opacity: 0.7;
   width: 10px;
   height: 10px;
-  border: 2px solid rgba(0, 255, 255, 0.61);
+  border: 2px solid rgba(255, 255, 255, 0.61);
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s;
   border-radius: 50%;
@@ -106,10 +106,10 @@
   background: rgb(90, 90, 90);
   transform: scale(1.5);
   opacity: 1;
-  border: 2px solid rgb(0, 238, 255);
+  border: 2px solid rgb(255, 255, 255);
 }
 .my-swiper-container-wide .swiper-pagination-bullet {
-  background: rgb(34, 34, 34);
+  background: rgb(121, 121, 121);
   opacity: 0.7;
   width: 10px;
   height: 10px;
@@ -121,11 +121,11 @@
   background: rgb(68, 68, 68);
   transform: scale(1.5);
   opacity: 1;
-  border: 2px solid rgb(0, 238, 255);
+  border: 2px solid rgb(255, 255, 255);
 }
 .my-swiper-container-wide .swiper-button-next,
 .my-swiper-container-wide .swiper-button-prev {
-  color: rgb(0, 238, 255);
+  color: rgb(255, 255, 255);
 }
 
 /* OBSERVER ANIMATIONS ################################################## 

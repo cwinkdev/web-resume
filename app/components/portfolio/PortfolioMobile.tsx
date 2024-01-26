@@ -2,7 +2,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
 import { Navigation, Pagination } from 'swiper/modules';
 import PortfolioStackSlide from './PortfolioStackSlide';
-import { portfolioSlides as slides } from '@/app/data/portfolioSlides';
+import { portfolioSlides, tldlSlides } from '@/app/data/portfolioSlides';
 
 interface PortfolioMobileProps {
   setActiveIndex: (index: number) => void;
@@ -13,6 +13,8 @@ const PortfolioMobile = ({
   setActiveIndex,
   activeProject,
 }: PortfolioMobileProps) => {
+  let slides = activeProject === 0 ? portfolioSlides : tldlSlides;
+
   return (
     <div className="xl:hidden">
       <Swiper
@@ -45,7 +47,7 @@ const PortfolioMobile = ({
           </SwiperSlide>
         ))}
         <SwiperSlide key={5} className="relative">
-          <PortfolioStackSlide />
+          <PortfolioStackSlide activeProject={activeProject} />
         </SwiperSlide>
       </Swiper>
     </div>
