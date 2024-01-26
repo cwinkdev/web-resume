@@ -16,6 +16,7 @@ const PortfolioStackSlide = ({ activeProject }: PortfolioStackSlideProps) => {
             <p>React 18.2.0</p>
             <p>Next.js 14.0.3</p>
             <p>TypeScript 5.1.3</p>
+            <p>ESLint 8.42.0</p>
             <p>Firebase Firestore DB</p>
             <p>Tailwind CSS 3.3.2</p>
             <p>Spotify API </p>
@@ -60,12 +61,12 @@ const PortfolioStackSlide = ({ activeProject }: PortfolioStackSlideProps) => {
           </div>
           <div className="text-sm xl:text-lg font-light">
             <p>React 18.2.0</p>
-            <p>Next.js 14.0.3</p>
-            <p>TypeScript 5.1.3</p>
-            <p>Firebase Firestore DB</p>
-            <p>Tailwind CSS 3.3.2</p>
-            <p>Spotify API </p>
-            <p>Google Vision API</p>
+            <p>Next.js 13.4.12</p>
+            <p>TypeScript 5.1.6</p>
+            <p>ESLint 8.45.0</p>
+            <p>MongoDB 5.7.0</p>
+            <p>Tailwind CSS 3.3.3</p>
+            <p>Whisper AI </p>
           </div>
         </div>
         <div>
@@ -90,8 +91,10 @@ const PortfolioStackSlide = ({ activeProject }: PortfolioStackSlideProps) => {
           <div className="text-sm xl:text-lg font-light">
             <p>react-icons</p>
             <p>react-select</p>
-            <p>react-toastify </p>
-            <p>react-webcam</p>
+            <p>react-slick</p>
+            <p>react-youtube</p>
+            <p>react-twitter-embed</p>
+            <p>slick-carousel</p>
           </div>
         </div>
       </div>
