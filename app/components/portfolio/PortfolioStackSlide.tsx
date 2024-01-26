@@ -12,7 +12,7 @@ const PortfolioStackSlide = ({ activeProject }: PortfolioStackSlideProps) => {
             <p className="mx-1 my-auto text-cyan-400 font-bold">CORE TECH</p>
             <div className="w-1/12 border-b border-cyan-200 my-auto opacity-60"></div>
           </div>
-          <div className="text-sm xl:text-lg font-light">
+          <div className="text-sm xl:text-lg font-light text-baseText">
             <p>React 18.2.0</p>
             <p>Next.js 14.0.3</p>
             <p>TypeScript 5.1.3</p>
@@ -29,7 +29,7 @@ const PortfolioStackSlide = ({ activeProject }: PortfolioStackSlideProps) => {
             <p className="mx-1 my-auto text-cyan-400 font-bold">Deployment</p>
             <div className="w-1/12 border-b border-cyan-200 my-auto opacity-60"></div>
           </div>
-          <div className="text-sm xl:text-lg font-light">
+          <div className="text-sm xl:text-lg font-light text-baseText">
             <p>Vercel</p>
             <p>GitHub</p>
           </div>
@@ -40,7 +40,7 @@ const PortfolioStackSlide = ({ activeProject }: PortfolioStackSlideProps) => {
             <p className="mx-1 my-auto text-cyan-400 font-bold">UX Packages</p>
             <div className="w-1/12 border-b border-cyan-200 my-auto opacity-60"></div>
           </div>
-          <div className="text-sm xl:text-lg font-light">
+          <div className="text-sm xl:text-lg font-light text-baseText">
             <p>react-icons</p>
             <p>react-select</p>
             <p>react-toastify </p>
@@ -59,7 +59,7 @@ const PortfolioStackSlide = ({ activeProject }: PortfolioStackSlideProps) => {
             <p className="mx-1 my-auto text-violet-400 font-bold">CORE TECH</p>
             <div className="w-1/12 border-b border-violet-200 my-auto opacity-60"></div>
           </div>
-          <div className="text-sm xl:text-lg font-light">
+          <div className="text-sm xl:text-lg font-light text-baseText">
             <p>React 18.2.0</p>
             <p>Next.js 13.4.12</p>
             <p>TypeScript 5.1.6</p>
@@ -75,7 +75,7 @@ const PortfolioStackSlide = ({ activeProject }: PortfolioStackSlideProps) => {
             <p className="mx-1 my-auto text-violet-400 font-bold">Deployment</p>
             <div className="w-1/12 border-b border-violet-200 my-auto opacity-60"></div>
           </div>
-          <div className="text-sm xl:text-lg font-light">
+          <div className="text-sm xl:text-lg font-light text-baseText">
             <p>Vercel</p>
             <p>GitHub</p>
           </div>
@@ -88,7 +88,7 @@ const PortfolioStackSlide = ({ activeProject }: PortfolioStackSlideProps) => {
             </p>
             <div className="w-1/12 border-b border-violet-200 my-auto opacity-60"></div>
           </div>
-          <div className="text-sm xl:text-lg font-light">
+          <div className="text-sm xl:text-lg font-light text-baseText">
             <p>react-icons</p>
             <p>react-select</p>
             <p>react-slick</p>
