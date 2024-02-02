@@ -28,7 +28,7 @@ const PortfolioMobile = ({
           bulletClass: 'swiper-pagination-bullet',
           bulletActiveClass: 'swiper-pagination-bullet-active',
         }}
-        className="border-2 border-neutral-500 rounded-3xl text-white w-11/12 bg-zinc-900 shadow-md shadow-baseShadow my-swiper-container"
+        className="w-11/12 text-white border-2 shadow-md border-neutral-500 rounded-3xl bg-zinc-900 shadow-baseShadow my-swiper-container"
       >
         {slides.map((slide, index) => (
           <SwiperSlide key={index} className="relative flex flex-col">
@@ -41,8 +41,8 @@ const PortfolioMobile = ({
               }}
               className="rounded-3xl"
             ></div>
-            <div className="flex flex-col absolute bottom- w-full bg-gradient-to-t from-black to-neutral-900 h-12 -bottom-1">
-              <div className="w-full rounded-b-2xl border-t border-neutral-600 "></div>
+            <div className="absolute flex flex-col w-full h-12 bottom- bg-gradient-to-t from-black to-neutral-900 -bottom-1">
+              <div className="w-full border-t rounded-b-2xl border-neutral-600 "></div>
             </div>
           </SwiperSlide>
         ))}

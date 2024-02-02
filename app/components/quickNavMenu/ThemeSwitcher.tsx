@@ -44,7 +44,7 @@ const ThemeSwitcher = ({
 
   return (
     <div
-      className="h-32 flex flex-col "
+      className="flex flex-col h-32"
       style={{ transform: `translateX(${translateX}px)` }}
     >
       {showName ? <h2 className="font-semibold">View mode:</h2> : null}

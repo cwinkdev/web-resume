@@ -44,7 +44,7 @@ const MainNavButton = ({
             : 'rounded-full'
         } relative h-3/4 w-3/4 flex bg-base shadow-md xl:group-hover:scale-110 xl:group-hover:border-accent shadow-baseShadow mx-auto duration-500 border-2 border-base3 ${additionalCSS}`}
       >
-        <div className="m-auto text-7xl z-10">{icon}</div>
+        <div className="z-10 m-auto text-7xl">{icon}</div>
         <div
           style={{
             backgroundImage:
@@ -61,7 +61,7 @@ const MainNavButton = ({
           } absolute left-0 h-full bg-base2 transform opacity-0 xl:group-hover:opacity-100 w-[0%] xl:group-hover:w-[100%] duration-700`}
         ></div>
       </div>
-      <p className="text-lg mt-4 h-1/4 font-light xl:group-hover:text-accent xl:group-hover:font-normal xl:group-hover:text-xl">
+      <p className="mt-4 text-lg font-light h-1/4 xl:group-hover:text-accent xl:group-hover:font-normal xl:group-hover:text-xl">
         {label}
       </p>
     </Link>

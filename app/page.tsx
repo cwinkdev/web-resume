@@ -81,11 +81,11 @@ export default function Home() {
         <QuickNavMenu />
         <div
           style={{ transform: `translateX(${state.offset}px)` }}
-          className="text-center text-primary font-mono z-30 w-fit m-auto h-14 flex flex-col"
+          className="z-30 flex flex-col m-auto font-mono text-center text-primary w-fit h-14"
         >
-          <p className="text-2xl m-auto mt-4">Christian Winkler</p>
+          <p className="m-auto mt-4 text-2xl">Christian Winkler</p>
 
-          <div className="h-14 w-full justify-center flex relative">
+          <div className="relative flex justify-center w-full h-14">
             <p
               className={`text-center absolute top-0 h-full text-accent font-mono ${
                 state.theme.id === 'theme1'
@@ -105,7 +105,7 @@ export default function Home() {
 
       <section
         id="main"
-        className="relative flex min-h-screen z-0 items-center flex-col font-extralight px-8 overflow-x-hidden w-full xl:mx-auto"
+        className="relative z-0 flex flex-col items-center w-full min-h-screen px-8 overflow-x-hidden font-extralight xl:mx-auto"
       >
         <div
           style={{

@@ -34,7 +34,7 @@ const SkillSection = ({ label, type }: SkillSectionProps) => {
       >
         {label}
       </p>
-      <ul className="w-full mx-auto flex flex-wrap items-center justify-evenly pb-2 pt-4">
+      <ul className="flex flex-wrap items-center w-full pt-4 pb-2 mx-auto justify-evenly">
         {skillsList.map((skill) =>
           skill.type === type ? (
             <li
@@ -42,7 +42,7 @@ const SkillSection = ({ label, type }: SkillSectionProps) => {
               className={`${skill.additionalCSS} flex flex-col bg-base1 border border-base2 shadow-baseShadow0 shadow-sm rounded-lg px-4 items-center justify-center m-1 py-4`}
             >
               <div className="text-5xl">{skill.icon}</div>
-              <p className="text-baseText font-bold mt-2">{skill.key}</p>
+              <p className="mt-2 font-bold text-baseText">{skill.key}</p>
             </li>
           ) : null,
         )}

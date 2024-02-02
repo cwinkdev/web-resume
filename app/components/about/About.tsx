@@ -8,7 +8,7 @@ const About = () => {
   const [isLongVersion, setIsLongVersion] = useState<boolean>(false);
 
   return (
-    <section className="pt-32 p-8 min-h-fit h-screen text-center xl:mx-auto">
+    <section className="h-screen p-8 pt-32 text-center min-h-fit xl:mx-auto">
       <div
         className={`${
           state.currentSection === 'about' ? 'slide-in-right' : ''

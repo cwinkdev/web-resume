@@ -34,7 +34,7 @@ const PortfolioDesktop = ({
           bulletActiveClass: 'swiper-pagination-bullet-active',
         }}
         navigation
-        className="border hidden border-neutral-500 rounded-3xl text-white w-11/12 bg-base shadow-md shadow-baseShadow my-swiper-container-wide"
+        className="hidden w-11/12 text-white border shadow-md border-neutral-500 rounded-3xl bg-base shadow-baseShadow my-swiper-container-wide"
       >
         {slides.map((slide, index) => (
           <SwiperSlide key={index} className="relative flex flex-col">
@@ -47,7 +47,7 @@ const PortfolioDesktop = ({
               }}
               className="rounded-t-3xl"
             ></div>
-            <div className="absolute w-full text-lg z-20 rounded-b-2xl bg-zinc-950 border-t border-neutral-600 flex justify-between px-4 h-12"></div>
+            <div className="absolute z-20 flex justify-between w-full h-12 px-4 text-lg border-t rounded-b-2xl bg-zinc-950 border-neutral-600"></div>
           </SwiperSlide>
         ))}
         <SwiperSlide key={5} className="relative">

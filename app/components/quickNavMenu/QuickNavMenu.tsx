@@ -37,8 +37,8 @@ const QuickNavMenu = () => {
         additionalCSS="text-2xl rounded-full"
         showName={false}
       />
-      <div className="border-r h-6 w-6 mx-auto mt-2 opacity-50 border-accent xl:border-b xl:h-0 xl:w-10"></div>
-      <div className="flex xl:flex-col justify-evenly w-3/4 xl:w-28 mx-auto h-full">
+      <div className="w-6 h-6 mx-auto mt-2 border-r opacity-50 border-accent xl:border-b xl:h-0 xl:w-10"></div>
+      <div className="flex w-3/4 h-full mx-auto xl:flex-col justify-evenly xl:w-28">
         <QuickNavButton
           label={'ABOUT'}
           icon={<GiPerson />}

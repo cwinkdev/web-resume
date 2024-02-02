@@ -39,7 +39,7 @@ const AboutCard = ({ isLongVersion }: AboutCardProps) => {
             {aboutMeLines.map((line, index) => (
               <div
                 key={line}
-                className="crawl-line w-full xl:text-2xl text-xl font-bold"
+                className="w-full text-xl font-bold crawl-line xl:text-2xl"
                 style={{
                   opacity: 1 - index * 0.1,
                   transform: `translateY(${index * 10}vh) scale(${
@@ -52,11 +52,11 @@ const AboutCard = ({ isLongVersion }: AboutCardProps) => {
               </div>
             ))}
           </div>
-          <div className="xl:block hidden">
+          <div className="hidden xl:block">
             {aboutMeLinesWide.map((line, index) => (
               <div
                 key={line}
-                className="crawl-line w-full xl:text-2xl text-xl font-bold"
+                className="w-full text-xl font-bold crawl-line xl:text-2xl"
                 style={{
                   opacity: 1 - index * 0.1,
                   transform: `translateY(${index * 10}vh) scale(${

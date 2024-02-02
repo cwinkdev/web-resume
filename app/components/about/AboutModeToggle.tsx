@@ -32,7 +32,7 @@ const AboutModeToggle = ({
       <p className="my-auto text-primary">Version:</p>
       <div
         {...handlers}
-        className="w-40 cursor-pointer h-6 mx-auto rounded-full flex shadow-md shadow-baseShadow bg-base2 text-baseText relative font-light box-border border border-base3"
+        className="box-border relative flex w-40 h-6 mx-auto font-light border rounded-full shadow-md cursor-pointer shadow-baseShadow bg-base2 text-baseText border-base3"
       >
         <div
           onClick={() => setIsLongVersion(false)}

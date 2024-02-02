@@ -11,7 +11,7 @@ const MainNavMenu = ({}: MainNavMenuProps) => {
   const options = { threshold: 0 };
   const { ref, inView } = useInView(options);
   return (
-    <div className="w-full flex flex-col text-center h-full my-auto">
+    <div className="flex flex-col w-full h-full my-auto text-center">
       <div
         ref={ref}
         className={`w-full lg:mt-0 mt-20 ${inView ? 'slide-in-left' : ''} `}
