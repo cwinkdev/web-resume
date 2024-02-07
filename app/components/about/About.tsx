@@ -10,6 +10,11 @@ const About = () => {
   return (
     <section className="h-screen p-8 pt-32 text-center min-h-fit xl:mx-auto">
       <div
+        style={{
+          backgroundImage: 'url(./i.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
         className={`${
           state.currentSection === 'about' ? 'slide-in-right' : ''
         } border-2 border-base3 rounded-full shadow-md shadow-baseShadow h-40 bg-base2 w-40 mx-auto my-4`}
