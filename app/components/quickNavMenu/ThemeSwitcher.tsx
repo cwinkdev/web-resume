@@ -10,12 +10,12 @@ const themes = [
     icon: <GiSun />,
     colors: 'text-amber-600',
   },
-  {
-    id: 'theme2',
-    name: 'Vibrant Fun',
-    icon: <GiPartyPopper />,
-    colors: 'text-yellow-200',
-  },
+  // {
+  //   id: 'theme2',
+  //   name: 'Vibrant Fun',
+  //   icon: <GiPartyPopper />,
+  //   colors: 'text-yellow-200',
+  // },
 ];
 
 interface ThemeSwitcherProps {
