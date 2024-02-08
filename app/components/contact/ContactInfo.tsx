@@ -34,8 +34,8 @@ const ContactInfo = () => {
       <div className="w-1/2 mx-auto border-b opacity-50 border-secondary xl:w-1/3"></div>
       <div className="flex flex-col items-center">
         <a
-          href="/path-to-resume.pdf"
-          download
+          href="/Christian Winkler - Frontend Developer.pdf"
+          download="Christian_Winkler_Resume.pdf"
           className="relative flex items-center justify-center p-2 px-4 mx-auto text-xl border rounded-lg bg-base w-fit hover:border-accent group border-base3"
         >
           <div className="absolute w-[0%] group-hover:w-[100%] opacity-0 group-hover:opacity-100 h-full bg-base2 z-0 duration-500 rounded-lg left-0"></div>
