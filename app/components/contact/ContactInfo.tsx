@@ -1,5 +1,3 @@
-'use client';
-
 import { SiGithub } from 'react-icons/si';
 import { GiCloudDownload } from 'react-icons/gi';
 

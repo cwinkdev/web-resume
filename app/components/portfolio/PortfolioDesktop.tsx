@@ -6,8 +6,6 @@ import {
   portfolioSlidesWide,
   tldlSlidesWide,
 } from '@/app/data/portfolioSlides';
-import { handleClientScriptLoad } from 'next/script';
-import { act } from 'react-dom/test-utils';
 
 interface PortfolioDesktopProps {
   activeProject: number;

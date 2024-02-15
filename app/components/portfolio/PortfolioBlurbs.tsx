@@ -20,7 +20,7 @@ const PortfolioBlurbs = ({
       <p className={`text-baseText text-lg mx-6`}>
         {activeIndex === slides.length
           ? 'Tech Stack'
-          : slides[activeProject].text}
+          : slides[activeIndex].text}
       </p>
     </div>
   );
