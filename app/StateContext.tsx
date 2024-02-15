@@ -5,7 +5,12 @@ import { AppState } from '../types';
 import React, { createContext, useState, ReactNode } from 'react';
 
 const initialState: AppState = {
-  theme: { id: '', name: 'Dark', icon: <GiMoon />, colors: 'bg-white' },
+  theme: {
+    id: '',
+    name: 'Modern Dark',
+    icon: <GiMoon />,
+    colors: 'text-yellow-100',
+  },
   offset: 0,
   showQuickNav: false,
   currentSection: 'top',

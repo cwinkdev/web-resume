@@ -56,7 +56,7 @@ const ThemeSwitcher = ({
             : state.theme.id === ''
             ? 'rounded-xl'
             : 'rounded-full'
-        } ${themes[themeIndex].colors} ${additionalCSS} relative
+        } ${state.theme.colors} ${additionalCSS} relative
    group bg-base shadow-sm xl:mt-0 shadow-baseShadow justify-between mx-auto flex border border-base3 xl:hover:border-accent duration-300`}
       >
         <div
@@ -68,12 +68,12 @@ const ThemeSwitcher = ({
               : 'rounded-full'
           } absolute w-[0%] xl:group-hover:w-[100%] opacity-0 xl:group-hover:opacity-100 h-full bg-base2 z-0 duration-500 left-0`}
         ></div>
-        <div className={`${themes[themeIndex].colors} z-10 m-1.5 xl:text-3xl`}>
+        <div className={`${state.theme.colors} z-10 m-1.5 xl:text-3xl`}>
           {state.theme.icon}
         </div>
         {showName ? (
           <p className={`text-baseText text-lg font-semibold m-auto px-3 z-10`}>
-            {themes[themeIndex].name}
+            {state.theme.name}
           </p>
         ) : null}
       </button>
