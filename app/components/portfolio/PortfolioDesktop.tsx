@@ -21,6 +21,7 @@ const PortfolioDesktop = ({
   return (
     <div className="hidden xl:block">
       <Swiper
+        key={`swiper-${activeProject}`}
         spaceBetween={0}
         modules={[Navigation, Pagination]}
         slidesPerView={1}
