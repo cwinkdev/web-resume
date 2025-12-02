@@ -22,12 +22,14 @@ const Portfolio = () => {
       } from-transparent ${
         activeProject === 0 ? 'via-cyan-950' : 'via-violet-950'
       }  to-transparent w-full text-center relative duration-1000 xl:w-full xl:mx-auto`}
+      aria-labelledby="portfolio-heading"
     >
       <div
         className={`${
           state.currentSection === 'portfolio' ? 'slide-in-right' : ''
         } `}
       >
+        <h2 id="portfolio-heading" className="sr-only">Portfolio Projects</h2>
         <PortfolioHeader
           activeProject={activeProject}
           setActiveProject={setActiveProject}

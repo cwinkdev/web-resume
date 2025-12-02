@@ -10,7 +10,7 @@ import MainNavMenu from './components/mainNavMenu/MainNavMenu';
 import { useEffect, useRef } from 'react';
 
 export default function Home() {
-  const { state, setState, handleClick, typedText } = useApp();
+  const { state, setState, typedText } = useApp();
   const aboutRef = useRef(null);
   const skillsRef = useRef(null);
   const portfolioRef = useRef(null);
@@ -67,7 +67,7 @@ export default function Home() {
       id="top"
       className={`relative duration-500 bg-base1 text-baseText overflow-x-hidden`}
     >
-      <div
+      <header
         style={{
           backgroundImage:
             state.theme.id === 'theme1' ? 'url(./abstractCardBG.png)' : '',
@@ -77,6 +77,7 @@ export default function Home() {
         className={`fixed top-0 w-full bg-base ${
           state.showQuickNav ? 'xl:h-0 h-16' : 'h-24'
         } shadow-md shadow-neutral-00 border-b z-20 duration-300 border-neutral-700`}
+        role="banner"
       >
         <QuickNavMenu />
         <div
@@ -101,11 +102,12 @@ export default function Home() {
             </p>
           </div>
         </div>
-      </div>
+      </header>
 
-      <section
+      <main
         id="main"
         className="relative z-0 flex flex-col items-center w-full min-h-screen px-8 overflow-x-hidden font-extralight xl:mx-auto"
+        role="main"
       >
         <div
           style={{
@@ -121,19 +123,19 @@ export default function Home() {
           } absolute w-full h-full`}
         ></div>
         <MainNavMenu />
-      </section>
-      <div id="about" ref={aboutRef}>
+      </main>
+      <section id="about" ref={aboutRef} aria-label="About section">
         <About />
-      </div>
-      <div id="skills" ref={skillsRef}>
+      </section>
+      <section id="skills" ref={skillsRef} aria-label="Skills section">
         <Skills />
-      </div>
-      <div id="portfolio" ref={portfolioRef}>
+      </section>
+      <section id="portfolio" ref={portfolioRef} aria-label="Portfolio section">
         <Portfolio />
-      </div>
-      <div id="contact" ref={contactRef}>
+      </section>
+      <section id="contact" ref={contactRef} aria-label="Contact section">
         <Contact />
-      </div>
+      </section>
     </div>
   );
 }

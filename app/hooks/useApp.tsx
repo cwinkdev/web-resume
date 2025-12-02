@@ -1,46 +1,68 @@
 'use client';
 
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useEffect, useState, useCallback } from 'react';
 import { AppStateContext } from '../StateContext';
 
 export function useApp() {
   const { state, setState } = useContext(AppStateContext);
 
-  const changeTheme = (theme: string) => {
-    document.querySelector('html')?.setAttribute('data-theme', theme);
-  };
-
-  const handleClick = (
-    e: React.MouseEvent<HTMLAnchorElement>,
-    sectionId: string,
-  ) => {
-    e.preventDefault();
-    const element = document.getElementById(sectionId);
-    if (element) {
-      setState((prevState) => ({
-        ...prevState,
-        currentSection: sectionId,
-      }));
-      element.scrollIntoView({ behavior: 'smooth' });
+  const changeTheme = useCallback((theme: string) => {
+    try {
+      document.querySelector('html')?.setAttribute('data-theme', theme);
+    } catch (error) {
+      console.error('Error changing theme:', error);
     }
-  };
+  }, []);
+
+  const handleClick = useCallback(
+    (
+      e: React.MouseEvent<HTMLAnchorElement>,
+      sectionId: string,
+    ) => {
+      e.preventDefault();
+      try {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          setState((prevState) => ({
+            ...prevState,
+            currentSection: sectionId,
+          }));
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      } catch (error) {
+        console.error('Error navigating to section:', error);
+      }
+    },
+    [setState],
+  );
 
   useEffect(() => {
+    let lastScrollTime = 0;
+    const throttleDelay = 16; // ~60fps
+
     const handleScroll = () => {
-      const maxScroll = window.innerWidth > 640 ? 800 : 1000;
-      const newPos = Math.min(
-        window.innerWidth > 640 ? window.scrollY * 1.5 : window.scrollY,
-        maxScroll,
-      );
-      setState((prevState) => ({
-        ...prevState,
-        offset: newPos,
-      }));
+      const now = Date.now();
+      if (now - lastScrollTime >= throttleDelay) {
+        try {
+          const maxScroll = window.innerWidth > 640 ? 800 : 1000;
+          const newPos = Math.min(
+            window.innerWidth > 640 ? window.scrollY * 1.5 : window.scrollY,
+            maxScroll,
+          );
+          setState((prevState) => ({
+            ...prevState,
+            offset: newPos,
+          }));
+          lastScrollTime = now;
+        } catch (error) {
+          console.error('Error handling scroll:', error);
+        }
+      }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [setState]);
 
   const [typedText, setTypedText] = useState('');
   const fullText = 'web_resume';
@@ -79,7 +101,7 @@ export function useApp() {
         showQuickNav: false,
       }));
     }
-  }, [state.offset]);
+  }, [state.offset, setState]);
 
   return {
     state,

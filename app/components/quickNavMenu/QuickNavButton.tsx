@@ -26,7 +26,9 @@ const QuickNavButton = ({
       href={`#${sectionId}`}
       onClick={(e) => handleClick(e, sectionId)}
       style={{ transform: `translateX(${translateX}px)` }}
-      className="group"
+      className="group focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-base rounded"
+      aria-label={`Navigate to ${label} section`}
+      aria-current={state.currentSection === sectionId ? 'page' : undefined}
     >
       <div
         className={`flex h-10 xl:h-16 xl:w-16 text-center ${
@@ -40,6 +42,9 @@ const QuickNavButton = ({
             ? 'rounded-xl'
             : 'rounded-full'
         } duration-300 text-2xl relative xl:group-hover:border-accent border-base3 px-1.5 m-auto ${additionalCSS}`}
+        role="button"
+        tabIndex={-1}
+        aria-hidden="true"
       >
         <div
           className={`${

@@ -4,7 +4,7 @@ import { IconType } from 'react-icons';
 export interface ThemeProps {
   id: string;
   name: string;
-  icon: any;
+  icon: ReactNode;
   colors: string;
 }
 

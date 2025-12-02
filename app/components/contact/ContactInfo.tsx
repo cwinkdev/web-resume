@@ -10,7 +10,11 @@ const ContactInfo = () => {
       <div className="">
         <p className="text-xl font-semibold ">Christian Winkler</p>
         <p className="mb-4  text-secondary">Front-End Developer</p>
-        <a href="mailto:cjwinkler0@gmail.com" className="text-lg">
+        <a
+          href="mailto:cjwinkler0@gmail.com"
+          className="text-lg focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-base rounded"
+          aria-label="Send email to cjwinkler0@gmail.com"
+        >
           cjwinkler0@gmail.com
         </a>
         <p className="text-secondary">North Augusta, SC - USA</p>
@@ -20,7 +24,10 @@ const ContactInfo = () => {
 
       <a
         href="https://github.com/cwinkdev"
-        className="relative flex items-center justify-center p-2 px-4 mx-auto text-xl duration-700 border rounded-lg bg-base w-fit hover:border-accent border-base3 group"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="relative flex items-center justify-center p-2 px-4 mx-auto text-xl duration-700 border rounded-lg bg-base w-fit hover:border-accent border-base3 group focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-base"
+        aria-label="Visit Christian Winkler's GitHub profile (opens in new tab)"
       >
         <div className="absolute w-[0%] group-hover:w-[100%] opacity-0 group-hover:opacity-100 h-full bg-base2 z-0 duration-500 rounded-lg left-0"></div>
         <div className="z-10 flex items-center">
@@ -34,7 +41,8 @@ const ContactInfo = () => {
         <a
           href="/Christian Winkler - Frontend Developer.pdf"
           download="Christian_Winkler_Resume.pdf"
-          className="relative flex items-center justify-center p-2 px-4 mx-auto text-xl border rounded-lg bg-base w-fit hover:border-accent group border-base3"
+          className="relative flex items-center justify-center p-2 px-4 mx-auto text-xl border rounded-lg bg-base w-fit hover:border-accent group border-base3 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-base"
+          aria-label="Download Christian Winkler's resume as PDF"
         >
           <div className="absolute w-[0%] group-hover:w-[100%] opacity-0 group-hover:opacity-100 h-full bg-base2 z-0 duration-500 rounded-lg left-0"></div>
           <div className="z-10 flex items-center">

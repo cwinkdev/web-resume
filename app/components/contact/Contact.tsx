@@ -9,6 +9,7 @@ const Contact = () => {
       className={`${
         state.currentSection === 'contact' ? 'slide-in-left' : ''
       }  p-8 pt-20 min-h-screen h-screen w-full text-center text-baseText xl:w-1/2 xl:mx-auto my-24`}
+      aria-labelledby="contact-heading"
     >
       <div
         className={`${
@@ -19,6 +20,7 @@ const Contact = () => {
             : 'border-y border-secondary rounded-2xl bg-base'
         }  rounded-lg shadow-md shadow-baseShadow`}
       >
+        <h2 id="contact-heading" className="sr-only">Contact Information</h2>
         <ContactInfo />
       </div>
     </section>

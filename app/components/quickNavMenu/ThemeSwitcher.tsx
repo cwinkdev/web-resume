@@ -57,7 +57,10 @@ const ThemeSwitcher = ({
             ? 'rounded-xl'
             : 'rounded-full'
         } ${state.theme.colors} ${additionalCSS} relative
-   group bg-base shadow-sm xl:mt-0 shadow-baseShadow justify-between mx-auto flex border border-base3 xl:hover:border-accent duration-300`}
+   group bg-base shadow-sm xl:mt-0 shadow-baseShadow justify-between mx-auto flex border border-base3 xl:hover:border-accent duration-300 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-base`}
+        aria-label={`Change theme. Current theme: ${state.theme.name}`}
+        aria-pressed="false"
+        type="button"
       >
         <div
           className={`${

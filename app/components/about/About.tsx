@@ -8,7 +8,11 @@ const About = () => {
   const [isLongVersion, setIsLongVersion] = useState<boolean>(false);
 
   return (
-    <section className="h-screen p-8 pt-32 text-center min-h-fit xl:mx-auto">
+    <section
+      className="h-screen p-8 pt-32 text-center min-h-fit xl:mx-auto"
+      aria-labelledby="about-heading"
+    >
+      <h2 id="about-heading" className="sr-only">About Me</h2>
       <div
         style={{
           backgroundImage: 'url(./i.jpg)',
@@ -18,6 +22,8 @@ const About = () => {
         className={`${
           state.currentSection === 'about' ? 'slide-in-right' : ''
         } border-2 border-base3 rounded-full shadow-md shadow-baseShadow h-40 bg-base2 w-40 mx-auto my-4`}
+        role="img"
+        aria-label="Profile picture of Christian Winkler"
       ></div>
       <AboutModeToggle
         isLongVersion={isLongVersion}
