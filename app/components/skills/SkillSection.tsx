@@ -24,14 +24,14 @@ const SkillSection = ({ label, type, isSideSection = false }: SkillSectionProps)
           : 'border-t border-secondary rounded-2xl bg-base2'
       } my-2 pb-3 shadow-md shadow-baseShadow ${
         isSideSection
-          ? 'xl:w-[165px] xl:flex-shrink-0 xl:scale-90'
-          : 'xl:w-[195px] xl:flex-shrink-0 xl:scale-100'
+          ? 'xl:w-[220px] xl:flex-shrink-0'
+          : 'xl:w-[280px] xl:flex-shrink-0'
       } xl:m-2`}
     >
       <p
         className={`text-primary ${
-          isSideSection ? 'text-lg' : 'text-xl'
-        } border-b border-base2 bg-base shadow-baseShadow shadow-sm text-center font-semibold py-3 ${
+          isSideSection ? 'text-xl' : 'text-2xl'
+        } border-b border-base2 bg-base shadow-baseShadow shadow-sm text-center font-semibold py-4 ${
           state.theme.id === 'theme1'
             ? 'rounded-t-sm'
             : state.theme.id === ''
@@ -41,7 +41,7 @@ const SkillSection = ({ label, type, isSideSection = false }: SkillSectionProps)
       >
         {label}
       </p>
-      <ul className="w-full pt-3 pb-2 px-3 space-y-2">
+      <ul className="w-full pt-4 pb-3 px-4 space-y-3">
         {skillsList.map((skill) => {
           const colorClass = skill.additionalCSS
             .split(' ')
@@ -49,15 +49,15 @@ const SkillSection = ({ label, type, isSideSection = false }: SkillSectionProps)
           return skill.type === type ? (
             <li
               key={skill.key}
-              className="flex items-center gap-2.5 py-1 hover:bg-base1 transition-colors duration-200 rounded px-2"
+              className="flex items-center gap-3 py-2 hover:bg-base1 transition-colors duration-200 rounded px-2"
             >
               <div className={`${
-                isSideSection ? 'text-2xl' : 'text-3xl'
+                isSideSection ? 'text-3xl' : 'text-4xl'
               } flex-shrink-0 ${colorClass}`}>
                 {skill.icon}
               </div>
               <p className={`text-baseText ${
-                isSideSection ? 'text-sm' : 'text-base'
+                isSideSection ? 'text-base' : 'text-lg'
               } font-medium text-left flex-grow`}>
                 {skill.key}
               </p>
