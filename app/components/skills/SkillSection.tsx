@@ -4,8 +4,9 @@ interface SkillSectionProps {
   label: string;
   type: string;
   isSideSection?: boolean;
+  isActive?: boolean;
 }
-const SkillSection = ({ label, type, isSideSection = false }: SkillSectionProps) => {
+const SkillSection = ({ label, type, isSideSection = false, isActive = false }: SkillSectionProps) => {
   const { state } = useApp();
 
   return (
@@ -20,8 +21,12 @@ const SkillSection = ({ label, type, isSideSection = false }: SkillSectionProps)
         state.theme.id === 'theme1'
           ? 'border border-base3 rounded-sm bg-gradient-radial from-base2 to-base1'
           : state.theme.id === ''
-          ? 'rounded-xl border-t border-secondary bg-gradient-radial from-base2 to-base1'
-          : 'border-t border-secondary rounded-2xl bg-base2'
+          ? `rounded-xl border-t ${
+              isActive ? 'border-accent bg-base2' : 'border-gray-500 bg-base1'
+            } bg-gradient-radial from-base2 to-base1`
+          : `border-t ${
+              isActive ? 'border-accent' : 'border-gray-500'
+            } rounded-2xl ${isActive ? 'bg-base2' : 'bg-base1'}`
       } my-2 pb-3 shadow-md shadow-baseShadow ${
         isSideSection
           ? 'xl:w-[220px] xl:flex-shrink-0'
@@ -29,7 +34,7 @@ const SkillSection = ({ label, type, isSideSection = false }: SkillSectionProps)
       } xl:m-2`}
     >
       <p
-        className={`text-primary ${
+        className={`text-accent ${
           isSideSection ? 'text-xl' : 'text-2xl'
         } border-b border-base2 bg-base shadow-baseShadow shadow-sm text-center font-semibold py-4 ${
           state.theme.id === 'theme1'

@@ -28,49 +28,51 @@ const Skills = () => {
     if (offset < -1) offset += 3;
 
     if (offset === 0) {
-      // Center position - largest and in front
+      // Center position - largest and in front, overlapping side cards
       return {
         translateX: 0,
-        scale: 1,
+        scale: 1.15,
         zIndex: 30,
         opacity: 1,
+        blur: 0,
+        brightness: 1,
       };
     } else if (offset === 1) {
       // Right side - smaller and behind
       return {
-        translateX: 350,
-        scale: 0.8,
+        translateX: 250,
+        scale: 0.75,
         zIndex: 10,
-        opacity: 0.6,
+        opacity: 0.5,
+        blur: 4,
+        brightness: 0.7,
       };
     } else {
       // Left side (offset === -1) - smaller and behind
       return {
-        translateX: -350,
-        scale: 0.8,
+        translateX: -250,
+        scale: 0.75,
         zIndex: 10,
-        opacity: 0.6,
+        opacity: 0.5,
+        blur: 4,
+        brightness: 0.7,
       };
     }
   };
 
   return (
     <section
-      className={`${
-        state.currentSection === 'skills' ? 'slide-in-left' : ''
-      } p-8 xl:pt-0 h-fit min-h-screen w-full text-center flex items-center xl:w-3/4 xl:m-auto`}
+      className="p-8 xl:pt-0 h-screen w-full text-center flex items-center justify-center xl:w-3/4 xl:m-auto"
       aria-labelledby="skills-heading"
     >
       <div
         className={`${
           state.theme.id === 'theme1' ? '' : ''
-        } min-h-[700px] xl:min-h-fit h-fit text-baseText text-lg justify-evenly rounded-lg py-2 w-full relative `}
+        } w-full text-baseText text-lg rounded-lg py-2 relative flex flex-col items-center justify-center`}
       >
         <h2
           id="skills-heading"
-          className={`text-4xl text-accent mb-6 ${
-            state.currentSection === 'skills' ? 'opacity-100' : 'opacity-0'
-          }`}
+          className="text-4xl text-accent mb-6"
         >
           What I can do for you...
         </h2>
@@ -99,13 +101,18 @@ const Skills = () => {
               return (
                 <div
                   key={index}
-                  className="absolute transition-all duration-700 ease-in-out"
+                  className={`absolute transition-all duration-700 ease-in-out ${
+                    isCenter
+                      ? 'shadow-2xl shadow-accent/30'
+                      : 'shadow-lg shadow-black/50'
+                  }`}
                   style={{
                     transform: `translateX(${position.translateX}px) scale(${position.scale}) ${
                       !isCenter ? 'translateZ(-50px)' : 'translateZ(0px)'
                     }`,
                     zIndex: position.zIndex,
                     opacity: position.opacity,
+                    filter: `blur(${position.blur}px) brightness(${position.brightness})`,
                     transformStyle: 'preserve-3d',
                   }}
                 >
@@ -113,30 +120,35 @@ const Skills = () => {
                     label={section.label}
                     type={section.type}
                     isSideSection={false}
+                    isActive={isCenter}
                   />
                 </div>
               );
             })}
           </div>
 
-          {/* Navigation Arrows */}
+          {/* Navigation Arrows - positioned relative to outer boxes */}
           <button
             onClick={handlePrevious}
-            className="absolute left-4 top-1/2 -translate-y-1/2 z-50 p-3 rounded-full bg-base2 border border-base3 shadow-lg shadow-baseShadow hover:bg-base1 transition-colors duration-200 text-primary text-2xl"
+            className="absolute top-1/2 -translate-y-1/2 z-50 text-primary text-6xl hover:scale-110 hover:opacity-80 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-base rounded"
+            style={{
+              right: 'calc(50% + 250px + 105px + 50px)', // Center + translateX + half scaled box width (280*0.75/2=105) + padding
+            }}
             aria-label="Previous skill category"
           >
             <FaChevronLeft />
           </button>
           <button
             onClick={handleNext}
-            className="absolute right-4 top-1/2 -translate-y-1/2 z-50 p-3 rounded-full bg-base2 border border-base3 shadow-lg shadow-baseShadow hover:bg-base1 transition-colors duration-200 text-primary text-2xl"
+            className="absolute top-1/2 -translate-y-1/2 z-50 text-primary text-6xl hover:scale-110 hover:opacity-80 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-base rounded"
+            style={{
+              left: 'calc(50% + 250px + 105px + 50px)', // Center + translateX + half scaled box width (280*0.75/2=105) + padding
+            }}
             aria-label="Next skill category"
           >
             <FaChevronRight />
           </button>
         </div>
-
-        <div className="mt-8"></div>
       </div>
     </section>
   );

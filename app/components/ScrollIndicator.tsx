@@ -46,7 +46,7 @@ const ScrollIndicator = () => {
   return (
     <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center z-10">
       <p className="text-xs text-baseText opacity-60 mb-3 font-light italic animate-pulse">
-        Or explore by scrolling down
+        Or explore by scrolling
       </p>
       <button
         onClick={handleClick}
