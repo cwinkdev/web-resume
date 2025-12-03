@@ -9,7 +9,7 @@ const About = () => {
 
   return (
     <section
-      className="h-screen p-8 pt-32 text-center min-h-fit xl:mx-auto"
+      className="h-screen p-8 pt-32 text-center min-h-screen xl:mx-auto bg-base1 relative"
       aria-labelledby="about-heading"
     >
       <h2 id="about-heading" className="sr-only">About Me</h2>

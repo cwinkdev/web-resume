@@ -34,8 +34,6 @@ const Skills = () => {
         scale: 1.15,
         zIndex: 30,
         opacity: 1,
-        blur: 0,
-        brightness: 1,
       };
     } else if (offset === 1) {
       // Right side - smaller and behind
@@ -43,9 +41,7 @@ const Skills = () => {
         translateX: 250,
         scale: 0.75,
         zIndex: 10,
-        opacity: 0.5,
-        blur: 4,
-        brightness: 0.7,
+        opacity: 0.6,
       };
     } else {
       // Left side (offset === -1) - smaller and behind
@@ -53,16 +49,14 @@ const Skills = () => {
         translateX: -250,
         scale: 0.75,
         zIndex: 10,
-        opacity: 0.5,
-        blur: 4,
-        brightness: 0.7,
+        opacity: 0.6,
       };
     }
   };
 
   return (
     <section
-      className="p-8 xl:pt-0 h-screen w-full text-center flex items-center justify-center xl:w-3/4 xl:m-auto"
+      className="p-8 xl:pt-0 h-screen min-h-screen w-full text-center flex items-center justify-center xl:w-3/4 xl:m-auto bg-base1 relative"
       aria-labelledby="skills-heading"
     >
       <div
@@ -101,18 +95,13 @@ const Skills = () => {
               return (
                 <div
                   key={index}
-                  className={`absolute transition-all duration-700 ease-in-out ${
-                    isCenter
-                      ? 'shadow-2xl shadow-accent/30'
-                      : 'shadow-lg shadow-black/50'
-                  }`}
+                  className="absolute transition-all duration-700 ease-in-out"
                   style={{
                     transform: `translateX(${position.translateX}px) scale(${position.scale}) ${
                       !isCenter ? 'translateZ(-50px)' : 'translateZ(0px)'
                     }`,
                     zIndex: position.zIndex,
                     opacity: position.opacity,
-                    filter: `blur(${position.blur}px) brightness(${position.brightness})`,
                     transformStyle: 'preserve-3d',
                   }}
                 >

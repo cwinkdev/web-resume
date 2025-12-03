@@ -8,7 +8,7 @@ const Contact = () => {
     <section
       className={`${
         state.currentSection === 'contact' ? 'slide-in-left' : ''
-      }  p-8 pt-20 min-h-screen h-screen w-full text-center text-baseText xl:w-1/2 xl:mx-auto my-24`}
+      }  p-8 pt-20 min-h-screen h-screen w-full text-center text-baseText xl:w-1/2 xl:mx-auto bg-base1 relative`}
       aria-labelledby="contact-heading"
     >
       <div

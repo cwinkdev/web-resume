@@ -137,16 +137,16 @@ export default function Home() {
         <MainNavMenu />
         <ScrollIndicator />
       </main>
-      <section id="about" ref={aboutRef} aria-label="About section">
+      <section id="about" ref={aboutRef} aria-label="About section" className="relative">
         <About />
       </section>
-      <section id="skills" ref={skillsRef} aria-label="Skills section">
+      <section id="skills" ref={skillsRef} aria-label="Skills section" className="relative">
         <Skills />
       </section>
-      <section id="portfolio" ref={portfolioRef} aria-label="Portfolio section">
+      <section id="portfolio" ref={portfolioRef} aria-label="Portfolio section" className="relative">
         <Portfolio />
       </section>
-      <section id="contact" ref={contactRef} aria-label="Contact section">
+      <section id="contact" ref={contactRef} aria-label="Contact section" className="relative">
         <Contact />
       </section>
     </div>

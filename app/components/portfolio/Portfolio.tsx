@@ -19,7 +19,7 @@ const Portfolio = () => {
   return (
     <section
       className={`p-8 pt-20 min-h-screen h-screen ${
-        state.theme.id === '' || state.theme.id === 'theme2' ? 'bg-gradient-to-b' : ''
+        state.theme.id === '' || state.theme.id === 'theme2' ? 'bg-gradient-to-b' : 'bg-base1'
       } from-transparent ${
         activeProject === 0
           ? 'via-cyan-950'

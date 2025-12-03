@@ -22,10 +22,10 @@ const SkillSection = ({ label, type, isSideSection = false, isActive = false }: 
           ? 'border border-base3 rounded-sm bg-gradient-radial from-base2 to-base1'
           : state.theme.id === ''
           ? `rounded-xl border-t ${
-              isActive ? 'border-accent bg-base2' : 'border-gray-500 bg-base1'
+              isActive ? 'border-secondary bg-base2' : 'border-gray-500 bg-base1'
             } bg-gradient-radial from-base2 to-base1`
           : `border-t ${
-              isActive ? 'border-accent' : 'border-gray-500'
+              isActive ? 'border-secondary' : 'border-gray-500'
             } rounded-2xl ${isActive ? 'bg-base2' : 'bg-base1'}`
       } my-2 pb-3 shadow-md shadow-baseShadow ${
         isSideSection

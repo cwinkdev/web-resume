@@ -98,27 +98,21 @@ const MainNavMenu = ({}: MainNavMenuProps) => {
         </div>
       </div>
 
-      {/* Desktop: Video Game UI with diagonal bars */}
+      {/* Desktop: Video Game UI with diagonal panels */}
       <div className="hidden xl:block w-full">
-        <div className="mb-6">
-          <p className="text-baseText text-lg xl:text-xl opacity-80 font-thin tracking-wide">
-            Hop to a specific section
-          </p>
-        </div>
-        <div className="flex items-center justify-center h-[50vh] max-w-[1400px] mx-auto px-8">
+        <div className="flex items-center justify-center gap-3 h-[45vh] max-w-[1400px] mx-auto px-8">
           {sections.map((section, index) => {
-            // All bars use the same skew direction to the right for consistency
-            const skewAngle = 8;
+            const skewAngle = -8; // All panels use the same skew angle
             return (
               <Link
                 key={section.sectionId}
                 href={`#${section.sectionId}`}
                 onClick={(e) => handleClick(e, section.sectionId)}
-                className="group flex-1 h-full relative overflow-visible -ml-1 first:ml-0 focus:outline-none"
+                className="group flex-1 h-full relative overflow-visible focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-base z-0 group-hover:z-50 transition-all duration-500"
                 aria-label={`Navigate to ${section.label} section`}
               >
                 <div
-                  className={`relative w-full h-full bg-gradient-to-br ${section.bgGradient} border-l-4 ${section.borderColor} opacity-50 group-hover:opacity-100 shadow-lg shadow-baseShadow transition-all duration-500 group-hover:scale-105 group-hover:shadow-xl group-hover:shadow-accent/20 group-hover:border-accent`}
+                  className={`relative w-full h-full bg-gradient-to-br ${section.bgGradient} border-l-4 ${section.borderColor} bg-base1/80 shadow-lg shadow-baseShadow transition-all duration-500 group-hover:scale-110 group-hover:-translate-y-4 group-hover:shadow-2xl group-hover:shadow-black/50 group-hover:shadow-[0_20px_40px_rgba(0,0,0,0.6)] group-hover:border-accent`}
                   style={{
                     transform: `skewX(${skewAngle}deg)`,
                     transformOrigin: 'center',
@@ -126,20 +120,20 @@ const MainNavMenu = ({}: MainNavMenuProps) => {
                 >
                   {/* Inner content - unskewed */}
                   <div
-                    className="absolute inset-0 flex flex-col items-center justify-center p-8"
+                    className="absolute inset-0 flex flex-col items-center justify-center p-6"
                     style={{
                       transform: `skewX(${-skewAngle}deg)`,
                     }}
                   >
-                    <div className={`${section.color} opacity-60 group-hover:opacity-100 text-6xl mb-4 group-hover:scale-110 transition-all duration-500`}>
+                    <div className={`${section.color} text-5xl mb-4 group-hover:scale-110 transition-transform duration-500`}>
                       {section.icon}
                     </div>
-                    <h3 className="text-baseText opacity-70 group-hover:opacity-100 text-2xl font-bold uppercase tracking-wider group-hover:text-accent transition-all duration-500">
+                    <h3 className="text-xl font-bold text-baseText uppercase tracking-wider group-hover:text-accent transition-colors duration-500">
                       {section.label}
                     </h3>
                   </div>
                   {/* Hover overlay effect */}
-                  <div className={`absolute inset-0 bg-gradient-to-br ${section.bgGradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
+                  <div className={`absolute inset-0 bg-gradient-to-br ${section.bgGradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none`}></div>
                 </div>
               </Link>
             );
