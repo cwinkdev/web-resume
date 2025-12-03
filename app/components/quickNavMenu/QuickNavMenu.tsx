@@ -16,7 +16,24 @@ const QuickNavMenu = () => {
     setInitialXOffset(xOffset);
   }, []);
 
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const checkDesktop = () => {
+      setIsDesktop(window.innerWidth > 1280); // xl breakpoint
+    };
+
+    checkDesktop();
+    window.addEventListener('resize', checkDesktop);
+    return () => window.removeEventListener('resize', checkDesktop);
+  }, []);
+
   const calculateTranslateX = (buttonIndex: number) => {
+    // On desktop, if showQuickNav is false, keep it fully hidden
+    if (!state.showQuickNav && isDesktop) {
+      return initialXOffset * (buttonIndex + 1); // Keep at initial offset (fully hidden)
+    }
+
     const startingPoint = 100;
     const scrollYPosition = Math.max(state.offset - startingPoint, 0);
 
@@ -30,7 +47,9 @@ const QuickNavMenu = () => {
   return (
     <div
       style={{ transform: `translateX(${calculateTranslateX(0)}px)` }}
-      className={`flex xl:flex-col xl:h-screen justify-evenly w-full xl:w-36 mx-auto duration-300 xl:bg-base xl:bg-opacity-40 absolute top-0 p-3`}
+      className={`flex xl:flex-col xl:h-screen justify-evenly w-full xl:w-36 mx-auto duration-300 xl:bg-base xl:bg-opacity-40 absolute top-0 p-3 ${
+        !state.showQuickNav ? 'xl:opacity-0 xl:pointer-events-none' : 'xl:opacity-100'
+      }`}
     >
       <ThemeSwitcher
         translateX={calculateTranslateX(0)}
@@ -45,7 +64,11 @@ const QuickNavMenu = () => {
           sectionId={'about'}
           translateX={calculateTranslateX(0)}
           additionalCSS={
-            state.theme.id === '' ? 'text-cyan-200' : 'text-cyan-500'
+            state.theme.id === ''
+              ? 'text-cyan-200'
+              : state.theme.id === 'theme2'
+              ? 'text-cyan-300'
+              : 'text-cyan-500'
           }
         />
         <QuickNavButton
@@ -54,7 +77,11 @@ const QuickNavMenu = () => {
           sectionId={'skills'}
           translateX={calculateTranslateX(0)}
           additionalCSS={
-            state.theme.id === '' ? 'text-amber-200' : 'text-amber-500'
+            state.theme.id === ''
+              ? 'text-amber-200'
+              : state.theme.id === 'theme2'
+              ? 'text-yellow-300'
+              : 'text-amber-500'
           }
         />
         <QuickNavButton
@@ -63,7 +90,11 @@ const QuickNavMenu = () => {
           sectionId={'portfolio'}
           translateX={calculateTranslateX(0)}
           additionalCSS={
-            state.theme.id === '' ? 'text-violet-200' : 'text-violet-500'
+            state.theme.id === ''
+              ? 'text-violet-200'
+              : state.theme.id === 'theme2'
+              ? 'text-pink-300'
+              : 'text-violet-500'
           }
         />
         <QuickNavButton
@@ -72,7 +103,11 @@ const QuickNavMenu = () => {
           sectionId={'contact'}
           translateX={calculateTranslateX(0)}
           additionalCSS={
-            state.theme.id === '' ? 'text-emerald-200' : 'text-emerald-500'
+            state.theme.id === ''
+              ? 'text-emerald-200'
+              : state.theme.id === 'theme2'
+              ? 'text-green-300'
+              : 'text-emerald-500'
           }
         />
       </div>

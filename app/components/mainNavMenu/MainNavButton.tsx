@@ -31,7 +31,7 @@ const MainNavButton = ({
       onClick={(e) => handleClick(e, sectionId)}
       className={`${
         inView ? 'slide-in-left' : ''
-      } w-40 h-40 text-center duration-300 group focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-base rounded`}
+      } w-48 h-48 xl:w-56 xl:h-56 text-center duration-300 group focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-base rounded`}
       id={componentID}
       ref={ref}
       aria-label={`Navigate to ${label} section`}
@@ -40,12 +40,12 @@ const MainNavButton = ({
         className={`${
           state.theme.id === 'theme1'
             ? 'rounded-sm'
-            : state.theme.id === ''
-            ? 'rounded-xl'
-            : 'rounded-full'
+            : state.theme.id === 'theme2'
+            ? 'rounded-full'
+            : 'rounded-xl'
         } relative h-3/4 w-3/4 flex bg-base shadow-md xl:group-hover:scale-110 xl:group-hover:border-accent shadow-baseShadow mx-auto duration-500 border-2 border-base3 ${additionalCSS}`}
       >
-        <div className="z-10 m-auto text-7xl">{icon}</div>
+        <div className="z-10 m-auto text-8xl xl:text-9xl">{icon}</div>
         <div
           style={{
             backgroundImage:
@@ -56,13 +56,13 @@ const MainNavButton = ({
           className={`${
             state.theme.id === 'theme1'
               ? 'rounded-sm'
-              : state.theme.id === ''
-              ? 'rounded-xl'
-              : 'rounded-full'
+              : state.theme.id === 'theme2'
+              ? 'rounded-full'
+              : 'rounded-xl'
           } absolute left-0 h-full bg-base2 transform opacity-0 xl:group-hover:opacity-100 w-[0%] xl:group-hover:w-[100%] duration-700`}
         ></div>
       </div>
-      <p className="mt-4 text-lg font-light h-1/4 xl:group-hover:text-accent xl:group-hover:font-normal xl:group-hover:text-xl">
+      <p className="mt-4 text-xl xl:text-2xl font-light h-1/4 xl:group-hover:text-accent xl:group-hover:font-normal xl:group-hover:text-2xl">
         {label}
       </p>
     </Link>

@@ -80,3 +80,65 @@ export const tldlSlidesWide = [
   },
   { href: 'url(./drawer.png)', text: 'Watch segments right from the app.' },
 ];
+
+export const tplSlides = [
+  {
+    href: 'url(./tpl0.png)',
+    text: 'Modern resume website with dynamic theming and smooth animations.',
+  },
+  {
+    href: 'url(./tpl1.png)',
+    text: 'Responsive design with mobile-first approach.',
+  },
+  {
+    href: 'url(./tpl2.png)',
+    text: 'Interactive portfolio showcase with image carousels.',
+  },
+  {
+    href: 'url(./tpl3.png)',
+    text: 'Skills section with organized categorization.',
+  },
+  {
+    href: 'url(./tpl4.png)',
+    text: 'Contact section with form integration.',
+  },
+  {
+    href: 'url(./tpl5.png)',
+    text: 'About section with version toggle functionality.',
+  },
+  {
+    href: 'url(./tpl6.png)',
+    text: 'Theme customization with multiple color schemes.',
+  },
+];
+
+export const tplSlidesWide = [
+  {
+    href: 'url(./tpl0.png)',
+    text: 'Modern resume website with dynamic theming and smooth animations.',
+  },
+  {
+    href: 'url(./tpl1.png)',
+    text: 'Responsive design with mobile-first approach.',
+  },
+  {
+    href: 'url(./tpl2.png)',
+    text: 'Interactive portfolio showcase with image carousels.',
+  },
+  {
+    href: 'url(./tpl3.png)',
+    text: 'Skills section with organized categorization.',
+  },
+  {
+    href: 'url(./tpl4.png)',
+    text: 'Contact section with form integration.',
+  },
+  {
+    href: 'url(./tpl5.png)',
+    text: 'About section with version toggle functionality.',
+  },
+  {
+    href: 'url(./tpl6.png)',
+    text: 'Theme customization with multiple color schemes.',
+  },
+];

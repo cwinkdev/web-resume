@@ -1,11 +1,11 @@
 html[data-theme='theme2'] {
-  --color-base: #f9ed69; /* Lemon Chiffon */
-  --color-base1: #f89970; /* Deep Peach */
-  --color-base2: #ff5c8a; /* Raspberry */
-  --color-base3: #6a2c70; /* Eggplant */
-  --color-baseText: #111c38; /* Dark Sapphire */
-  --color-primary: #380b0b; /* Steel Blue */
-  --color-secondary: #f38181; /* Soft Red */
-  --color-accent: #fce38a; /* Naples Yellow */
-  --color-baseShadow: #112d4e; /* Oxford Blue */
+  --color-base: #1a0033; /* Deep Purple */
+  --color-base1: #2d0047; /* Rich Purple */
+  --color-base2: #4a0066; /* Vibrant Purple */
+  --color-base3: #6b0080; /* Bright Purple */
+  --color-baseText: #ffffff; /* White text for contrast */
+  --color-primary: #ff00ff; /* Magenta */
+  --color-secondary: #00ffff; /* Cyan */
+  --color-accent: #ffff00; /* Bright Yellow */
+  --color-baseShadow: #000000; /* Black shadow */
 }

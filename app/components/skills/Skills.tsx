@@ -24,10 +24,10 @@ const Skills = () => {
         >
           What I can do for you...
         </h2>
-        <div className="flex flex-col xl:flex-row">
-          <SkillSection label={'Core Skills'} type={'core'} />
-          <SkillSection label={'Broad Proficiencies'} type={'broad'} />
-          <SkillSection label={'Intangibles'} type={'intangible'} />
+        <div className="flex flex-col xl:flex-row xl:items-start xl:justify-center xl:gap-4 xl:max-w-[900px] xl:mx-auto">
+          <SkillSection label={'Broad Proficiencies'} type={'broad'} isSideSection={true} />
+          <SkillSection label={'Core Skills'} type={'core'} isSideSection={false} />
+          <SkillSection label={'Intangibles'} type={'intangible'} isSideSection={true} />
         </div>
         <div className="mt-20"></div>
       </div>

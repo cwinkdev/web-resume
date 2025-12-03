@@ -15,6 +15,8 @@ const Contact = () => {
         className={`${
           state.theme.id === 'theme1'
             ? 'border border-base3 rounded-sm bg-gradient-radial from-base1 to-base0'
+            : state.theme.id === 'theme2'
+            ? 'border-y border-accent rounded-full bg-gradient-radial from-base2 to-base1'
             : state.theme.id === ''
             ? 'border-y border-secondary rounded-xl bg-gradient-radial from-base2 to-base1'
             : 'border-y border-secondary rounded-2xl bg-base'

@@ -38,9 +38,9 @@ const QuickNavButton = ({
         } ${
           state.theme.id === 'theme1'
             ? 'rounded-sm'
-            : state.theme.id === ''
-            ? 'rounded-xl'
-            : 'rounded-full'
+            : state.theme.id === 'theme2'
+            ? 'rounded-full'
+            : 'rounded-xl'
         } duration-300 text-2xl relative xl:group-hover:border-accent border-base3 px-1.5 m-auto ${additionalCSS}`}
         role="button"
         tabIndex={-1}
@@ -50,9 +50,9 @@ const QuickNavButton = ({
           className={`${
             state.theme.id === 'theme1'
               ? 'rounded-sm'
-              : state.theme.id === ''
-              ? 'rounded-xl'
-              : 'rounded-full'
+              : state.theme.id === 'theme2'
+              ? 'rounded-full'
+              : 'rounded-xl'
           } absolute left-0 h-full bg-base2 transform opacity-0 xl:group-hover:opacity-100 w-[0%] xl:group-hover:w-[100%] duration-700`}
         ></div>
         <div className="z-10 m-auto">{icon}</div>

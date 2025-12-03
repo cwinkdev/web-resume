@@ -5,6 +5,7 @@ import PortfolioStackSlide from './PortfolioStackSlide';
 import {
   portfolioSlidesWide,
   tldlSlidesWide,
+  tplSlidesWide,
 } from '@/app/data/portfolioSlides';
 
 interface PortfolioDesktopProps {
@@ -16,7 +17,12 @@ const PortfolioDesktop = ({
   setActiveIndex,
   activeProject,
 }: PortfolioDesktopProps) => {
-  let slides = activeProject === 0 ? portfolioSlidesWide : tldlSlidesWide;
+  let slides =
+    activeProject === 0
+      ? portfolioSlidesWide
+      : activeProject === 1
+      ? tldlSlidesWide
+      : tplSlidesWide;
 
   return (
     <div className="hidden xl:block">

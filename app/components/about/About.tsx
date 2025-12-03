@@ -21,7 +21,7 @@ const About = () => {
         }}
         className={`${
           state.currentSection === 'about' ? 'slide-in-right' : ''
-        } border-2 border-base3 rounded-full shadow-md shadow-baseShadow h-40 bg-base2 w-40 mx-auto my-4`}
+        } border-2 border-base3 rounded-full shadow-md shadow-baseShadow h-64 bg-base2 w-64 mx-auto my-4`}
         role="img"
         aria-label="Profile picture of Christian Winkler"
       ></div>

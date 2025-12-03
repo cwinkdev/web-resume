@@ -11,58 +11,78 @@ const MainNavMenu = ({}: MainNavMenuProps) => {
   const options = { threshold: 0 };
   const { ref, inView } = useInView(options);
   return (
-    <div className="flex flex-col w-full h-full my-auto text-center">
+    <div className="flex flex-col w-full text-center pt-8 xl:pt-12">
       <div
         ref={ref}
-        className={`w-full lg:mt-0 mt-20 ${inView ? 'slide-in-left' : ''} `}
+        className={`w-full ${inView ? 'slide-in-left' : ''} `}
       >
-        <ThemeSwitcher
-          additionalCSS="text-4xl mt-2 w-64 px-3"
-          showName={true}
+        <div className="mb-4 xl:mb-6">
+          <ThemeSwitcher
+            additionalCSS=""
+            showName={true}
+          />
+        </div>
+      </div>
+    <div>
+        <p className="text-baseText text-lg xl:text-xl opacity-80 font-thin tracking-wide mb-10 mt-10">
+          Hop to a specific section
+        </p>
+      </div>
+      <div className="grid grid-rows-2 grid-cols-2 gap-6 xl:flex xl:flex-row xl:justify-center xl:items-center xl:gap-8 xl:max-w-5xl xl:mx-auto mb-4 xl:mb-6">
+        <MainNavButton
+          label={'ABOUT ME'}
+          icon={<GiPerson />}
+          additionalCSS={`dropBounceLeftAnimation ${
+            state.theme.id === ''
+              ? 'text-cyan-200'
+              : state.theme.id === 'theme2'
+              ? 'text-cyan-300'
+              : 'text-cyan-500'
+          }`}
+          sectionId={'about'}
+          componentID={'navButtonAbout'}
+        />
+        <MainNavButton
+          label={'SKILLS'}
+          icon={<GiSkills />}
+          additionalCSS={`dropBounceLeftAnimation ${
+            state.theme.id === ''
+              ? 'text-amber-200'
+              : state.theme.id === 'theme2'
+              ? 'text-yellow-300'
+              : 'text-amber-500'
+          }`}
+          sectionId={'skills'}
+          componentID={'navButtonSkills'}
+        />
+        <MainNavButton
+          label={'PORTFOLIO'}
+          icon={<GiWoodFrame />}
+          additionalCSS={`dropBounceLeftAnimation ${
+            state.theme.id === ''
+              ? 'text-violet-200'
+              : state.theme.id === 'theme2'
+              ? 'text-pink-300'
+              : 'text-violet-500'
+          }`}
+          sectionId={'portfolio'}
+          componentID={'navButtonPortfolio'}
+        />
+        <MainNavButton
+          label={'CONTACT'}
+          icon={<GiEnvelope />}
+          additionalCSS={`dropBounceLeftAnimation ${
+            state.theme.id === ''
+              ? 'text-emerald-200'
+              : state.theme.id === 'theme2'
+              ? 'text-green-300'
+              : 'text-emerald-500'
+          }`}
+          sectionId={'contact'}
+          componentID={'navButtonContact'}
         />
       </div>
-      <div className="h-[450px] grid grid-rows-2 mt-12 lg:mt-24 grid-cols-1 xl:justify-evenly justify-between xl:flex xl:mx-auto">
-        <div className="flex justify-center h-1/2">
-          <MainNavButton
-            label={'ABOUT ME'}
-            icon={<GiPerson />}
-            additionalCSS={`dropBounceLeftAnimation ${
-              state.theme.id === '' ? 'text-cyan-200' : 'text-cyan-500'
-            }`}
-            sectionId={'about'}
-            componentID={'navButtonAbout'}
-          />
-          <MainNavButton
-            label={'SKILLS'}
-            icon={<GiSkills />}
-            additionalCSS={`dropBounceLeftAnimation ${
-              state.theme.id === '' ? 'text-amber-200' : 'text-amber-500'
-            }`}
-            sectionId={'skills'}
-            componentID={'navButtonSkills'}
-          />
-        </div>
-        <div className="flex justify-center h-1/2">
-          <MainNavButton
-            label={'PORTFOLIO'}
-            icon={<GiWoodFrame />}
-            additionalCSS={`dropBounceLeftAnimation ${
-              state.theme.id === '' ? 'text-violet-200' : 'text-violet-500'
-            }`}
-            sectionId={'portfolio'}
-            componentID={'navButtonPortfolio'}
-          />
-          <MainNavButton
-            label={'CONTACT'}
-            icon={<GiEnvelope />}
-            additionalCSS={`dropBounceLeftAnimation ${
-              state.theme.id === '' ? 'text-emerald-200' : 'text-emerald-500'
-            }`}
-            sectionId={'contact'}
-            componentID={'navButtonContact'}
-          />
-        </div>
-      </div>
+
     </div>
   );
 };

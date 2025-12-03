@@ -103,7 +103,7 @@ export const skillsList = [
     type: 'intangible',
   },
   {
-    key: 'Problem Solving',
+    key: 'Problem Solver',
     icon: <FaPuzzlePiece />,
     additionalCSS: 'w-fit px-4 text-blue-300',
     type: 'intangible',

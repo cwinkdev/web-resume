@@ -2,6 +2,7 @@ import 'swiper/swiper-bundle.css';
 import {
   portfolioSlides as slides,
   tldlSlides,
+  tplSlides,
 } from '@/app/data/portfolioSlides';
 import { useState } from 'react';
 import { useApp } from '@/app/hooks/useApp';
@@ -18,9 +19,13 @@ const Portfolio = () => {
   return (
     <section
       className={`p-8 pt-20 min-h-screen h-screen ${
-        state.theme.id === '' ? 'bg-gradient-to-b' : ''
+        state.theme.id === '' || state.theme.id === 'theme2' ? 'bg-gradient-to-b' : ''
       } from-transparent ${
-        activeProject === 0 ? 'via-cyan-950' : 'via-violet-950'
+        activeProject === 0
+          ? 'via-cyan-950'
+          : activeProject === 1
+          ? 'via-violet-950'
+          : 'via-emerald-950'
       }  to-transparent w-full text-center relative duration-1000 xl:w-full xl:mx-auto`}
       aria-labelledby="portfolio-heading"
     >
@@ -45,7 +50,13 @@ const Portfolio = () => {
         <PortfolioBlurbs
           activeIndex={activeIndex}
           activeProject={activeProject}
-          slides={activeProject === 0 ? slides : tldlSlides}
+          slides={
+            activeProject === 0
+              ? slides
+              : activeProject === 1
+              ? tldlSlides
+              : tplSlides
+          }
         />
       </div>
     </section>
