@@ -1,63 +1,37 @@
-import 'swiper/swiper-bundle.css';
-import {
-  portfolioSlides as slides,
-  tldlSlides,
-  tplSlides,
-} from '@/app/data/portfolioSlides';
 import { useState } from 'react';
 import { useApp } from '@/app/hooks/useApp';
 import PortfolioHeader from './PortfolioHeader';
-import PortfolioBlurbs from './PortfolioBlurbs';
-import PortfolioMobile from './PortfolioMobile';
-import PortfolioDesktop from './PortfolioDesktop';
+import ProjectShowcase from './ProjectShowcase';
+import { projects } from '@/app/data/projects';
 
 const Portfolio = () => {
   const { state } = useApp();
-  const [activeProject, setActiveProject] = useState(0);
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeProject, setActiveProject] = useState(3);
+  const currentProject = projects[activeProject];
 
   return (
     <section
-      className={`p-8 pt-20 min-h-screen h-screen ${
-        state.theme.id === '' || state.theme.id === 'theme2' ? 'bg-gradient-to-b' : 'bg-base1'
-      } from-transparent ${
-        activeProject === 0
-          ? 'via-cyan-950'
-          : activeProject === 1
-          ? 'via-violet-950'
-          : 'via-emerald-950'
-      }  to-transparent w-full text-center relative duration-1000 xl:w-full xl:mx-auto`}
+      className="p-4 xl:p-8 pt-16 xl:pt-20 min-h-screen h-screen overflow-hidden bg-base1 w-full text-center relative xl:w-full xl:mx-auto flex flex-col"
       aria-labelledby="portfolio-heading"
     >
       <div
-        className={`${
+        className={`flex-1 flex flex-col overflow-hidden ${
           state.currentSection === 'portfolio' ? 'slide-in-right' : ''
         } `}
       >
-        <h2 id="portfolio-heading" className="sr-only">Portfolio Projects</h2>
+        <h2 id="portfolio-heading" className="sr-only">Projects</h2>
+        <div className="w-full max-w-[90rem] mx-auto mb-4">
+          <h3 className="text-3xl xl:text-4xl font-bold text-primary text-left">
+            My Projects
+          </h3>
+        </div>
         <PortfolioHeader
           activeProject={activeProject}
           setActiveProject={setActiveProject}
         />
-        <PortfolioMobile
-          setActiveIndex={setActiveIndex}
-          activeProject={activeProject}
-        />
-        <PortfolioDesktop
-          setActiveIndex={setActiveIndex}
-          activeProject={activeProject}
-        />
-        <PortfolioBlurbs
-          activeIndex={activeIndex}
-          activeProject={activeProject}
-          slides={
-            activeProject === 0
-              ? slides
-              : activeProject === 1
-              ? tldlSlides
-              : tplSlides
-          }
-        />
+        <div className="flex-1 overflow-hidden">
+          <ProjectShowcase project={currentProject} />
+        </div>
       </div>
     </section>
   );

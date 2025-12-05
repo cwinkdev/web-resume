@@ -99,8 +99,8 @@ const MainNavMenu = ({}: MainNavMenuProps) => {
       </div>
 
       {/* Desktop: Video Game UI with diagonal panels */}
-      <div className="hidden xl:block w-full">
-        <div className="flex items-center justify-center gap-3 h-[45vh] max-w-[1400px] mx-auto px-8">
+      <div className="hidden xl:block w-full overflow-visible">
+        <div className="flex items-center justify-center gap-3 h-[45vh] max-w-[1400px] mx-auto px-8 overflow-visible">
           {sections.map((section, index) => {
             const skewAngle = -8; // All panels use the same skew angle
             return (
@@ -108,7 +108,7 @@ const MainNavMenu = ({}: MainNavMenuProps) => {
                 key={section.sectionId}
                 href={`#${section.sectionId}`}
                 onClick={(e) => handleClick(e, section.sectionId)}
-                className="group flex-1 h-full relative overflow-visible focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-base z-0 group-hover:z-50 transition-all duration-500"
+                className="group flex-1 h-full relative overflow-visible outline-none focus:outline-none z-0 group-hover:z-50 transition-all duration-500"
                 aria-label={`Navigate to ${section.label} section`}
               >
                 <div

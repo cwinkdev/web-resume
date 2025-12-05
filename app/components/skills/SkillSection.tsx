@@ -36,7 +36,7 @@ const SkillSection = ({ label, type, isSideSection = false, isActive = false }: 
       <p
         className={`text-accent ${
           isSideSection ? 'text-xl' : 'text-2xl'
-        } border-b border-base2 bg-base shadow-baseShadow shadow-sm text-center font-semibold py-4 ${
+        } bg-base shadow-baseShadow shadow-sm text-center font-bold py-4 ${
           state.theme.id === 'theme1'
             ? 'rounded-t-sm'
             : state.theme.id === ''

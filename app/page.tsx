@@ -117,7 +117,7 @@ export default function Home() {
 
       <main
         id="main"
-        className="relative z-0 flex flex-col items-center w-full min-h-screen px-8 overflow-x-hidden font-extralight xl:mx-auto pt-24 pb-24 bg-base1"
+        className="relative z-0 flex flex-col items-center w-full min-h-screen px-8 overflow-x-hidden overflow-y-visible font-extralight xl:mx-auto pt-24 pb-24 bg-base1"
         role="main"
       >
         <div

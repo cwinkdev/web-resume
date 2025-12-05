@@ -31,7 +31,7 @@ const MainNavButton = ({
       onClick={(e) => handleClick(e, sectionId)}
       className={`${
         inView ? 'slide-in-left' : ''
-      } w-48 h-48 xl:w-56 xl:h-56 text-center duration-300 group focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-base rounded`}
+      } w-48 h-48 xl:w-56 xl:h-56 text-center duration-300 group outline-none focus:outline-none rounded`}
       id={componentID}
       ref={ref}
       aria-label={`Navigate to ${label} section`}
