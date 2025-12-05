@@ -26,7 +26,7 @@ const QuickNavButton = ({
       href={`#${sectionId}`}
       onClick={(e) => handleClick(e, sectionId)}
       style={{ transform: `translateX(${translateX}px)` }}
-      className="group outline-none focus:outline-none rounded"
+      className="group outline-none focus:outline-none focus:ring-1 focus:ring-accent/50 focus:ring-offset-1 focus:ring-offset-base rounded"
       aria-label={`Navigate to ${label} section`}
       aria-current={state.currentSection === sectionId ? 'page' : undefined}
     >
