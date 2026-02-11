@@ -11,7 +11,7 @@ const Portfolio = () => {
 
   return (
     <section
-      className="p-4 xl:p-8 pt-16 xl:pt-20 min-h-screen h-screen overflow-hidden bg-base1 w-full text-center relative xl:w-full xl:mx-auto flex flex-col"
+      className="p-4 xl:p-8 pt-16 xl:pt-20 min-h-screen xl:h-screen overflow-y-auto xl:overflow-hidden bg-base1 w-full text-center relative xl:w-full xl:mx-auto flex flex-col"
       aria-labelledby="portfolio-heading"
     >
       <div

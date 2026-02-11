@@ -84,7 +84,7 @@ const MainNavMenu = ({}: MainNavMenuProps) => {
             Hop to a specific section
           </p>
         </div>
-        <div className="grid grid-rows-2 grid-cols-2 gap-6 max-w-5xl mx-auto mb-4">
+        <div className="grid grid-rows-2 grid-cols-2 gap-2 sm:gap-4 max-w-5xl mx-auto mb-4">
           {sections.map((section, index) => (
             <MainNavButton
               key={section.sectionId}

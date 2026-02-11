@@ -155,7 +155,7 @@ const ProjectShowcase = ({ project }: ProjectShowcaseProps) => {
         </div>
 
         {/* Content Grid */}
-        <div className="flex-1 grid xl:grid-cols-3 gap-6 xl:gap-8 text-left overflow-hidden min-h-0">
+        <div className="flex-1 grid xl:grid-cols-3 gap-4 xl:gap-8 text-left overflow-hidden min-h-0">
         <div className="flex flex-col min-h-0 bg-base1 border border-base3 rounded-lg p-4 xl:p-6 shadow-md shadow-baseShadow">
           <h4 className={`text-xl font-bold mb-4 ${accentColor} flex-shrink-0`}>
             Key Features

@@ -22,7 +22,7 @@ const AboutCard = ({ isLongVersion }: AboutCardProps) => {
           ref={ref}
           className={`${
             inView ? 'slide-in-right' : ''
-          } mt-4 h-[450px] w-[350px] xl:w-[750px] font-light mx-auto relative overflow-hidden crawl-container shadow-baseShadow shadow-inner border-y border-secondary ${
+          } mt-4 h-[450px] w-full max-w-[min(100%,350px)] xl:max-w-none xl:w-[750px] font-light mx-auto relative overflow-hidden crawl-container shadow-baseShadow shadow-inner border-y border-secondary ${
             state.theme.id === 'theme1'
               ? 'rounded-sm'
               : state.theme.id === ''
@@ -85,7 +85,7 @@ const AboutCard = ({ isLongVersion }: AboutCardProps) => {
               : state.theme.id === ''
               ? 'border-y border-secondary rounded-xl'
               : 'border-y border-secondary rounded-lg'
-          } mt-4 h-[380px] w-[350px] xl:h-[340px] xl:w-[750px] mx-auto flex flex-col font-light relative overflow-y-auto shadow-baseShadow bg-base shadow-md rounded-lg`}
+          } mt-4 h-[380px] w-full max-w-[min(100%,350px)] xl:max-w-none xl:h-[340px] xl:w-[750px] mx-auto flex flex-col font-light relative overflow-y-auto shadow-baseShadow bg-base shadow-md rounded-lg`}
         >
           <div
             className={`bg-base2 text-left mt-4 py-2 border-y border-accent shadow-baseShadow shadow-md`}

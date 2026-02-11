@@ -11,8 +11,8 @@ const QuickNavMenu = () => {
   const [initialXOffset, setInitialXOffset] = useState<number>(0);
 
   useEffect(() => {
-    // Calculate initialXOffset when component mounts
-    const xOffset = window.innerWidth > 640 ? -700 : -700; // Adjust your logic as needed
+    // Desktop: off-screen left for scroll-in effect. Mobile: smaller offset so nav appears sooner
+    const xOffset = window.innerWidth >= 1280 ? -700 : -window.innerWidth;
     setInitialXOffset(xOffset);
   }, []);
 

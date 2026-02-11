@@ -4,7 +4,7 @@ import { GiCloudDownload } from 'react-icons/gi';
 const ContactInfo = () => {
   return (
     <div
-      className={`min-h-[700px] h-fit justify-evenly flex flex-col py-4 px-6 w-full`}
+      className={`min-h-0 xl:min-h-[700px] h-fit justify-evenly flex flex-col py-4 px-4 xl:px-6 w-full`}
     >
       <h2 className="text-3xl font-semibold text-primary">Contact Info</h2>
       <div className="">

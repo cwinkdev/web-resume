@@ -85,7 +85,7 @@ export default function Home() {
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
-        className={`fixed top-0 w-full ${
+        className={`fixed top-0 w-full overflow-x-hidden ${
           state.showQuickNav ? 'xl:h-0 h-16' : 'h-24'
         }  z-20 duration-300 `}
         role="banner"
@@ -95,7 +95,7 @@ export default function Home() {
           style={{ transform: `translateX(${state.offset}px)` }}
           className="z-30 flex flex-col m-auto font-mono text-center text-primary w-fit h-14"
         >
-          <p className="m-auto mt-4 text-2xl">Christian Winkler</p>
+          <p className="m-auto mt-4 text-lg xl:text-2xl">Christian Winkler</p>
 
           <div className="relative flex justify-center w-full h-14">
             <p
@@ -117,7 +117,7 @@ export default function Home() {
 
       <main
         id="main"
-        className="relative z-0 flex flex-col items-center w-full min-h-screen px-8 overflow-x-hidden overflow-y-visible font-extralight xl:mx-auto pt-24 pb-24 bg-base1"
+        className="relative z-0 flex flex-col items-center w-full min-h-screen px-4 xl:px-8 overflow-x-hidden overflow-y-visible font-extralight xl:mx-auto pt-24 pb-24 bg-base1"
         role="main"
       >
         <div

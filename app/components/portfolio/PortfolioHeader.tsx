@@ -98,13 +98,13 @@ const PortfolioHeader = ({
                 relative flex flex-1 items-center justify-center
                 outline-none focus:outline-none
                 transition-all duration-300
-                px-[18px]
+                px-2 xl:px-[18px]
               `}
               aria-label={project.ariaLabel}
               aria-pressed={isActive}
               type="button"
             >
-              <span className="text-lg xl:text-xl whitespace-nowrap">
+              <span className="text-xs sm:text-sm xl:text-xl whitespace-normal xl:whitespace-nowrap">
                 {project.label}
               </span>
               {isActive && (

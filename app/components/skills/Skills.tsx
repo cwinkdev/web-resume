@@ -56,7 +56,7 @@ const Skills = () => {
 
   return (
     <section
-      className="p-8 xl:pt-0 h-screen min-h-screen w-full text-center flex items-center justify-center xl:w-3/4 xl:m-auto bg-base1 relative"
+      className="p-4 xl:p-8 xl:pt-0 h-screen min-h-screen w-full text-center flex items-center justify-center xl:w-3/4 xl:m-auto bg-base1 relative"
       aria-labelledby="skills-heading"
     >
       <div

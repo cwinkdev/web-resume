@@ -31,7 +31,7 @@ const QuickNavButton = ({
       aria-current={state.currentSection === sectionId ? 'page' : undefined}
     >
       <div
-        className={`flex h-10 xl:h-16 xl:w-16 text-center ${
+        className={`flex h-12 xl:h-16 xl:w-16 text-center ${
           state.currentSection === sectionId
             ? ` opacity-80 bg-base1 border-secondary border-2`
             : ' opacity-100 scale-110 border shadow-md shadow-baseShadow bg-base border-base3'
